@@ -18,6 +18,7 @@ fun MapInfo() {
     AutoScroll()
     MergeSameLevel()
     HalfLevelSuffix()
+    TimerSpeed()
 }
 
 @Composable
@@ -80,6 +81,20 @@ private fun HalfLevelSuffix() {
         onValueChange = {
             halfLevelSuffix = it
             logger.debug { "setting.mergeSameLevel change -> $it" }
+        },
+    )
+}
+
+@Composable
+private fun TimerSpeed() {
+    var timerSpeed by setting.timerSpeed
+    InputOption(
+        title = "timer speed",
+        subTitle = "change for map timer speed",
+        value = timerSpeed.toString(),
+        onValueChange = {
+            timerSpeed = it.toFloatOrNull() ?: return@InputOption
+            logger.debug { "setting.timerSpeed change -> $it" }
         },
     )
 }
