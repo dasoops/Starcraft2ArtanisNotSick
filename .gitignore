@@ -46,3 +46,4 @@ wix311/
 logs/
 data/
 ./*.hprof
+local.properties
