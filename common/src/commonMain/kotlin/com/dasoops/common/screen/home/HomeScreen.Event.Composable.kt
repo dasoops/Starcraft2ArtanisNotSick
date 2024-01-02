@@ -47,16 +47,50 @@ import com.dasoops.common.resources.map.event.RangeTime
 import com.dasoops.common.resources.map.event.text
 
 @Composable
-fun Event.Composable() {
-    val showHide by LocalState.current.setting.showHide
-    if (!showHide && !this.show) return
-    this.Composable0()
-    /* when (this) {
-         is AssaultEvent -> Composable()
-         is AwardEvent -> Composable()
-         is MonopolizeEvent -> Composable()
-     }*/
-}
+fun Event.Composable() = EventBox(
+    event = this,
+    content = {
+        Icon(
+            painter = painterResource(if (it) R.icon.keyboardArrowDown else R.icon.keyboardArrowRight),
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.width(40.dp),
+        )
+        Row(
+            modifier = Modifier.weight(1.0f)
+        ) {
+            Text(
+                text = time?.textFirst ?: " - ",
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(0.5f),
+            )
+
+            Spacer(Modifier.width(20.dp))
+
+            Text(
+                text = this@Composable.text,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f),
+            )
+        }
+        Box(modifier = Modifier.width(110.dp)) {
+            if (this@Composable is AssaultEvent) {
+                Text(
+                    text = level.text,
+                    modifier = Modifier.width(110.dp),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    textAlign = TextAlign.Right
+                )
+            }
+        }
+    },
+    expandedContent = {
+        Text(text = this.id)
+    }
+)
 
 @Composable
 fun EventBox(
@@ -123,53 +157,6 @@ fun EventBox(
         }
     }
 }
-
-@Composable
-fun Event.Composable0(
-) = EventBox(
-    event = this,
-    content = {
-        Icon(
-            painter = painterResource(if (it) R.icon.keyboardArrowDown else R.icon.keyboardArrowRight),
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.width(40.dp),
-        )
-        Row(
-            modifier = Modifier.weight(1.0f)
-        ) {
-            Text(
-                text = time?.textFirst ?: " - ",
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(0.5f),
-            )
-
-            Spacer(Modifier.width(20.dp))
-
-            Text(
-                text = this@Composable0.text,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
-            )
-        }
-        Box(modifier = Modifier.width(110.dp)) {
-            if (this@Composable0 is AssaultEvent) {
-                Text(
-                    text = level.text,
-                    modifier = Modifier.width(110.dp),
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    textAlign = TextAlign.Right
-                )
-            }
-        }
-    },
-    expandedContent = {
-        Text(text = this.id)
-    }
-)
 
 @Composable
 fun AssaultEvent.Composable() = EventBox(

@@ -27,6 +27,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -51,7 +52,7 @@ import com.dasoops.common.util.TimeUnit
 import com.dasoops.common.util.UnitTime
 import com.dasoops.common.util.text
 import io.github.oshai.kotlinlogging.KotlinLogging
-import kotlin.math.max
+import kotlinx.coroutines.launch
 
 val logger = KotlinLogging.logger {}
 
@@ -114,21 +115,23 @@ private fun MapInfoMain(
     appState: AppState = LocalState.current,
     mapState: MapState = appState.mapState,
 ) {
+    val scope = rememberCoroutineScope()
+
     val map: Map? by remember { mapState.current }
     val timer: Int by remember { mapState.timer }
     val autoScroll: Boolean by remember { appState.setting.autoScroll }
+    val showHide by remember { appState.setting.showHide }
 
     val lazyListState = rememberLazyListState()
     val eventList = remember(map) {
         map ?: return@remember emptyList()
-        map!!.event.sortedBy { it.sortValue }.toList()
+        map!!.event.filter { if (showHide) true else it.show }.sortedBy { it.sortValue }.toList()
     }
 
     Box(Modifier) {
         LazyColumn(
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
             state = lazyListState,
-            userScrollEnabled = false,
         ) {
             items(eventList) {
                 it.Composable()
@@ -151,7 +154,9 @@ private fun MapInfoMain(
                 else -> false
             }
         }
-        if (index != -1) lazyListState.animateScrollToItem(max(index - 3, 0))
+        if (index <= 0) return@LaunchedEffect
+
+        scope.launch { lazyListState.animateScrollToItem(index = index) }
     }
 }
 
@@ -172,7 +177,7 @@ private fun MapInfoTop(
             .height(90.dp)
     ) {
 
-    Row(modifier = Modifier
+        Row(modifier = Modifier
             .clickable {
                 logger.trace { "map change -> null" }
                 state.clear()
