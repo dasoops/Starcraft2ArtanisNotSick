@@ -26,7 +26,7 @@ class Setting(
     companion object {
         val Default
             get() = Setting(
-                autoScroll = mutableStateOf(false),
+                autoScroll = mutableStateOf(true),
                 showHide = mutableStateOf(false),
                 theme = mutableStateOf(Theme.Default),
                 halfLevelSuffix = mutableStateOf("(½)"),
