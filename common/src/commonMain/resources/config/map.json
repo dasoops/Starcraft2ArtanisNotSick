@@ -1,0 +1,666 @@
+[
+  {
+    "name": "克哈裂痕",
+    "image": "image/map/Fireworks.png",
+    "event": [
+      {
+        "type": "Monopolize",
+        "id": "Monopolize$f90c4224-ba70-4596-86cb-1bfdf0b422c5",
+        "show": true,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 288,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 0,
+        "description": "虚空裂片",
+        "position": {
+          "type": "Multiple",
+          "position": [
+            "Point$df817065-341a-4f5b-80a4-8331a06fed22"
+          ]
+        }
+      },
+      {
+        "type": "Monopolize",
+        "id": "Monopolize$07af3141-856c-47af-b58e-2c8b49251d85",
+        "show": false,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Event.Offset",
+              "event": "Monopolize$f90c4224-ba70-4596-86cb-1bfdf0b422c5",
+              "offset": {
+                "unit": "Second",
+                "value": 5
+              }
+            }
+          ]
+        },
+        "index": 1,
+        "description": "虚空裂片",
+        "position": {
+          "type": "Multiple",
+          "position": [
+            "Point$61db8c7b-7a0a-4a70-9a67-963594791cb7",
+            "Point$0ababef9-ad00-461b-827d-e7e1d2ae3d2b"
+          ]
+        }
+      },
+      {
+        "type": "Monopolize",
+        "id": "Monopolize$b7c8399b-ee7e-4ee2-941e-e9eb014ffa3c",
+        "show": false,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Event.Offset",
+              "event": "Monopolize$07af3141-856c-47af-b58e-2c8b49251d85",
+              "offset": {
+                "unit": "Second",
+                "value": 5
+              }
+            }
+          ]
+        },
+        "index": 2,
+        "description": "虚空裂片",
+        "position": {
+          "type": "Multiple",
+          "position": [
+            "Point$45a300b8-dfb7-443d-a22e-a216cb29e31e",
+            "Point$9acd623b-99b1-41db-bbde-4e289993a819",
+            "Point$5082ccb1-9606-454d-823e-f7372c9c13d2"
+          ]
+        }
+      },
+      {
+        "type": "Monopolize",
+        "id": "Monopolize$f860f16c-1d29-48c6-9559-54733a35a5a7",
+        "show": false,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Event.Offset",
+              "event": "Monopolize$b7c8399b-ee7e-4ee2-941e-e9eb014ffa3c",
+              "offset": {
+                "unit": "Second",
+                "value": 5
+              }
+            }
+          ]
+        },
+        "index": 3,
+        "description": "虚空裂片",
+        "position": {
+          "type": "Multiple",
+          "position": [
+            "Point$5eb92f9f-69c9-4564-a5be-98a83ac575b3",
+            "Point$a8a2221b-872a-4843-bba1-e6f0646268c7",
+            "Point$856cc3c7-fd74-4259-b389-ced1bf5c847f",
+            "Point$89d7dd0c-9c77-40c8-a5c0-74c125ced216"
+          ]
+        }
+      },
+      {
+        "type": "Award",
+        "id": "Award$af8ecb76-711f-4829-9fce-4c60faea94e0",
+        "show": true,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 700,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 0,
+        "description": "海盗船",
+        "position": {
+          "type": "Single",
+          "position": "Point$0088b218-6d9d-4d79-8057-e6d21cec5cd0"
+        }
+      },
+      {
+        "type": "Award",
+        "id": "Award$e15f6d60-1ea8-445a-b8db-879f1b34752b",
+        "show": true,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1130,
+              "unit": "Second"
+            },
+            {
+              "type": "Event.Offset",
+              "event": "Monopolize$b7c8399b-ee7e-4ee2-941e-e9eb014ffa3c",
+              "offset": {
+                "unit": "Second",
+                "value": 8
+              }
+            },
+            {
+              "type": "Trigger.Position",
+              "position": "Point$0088b218-6d9d-4d79-8057-e6d21cec5cd0"
+            }
+          ]
+        },
+        "index": 1,
+        "description": "海盗船",
+        "position": {
+          "type": "Single",
+          "position": "Point$0088b218-6d9d-4d79-8057-e6d21cec5cd0"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$ca0ee731-5849-4314-a301-0d462678e79e",
+        "show": true,
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 1
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 1
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 120,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 0,
+        "target": null,
+        "position": {
+          "type": "Single",
+          "position": "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$707db70f-84f4-47a6-83a3-931f2147c736",
+        "show": true,
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 2
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 2
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 300,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 1,
+        "target": null,
+        "position": {
+          "type": "Single",
+          "position": "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$1aefb891-30e6-499a-8cf9-b8fc3571eabd",
+        "show": true,
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 3
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 3
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 480,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 2,
+        "target": {
+          "type": "Max.SecondBaseBuilding"
+        },
+        "position": {
+          "type": "Single",
+          "position": "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$27d29a3a-1400-4381-b993-aba061c7d861",
+        "show": true,
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 4
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 4
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 660,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 3,
+        "target": null,
+        "position": {
+          "type": "Single",
+          "position": "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$2b17cc44-6131-4f52-9c20-f9e3f8c2b935",
+        "show": true,
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 5
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 840,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 4,
+        "target": {
+          "type": "like",
+          "target": "[Assault-8:00]$0"
+        },
+        "position": {
+          "type": "Single",
+          "position": "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$d3d50049-90e2-447e-8018-3bc86f908dac",
+        "show": true,
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 6
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 6
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1020,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 5,
+        "target": null,
+        "position": {
+          "type": "Single",
+          "position": "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$cc7b040f-d1e4-4410-929d-cc46abaf5220",
+        "show": true,
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 7
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 7
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1230,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 6,
+        "target": null,
+        "position": {
+          "type": "Single",
+          "position": "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$ea603d01-632c-4c1f-8786-88c6fa85a17b",
+        "show": true,
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 7
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 7
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1470,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 7,
+        "target": null,
+        "position": {
+          "type": "Single",
+          "position": "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$1cb2f6b1-fa6a-4c4f-b184-aa79a90bbd6f",
+        "show": true,
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 7
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 7
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1590,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 8,
+        "target": null,
+        "position": {
+          "type": "Single",
+          "position": "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$741e5592-23b9-4888-821c-50f4003b8874",
+        "show": true,
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 7
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 7
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1710,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 9,
+        "target": null,
+        "position": {
+          "type": "Single",
+          "position": "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$8face6a3-b903-472c-86f7-e13d06c6ed55",
+        "show": true,
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 7
+          },
+          "cost": {
+            "type": "Half",
+            "value": 7
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1800,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 10,
+        "target": null,
+        "position": {
+          "type": "Single",
+          "position": "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f"
+        }
+      }
+    ],
+    "position": [
+      {
+        "id": "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f",
+        "type": "Point",
+        "description": "红点刷新点"
+      },
+      {
+        "id": "Point$0088b218-6d9d-4d79-8057-e6d21cec5cd0",
+        "type": "Point",
+        "description": "海盗船-1"
+      },
+      {
+        "id": "Point$011accdf-3108-4cd5-8957-39bf7e3e3d01",
+        "type": "Point",
+        "description": "海盗船-2"
+      },
+      {
+        "id": "Point$df817065-341a-4f5b-80a4-8331a06fed22",
+        "type": "Point",
+        "description": "虚空碎片-1"
+      },
+      {
+        "id": "Point$61db8c7b-7a0a-4a70-9a67-963594791cb7",
+        "type": "Point",
+        "description": "虚空碎片-2"
+      },
+      {
+        "id": "Point$0ababef9-ad00-461b-827d-e7e1d2ae3d2b",
+        "type": "Point",
+        "description": "虚空碎片-3"
+      },
+      {
+        "id": "Point$45a300b8-dfb7-443d-a22e-a216cb29e31e",
+        "type": "Point",
+        "description": "虚空碎片-4"
+      },
+      {
+        "id": "Point$9acd623b-99b1-41db-bbde-4e289993a819",
+        "type": "Point",
+        "description": "虚空碎片-5"
+      },
+      {
+        "id": "Point$5082ccb1-9606-454d-823e-f7372c9c13d2",
+        "type": "Point",
+        "description": "虚空碎片-6"
+      },
+      {
+        "id": "Point$5eb92f9f-69c9-4564-a5be-98a83ac575b3",
+        "type": "Point",
+        "description": "虚空碎片-7"
+      },
+      {
+        "id": "Point$a8a2221b-872a-4843-bba1-e6f0646268c7",
+        "type": "Point",
+        "description": "虚空碎片-8"
+      },
+      {
+        "id": "Point$856cc3c7-fd74-4259-b389-ced1bf5c847f",
+        "type": "Point",
+        "description": "虚空碎片-9"
+      },
+      {
+        "id": "Point$89d7dd0c-9c77-40c8-a5c0-74c125ced216",
+        "type": "Point",
+        "description": "虚空碎片-10"
+      }
+    ]
+  },
+  {
+    "name": "湮灭快车",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  },
+  {
+    "name": "虚空撕裂",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  },
+  {
+    "name": "虚空降临",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  },
+  {
+    "name": "往日神庙",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  },
+  {
+    "name": "天界封锁",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  },
+  {
+    "name": "升格之链",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  },
+  {
+    "name": "熔火危机",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  },
+  {
+    "name": "机会渺茫",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  },
+  {
+    "name": "营救矿工",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  },
+  {
+    "name": "亡者之夜",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  },
+  {
+    "name": "黑暗杀星",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  },
+  {
+    "name": "净网行动",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  },
+  {
+    "name": "聚铁成兵",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  },
+  {
+    "name": "死亡摇篮",
+    "image": "image/map/Barrier.png",
+    "event": [],
+    "position": []
+  }
+]
