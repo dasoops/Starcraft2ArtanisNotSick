@@ -11,6 +11,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import com.dasoops.common.LocalState
+import com.dasoops.common.resources.AppState
 import com.dasoops.common.resources.MapState
 import io.github.oshai.kotlinlogging.KotlinLogging
 
@@ -19,16 +20,21 @@ val logger = KotlinLogging.logger {}
 @Composable
 @Suppress("NOTHING_TO_INLINE")
 inline fun Timer(
-    mapState: MapState = LocalState.current.mapState,
+    appState: AppState = LocalState.current,
+    mapState: MapState = appState.mapState,
 ) {
     var timer by remember { mapState.timer }
+    val timerSpeed by remember { appState.setting.timerSpeed }
     val timerStart by remember { mapState.timerStart }
     var trigger by remember { mutableStateOf(timer) }
 
     val (state, stop, start) = controlAnimateValue(
         targetValue = trigger,
         typeConverter = Int.VectorConverter,
-        animationSpec = tween(durationMillis = Int.MAX_VALUE / 1000 * 1000, easing = LinearEasing),
+        animationSpec = tween(
+            durationMillis = (Int.MAX_VALUE / 1000 * 1000 / timerSpeed).toInt(),
+            easing = LinearEasing
+        ),
         autoStart = timerStart,
     )
     timer = state.value

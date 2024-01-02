@@ -19,6 +19,8 @@ class Setting(
     val halfLevelSuffix: MutableState<String>,
     @Serializable(with = MutableStateSerializer::class)
     val mergeSameLevel: MutableState<Boolean>,
+    @Serializable(with = MutableStateSerializer::class)
+    val timerSpeed: MutableState<Float>,
 ) {
 
     companion object {
@@ -29,6 +31,7 @@ class Setting(
                 theme = mutableStateOf(Theme.Default),
                 halfLevelSuffix = mutableStateOf("(½)"),
                 mergeSameLevel = mutableStateOf(true),
+                timerSpeed = mutableStateOf(1.42f)
             )
     }
 }
