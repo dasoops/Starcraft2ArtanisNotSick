@@ -157,6 +157,7 @@ private fun MapInfoMain(
 
 private val modifier: RowScope.() -> Modifier = {
     Modifier.weight(1f).fillMaxSize().align(Alignment.CenterVertically)
+        .wrapContentHeight(align = Alignment.CenterVertically)
 }
 
 @Composable
@@ -170,14 +171,14 @@ private fun MapInfoTop(
         modifier = Modifier
             .height(90.dp)
     ) {
-        Row(modifier = Modifier
+
+    Row(modifier = Modifier
             .clickable {
                 logger.trace { "map change -> null" }
                 state.clear()
             }
             .then(modifier())
             .padding(16.dp)
-            .wrapContentHeight(align = Alignment.CenterVertically)
         ) {
             Image(
                 painter = painterResource(map!!.image),
