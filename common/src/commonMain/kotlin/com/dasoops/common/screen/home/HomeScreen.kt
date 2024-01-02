@@ -94,7 +94,7 @@ private fun MapSelect() {
                     contentDescription = it.name,
                     contentScale = ContentScale.FillBounds
                 )
-                Text(text = it.name, color = MaterialTheme.colorScheme.primary)
+                Text(text = it.name, maxLines = 2)
             }
         }
     }
@@ -191,7 +191,7 @@ private fun MapInfoTop(
                 contentScale = ContentScale.FillBounds
             )
             Spacer(Modifier.width(8.dp))
-            Text(text = map!!.name)
+            Text(text = map!!.name, maxLines = 2)
         }
         TimeText(modifier = modifier())
         Row(
