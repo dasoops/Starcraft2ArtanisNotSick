@@ -2,6 +2,7 @@ package com.dasoops.common.screen.setting.option
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.MaterialTheme
@@ -24,7 +25,9 @@ fun Appearance() {
 @Composable
 private fun Theme() {
     var theme by setting.theme
-    Row {
+    Row(
+        modifier = Modifier.height(45.dp)
+    ) {
         Description(
             modifier = Modifier,
             title = "Theme",

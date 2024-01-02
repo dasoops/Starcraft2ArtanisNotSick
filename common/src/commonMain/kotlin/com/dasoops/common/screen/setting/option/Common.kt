@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -56,13 +57,41 @@ internal fun Description(modifier: Modifier = Modifier, title: String, subTitle:
 }
 
 @Composable
+internal fun Select(
+    modifier: Modifier = Modifier,
+    text: @Composable () -> Unit,
+    dropdownMenuItemContent: @Composable ColumnScope.(MutableState<Boolean>) -> Unit,
+) {
+    val expandedState = remember { mutableStateOf(false) }
+    var expanded by expandedState
+    TextButton(
+        modifier = modifier,
+        onClick = { expanded = true },
+        border = BorderStroke(0.5.dp, color = MaterialTheme.colorScheme.onBackground),
+        shape = MaterialTheme.shapes.extraSmall,
+    ) {
+        text()
+        DropdownMenu(
+            modifier = Modifier,
+            expanded = expanded,
+            onDismissRequest = {
+                expanded = false
+            },
+            content = { dropdownMenuItemContent(expandedState) }
+        )
+    }
+}
+
+@Composable
 internal fun SwitchOption(
     title: String,
     subTitle: String,
     checked: Boolean,
     onCheckedChange: (Boolean) -> Unit
 ) {
-    Row {
+    Row(
+        modifier = Modifier.height(45.dp)
+    ) {
         Description(
             modifier = Modifier,
             title = title,
@@ -87,7 +116,9 @@ internal fun InputOption(
     value: String,
     onValueChange: (String) -> Unit,
 ) {
-    Row {
+    Row(
+        modifier = Modifier.height(45.dp)
+    ) {
         Description(
             modifier = Modifier,
             title = title,
@@ -100,32 +131,6 @@ internal fun InputOption(
             value = value,
             singleLine = true,
             onValueChange = onValueChange,
-        )
-    }
-}
-
-@Composable
-internal fun Select(
-    modifier: Modifier = Modifier,
-    text: @Composable () -> Unit,
-    dropdownMenuItemContent: @Composable ColumnScope.(MutableState<Boolean>) -> Unit,
-) {
-    val expandedState = remember { mutableStateOf(false) }
-    var expanded by expandedState
-    TextButton(
-        modifier = modifier,
-        onClick = { expanded = true },
-        border = BorderStroke(0.5.dp, color = MaterialTheme.colorScheme.onBackground),
-        shape = MaterialTheme.shapes.extraSmall,
-    ) {
-        text()
-        DropdownMenu(
-            modifier = Modifier,
-            expanded = expanded,
-            onDismissRequest = {
-                expanded = false
-            },
-            content = { dropdownMenuItemContent(expandedState) }
         )
     }
 }

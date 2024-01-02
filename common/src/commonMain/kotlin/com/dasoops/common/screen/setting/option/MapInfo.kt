@@ -1,6 +1,7 @@
 package com.dasoops.common.screen.setting.option
 
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.material3.Switch
 import androidx.compose.runtime.Composable
@@ -54,7 +55,9 @@ private fun AutoScroll() {
 @Composable
 private fun MergeSameLevel() {
     var mergeSameLevel by setting.mergeSameLevel
-    Row {
+    Row(
+        modifier = Modifier.height(45.dp)
+    ) {
         Description(
             modifier = Modifier,
             title = "merge same level",
