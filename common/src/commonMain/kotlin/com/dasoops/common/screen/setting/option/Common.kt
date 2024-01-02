@@ -4,9 +4,11 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.MaterialTheme
@@ -23,6 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.unit.dp
 import com.dasoops.common.LocalState
+import com.dasoops.common.component.PaddingOutlinedTextField
 
 val setting @Composable get() = LocalState.current.setting
 
@@ -74,6 +77,30 @@ internal fun SwitchOption(
                 onCheckedChange = onCheckedChange,
             )
         }
+    }
+}
+
+@Composable
+internal fun InputOption(
+    title: String,
+    subTitle: String,
+    value: String,
+    onValueChange: (String) -> Unit,
+) {
+    Row {
+        Description(
+            modifier = Modifier,
+            title = title,
+            subTitle = subTitle
+        )
+        PaddingOutlinedTextField(
+            modifier = Modifier.size(width = 160.dp, height = 30.dp),
+            textStyle = MaterialTheme.typography.bodySmall,
+            contentPadding = PaddingValues(horizontal = 6.dp),
+            value = value,
+            singleLine = true,
+            onValueChange = onValueChange,
+        )
     }
 }
 
