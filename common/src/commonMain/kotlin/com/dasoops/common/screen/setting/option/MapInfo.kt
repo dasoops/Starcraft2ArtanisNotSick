@@ -1,10 +1,7 @@
 package com.dasoops.common.screen.setting.option
 
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.offset
-import androidx.compose.foundation.layout.size
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Switch
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -12,7 +9,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.unit.dp
-import com.dasoops.common.component.PaddingOutlinedTextField
 import com.dasoops.common.screen.setting.logger
 
 @Composable
@@ -77,22 +73,13 @@ private fun MergeSameLevel() {
 @Composable
 private fun HalfLevelSuffix() {
     var halfLevelSuffix by setting.halfLevelSuffix
-    Row {
-        Description(
-            modifier = Modifier,
-            title = "half level suffix",
-            subTitle = "T1$halfLevelSuffix"
-        )
-        PaddingOutlinedTextField(
-            modifier = Modifier.size(width = 160.dp, height = 30.dp),
-            textStyle = MaterialTheme.typography.bodySmall,
-            contentPadding = PaddingValues(horizontal = 6.dp),
-            value = halfLevelSuffix,
-            singleLine = true,
-            onValueChange = {
-                halfLevelSuffix = it
-                logger.debug { "setting.mergeSameLevel change -> $it" }
-            },
-        )
-    }
+    InputOption(
+        title = "half level suffix",
+        subTitle = "T1$halfLevelSuffix",
+        value = halfLevelSuffix,
+        onValueChange = {
+            halfLevelSuffix = it
+            logger.debug { "setting.mergeSameLevel change -> $it" }
+        },
+    )
 }
