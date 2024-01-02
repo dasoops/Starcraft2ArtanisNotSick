@@ -8,13 +8,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -174,24 +172,25 @@ private fun MapInfoTop(
 
     Row(
         modifier = Modifier
-            .height(90.dp)
+            .height(110.dp)
     ) {
-
-        Row(modifier = Modifier
+        Column(modifier = Modifier
             .clickable {
                 logger.trace { "map change -> null" }
                 state.clear()
             }
             .then(modifier())
-            .padding(16.dp)
+            .padding(horizontal = 16.dp, vertical = 6.dp)
         ) {
             Image(
                 painter = painterResource(map!!.image),
                 contentDescription = map!!.name,
                 contentScale = ContentScale.FillBounds
             )
-            Spacer(Modifier.width(8.dp))
-            Text(text = map!!.name, maxLines = 2)
+            Text(
+                text = map!!.name, textAlign = TextAlign.Center, maxLines = 1,
+                modifier = Modifier.fillMaxWidth()
+            )
         }
         TimeText(modifier = modifier())
         Row(

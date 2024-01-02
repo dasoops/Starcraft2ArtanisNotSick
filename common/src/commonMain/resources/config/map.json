@@ -1,7 +1,7 @@
 [
   {
     "name": "克哈裂痕",
-    "image": "image/map/Fireworks.png",
+    "image": "image/map/Rifts to Korhal.jpg",
     "event": [
       {
         "type": "Monopolize",
@@ -581,85 +581,85 @@
   },
   {
     "name": "湮灭快车",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/Oblivion Express.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "虚空撕裂",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/Void Thrashing.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "虚空降临",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/Void Launch.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "往日神庙",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/Temple of the Past.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "天界封锁",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/Lock & Load.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "升格之链",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/Chain of Ascension.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "熔火危机",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/The Vermillion Problem.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "机会渺茫",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/Mist Opportunities.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "营救矿工",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/Miner Evacuation.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "亡者之夜",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/Dead of Night.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "黑暗杀星",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/Scythe of Amon.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "净网行动",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/Malwarfare.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "聚铁成兵",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/Part and Parcel.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "死亡摇篮",
-    "image": "image/map/Barrier.png",
+    "image": "image/map/Cradle of Death.jpg",
     "event": [],
     "position": []
   }
