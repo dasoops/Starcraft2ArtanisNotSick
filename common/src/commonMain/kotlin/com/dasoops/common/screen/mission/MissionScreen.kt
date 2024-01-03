@@ -1,4 +1,4 @@
-package com.dasoops.common.screen.home
+package com.dasoops.common.screen.mission
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.VerticalScrollbar
@@ -55,7 +55,7 @@ import kotlinx.coroutines.launch
 val logger = KotlinLogging.logger {}
 
 @Composable
-fun HomeScreen() {
+fun MissionScreen() {
     val mission by LocalState.current.missionState.current
     if (mission == null) {
         MissionSelect()

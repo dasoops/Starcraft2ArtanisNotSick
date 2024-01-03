@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.localization.str
-import com.dasoops.common.screen.home.HomeScreen
+import com.dasoops.common.screen.mission.MissionScreen
 import com.dasoops.common.screen.setting.SettingScreen
 import com.dasoops.common.util.Serializer
 import com.dasoops.common.util.StringDataEnum
@@ -23,10 +23,10 @@ enum class Screen(
     val mainScreen: @Composable () -> Unit,
     val icon: ImageVector,
 ) : StringDataEnum {
-    HOME(
-        data = "Home",
+    Mission(
+        data = "Mission",
         icon = Icons.Default.Home,
-        mainScreen = { HomeScreen() }
+        mainScreen = { MissionScreen() }
     ) {
         override val text: String
             @Composable get() = R.str.screen.mission.title
@@ -44,9 +44,8 @@ enum class Screen(
     abstract val text: String @Composable get
 
     companion object {
-        val Default = HOME
+        val Default = Mission
 
         object Serializer : KSerializer<Screen> by StringDataEnum.Serializer<Screen>()
     }
 }
-

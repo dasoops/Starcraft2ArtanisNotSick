@@ -1,4 +1,4 @@
-package com.dasoops.common.screen.home
+package com.dasoops.common.screen.mission
 
 import com.dasoops.common.resources.mission.event.AssaultEvent
 import com.dasoops.common.resources.mission.event.AwardEvent

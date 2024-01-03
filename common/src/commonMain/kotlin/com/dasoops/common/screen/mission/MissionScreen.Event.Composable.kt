@@ -1,4 +1,4 @@
-package com.dasoops.common.screen.home
+package com.dasoops.common.screen.mission
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
