@@ -34,16 +34,6 @@ val EventTime.first: Time
         return trigger.first()
     }
 
-val EventTime.text: String
-    get() = trigger.joinToString(
-        separator = " 或 ",
-        postfix = if (null == this.keep) {
-            ""
-        } else {
-            "持续${this.keep.originSeconds}秒"
-        },
-    ) { it.text }
-
 val EventTime.textFirst: String
     get() = (if (this.trigger.size > 1) "*" else "") + when (this.first) {
         is NormalTime -> (first as NormalTime).text
