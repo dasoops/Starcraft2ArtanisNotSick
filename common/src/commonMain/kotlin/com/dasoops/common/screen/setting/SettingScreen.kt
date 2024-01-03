@@ -29,7 +29,7 @@ fun SettingScreen() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 24.dp, start = 12.dp, end = 24.dp)
+                .padding(top = 24.dp, bottom = 24.dp, start = 12.dp, end = 24.dp)
                 .verticalScroll(scrollState)
         ) {
             TopAppInfo()
