@@ -1,6 +1,7 @@
 package com.dasoops.common.resources.localization
 
 import com.dasoops.common.resources.mission.Mission
+import com.dasoops.common.util.BaseException
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -58,7 +59,8 @@ data class EventText(
     private val award: String,
     private val monopolize: String,
 ) {
-    fun assault(position: String, index: String) = assault.fill(
+    fun assault(position: String, index: String, description: String) = assault.fill(
+        "description" to description,
         "position" to position,
         "index" to index,
     )
@@ -80,8 +82,9 @@ data class MissionInfoText(
     private val event: Map<String, EventInfoText>,
     private val position: Map<String, PositionInfoText>,
 ) {
-    fun event(id: String) = event[id]!!
-    fun position(id: String) = position[id]!!
+    fun event(id: String) = event[id] ?: throw BaseException("undefined event[${id}]")
+    fun position(id: String) = position[id] ?: throw BaseException("undefined position[${id}]")
+
 }
 
 @Serializable

@@ -49,7 +49,7 @@
       "clickToPause": "单击以暂停",
       "clickToContinue": "单击以继续",
       "event": {
-        "assault": "${position} | 进攻波次 ${index}",
+        "assault": "${position} | ${description} ${index}",
         "award": "奖励波次(${description}) ${index}",
         "monopolize": "地图事件波次(${description}) ${index}"
       },
@@ -83,6 +83,39 @@
             },
             "Award$e15f6d60-1ea8-445a-b8db-879f1b34752b": {
               "description": "海盗船"
+            },
+            "Assault$ca0ee731-5849-4314-a301-0d462678e79e": {
+              "description": "进攻波次"
+            },
+            "Assault$707db70f-84f4-47a6-83a3-931f2147c736": {
+              "description": "进攻波次"
+            },
+            "Assault$1aefb891-30e6-499a-8cf9-b8fc3571eabd": {
+              "description": "进攻波次"
+            },
+            "Assault$27d29a3a-1400-4381-b993-aba061c7d861": {
+              "description": "进攻波次"
+            },
+            "Assault$2b17cc44-6131-4f52-9c20-f9e3f8c2b935": {
+              "description": "进攻波次"
+            },
+            "Assault$d3d50049-90e2-447e-8018-3bc86f908dac": {
+              "description": "进攻波次"
+            },
+            "Assault$cc7b040f-d1e4-4410-929d-cc46abaf5220": {
+              "description": "进攻波次"
+            },
+            "Assault$ea603d01-632c-4c1f-8786-88c6fa85a17b": {
+              "description": "进攻波次"
+            },
+            "Assault$1cb2f6b1-fa6a-4c4f-b184-aa79a90bbd6f": {
+              "description": "进攻波次"
+            },
+            "Assault$741e5592-23b9-4888-821c-50f4003b8874": {
+              "description": "进攻波次"
+            },
+            "Assault$8face6a3-b903-472c-86f7-e13d06c6ed55": {
+              "description": "进攻波次"
             }
           },
           "position": {
@@ -129,8 +162,49 @@
         },
         "Oblivion Express": {
           "name": "湮灭快车",
-          "event": {},
-          "position": {}
+          "event": {
+            "车1": {
+              "description": "列车波次"
+            },
+            "车2": {
+              "description": "列车波次"
+            },
+            "车3": {
+              "description": "列车波次"
+            },
+            "车4,5": {
+              "description": "列车波次"
+            },
+            "车6": {
+              "description": "列车波次"
+            },
+            "车7,8": {
+              "description": "列车波次"
+            },
+            "车9": {
+              "description": "列车波次"
+            },
+            "车10": {
+              "description": "列车波次"
+            }
+          },
+          "position": {
+            "红点左": {
+              "description": "红点刷新点 ↖"
+            },
+            "红点右": {
+              "description": "红点刷新点 ↘"
+            },
+            "列车上": {
+              "description": "列车刷新点 ↖"
+            },
+            "列车中": {
+              "description": "列车刷新点 ←"
+            },
+            "奖励": {
+              "description": "奖励车刷新点 ↙"
+            }
+          }
         },
         "Void Thrashing": {
           "name": "虚空撕裂",
