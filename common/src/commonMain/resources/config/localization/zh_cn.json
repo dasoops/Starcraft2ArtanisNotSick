@@ -20,7 +20,7 @@
         }
       },
       "mission": {
-        "title": "任务信息",
+        "title": "地图信息",
         "showHideEvent": {
           "title": "显示隐藏事件",
           "subTitle": "例 克哈虚空裂片(2-10)"
@@ -44,7 +44,7 @@
       }
     },
     "mission": {
-      "title": "Mission",
+      "title": "地图",
       "clickToStart": "单击以开始",
       "clickToPause": "单击以暂停",
       "clickToContinue": "单击以继续",
