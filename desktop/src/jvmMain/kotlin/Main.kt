@@ -8,23 +8,26 @@ import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.WindowState
 import androidx.compose.ui.window.application
 import com.dasoops.common.app
+import com.dasoops.common.appWrap
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.image
 import com.dasoops.common.resources.str
 
 
 fun main() = application {
-    Window(
-        onCloseRequest = ::exitApplication,
-        icon = painterResource(R.image.icon),
-        title = R.str.title,
-        resizable = false,
-        state = WindowState(
-            placement = WindowPlacement.Floating,
-            position = WindowPosition.Aligned(Alignment.Center),
-            size = DpSize(800.dp, 600.dp),
-        )
-    ) {
-        app()
+    appWrap {
+        Window(
+            onCloseRequest = ::exitApplication,
+            icon = painterResource(R.image.icon),
+            title = R.str.title,
+            resizable = false,
+            state = WindowState(
+                placement = WindowPlacement.Floating,
+                position = WindowPosition.Aligned(Alignment.Center),
+                size = DpSize(800.dp, 600.dp),
+            )
+        ) {
+            app()
+        }
     }
 }
