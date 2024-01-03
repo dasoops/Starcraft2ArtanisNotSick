@@ -181,8 +181,8 @@ private fun MissionInfoTop(
                     logger.trace { "mission change -> null" }
                     state.clear()
                 }
-            .then(modifier())
-            .padding(horizontal = 16.dp, vertical = 6.dp)
+                .then(modifier())
+                .padding(horizontal = 16.dp, vertical = 6.dp)
         ) {
             Image(
                 painter = painterResource(mission!!.image),
