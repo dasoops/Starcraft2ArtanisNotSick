@@ -72,23 +72,23 @@ data class MapState(
 }
 
 /* util */
+private val json = Json { prettyPrint = true }
 private val dataFile by lazy { R.data("appState.json") }
 
 fun loadAppState(): AppState {
     val dataString = dataFile.readText()
+    logger.info { "read state dataJson[${dataString}]" }
     return if (dataString.isBlank()) {
         AppState.Default
     } else {
         try {
-            Json.decodeFromString<AppState>(dataString)
+            json.decodeFromString<AppState>(dataString)
         } catch (e: SerializationException) {
             logger.error(e) { "deserialize AppState failed, use default appState" }
             AppState.Default
         }
     }
 }
-
-private val json = Json { prettyPrint = true }
 
 fun saveAppState(appState: AppState) {
     val serializerAppStateString = json.encodeToString(appState)
