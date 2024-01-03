@@ -15,14 +15,14 @@ private val idEventCache by lazy {
 fun position(id: String) = idEventCache[id]!!
 
 /* Position.event */
-private val positionEventCache by lazy {
+private val positionMissionCache by lazy {
     R.missions.flatMap { mission ->
         mission.position.map {
             it to mission
         }
     }.toMap()
 }
-val Position.event get() = positionEventCache[this]!!
+val Position.mission get() = positionMissionCache[this]!!
 
 /* EventPosition.event */
 private val eventPositionEventCache by lazy {
