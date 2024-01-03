@@ -10,7 +10,6 @@ import com.dasoops.common.screen.setting.Setting
 import com.dasoops.common.util.MutableStateSerializer
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.SerializationException
 import kotlinx.serialization.Transient
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encodeToString
@@ -86,7 +85,7 @@ fun loadAppState(): AppState {
     } else {
         try {
             json.decodeFromString<AppState>(dataString)
-        } catch (e: SerializationException) {
+        } catch (e: Exception) {
             logger.error(e) { "deserialize AppState failed, use default appState" }
             AppState.Default
         }
