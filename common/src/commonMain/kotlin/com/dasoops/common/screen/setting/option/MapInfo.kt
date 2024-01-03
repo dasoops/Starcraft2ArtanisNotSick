@@ -93,7 +93,7 @@ private fun TimerSpeed() {
     var timerSpeed by setting.timerSpeed
     InputOption(
         title = "timer speed",
-        subTitle = "change for map timer speed",
+        subTitle = "1 seconds : $timerSpeed seconds for game",
         value = timerSpeed.toString(),
         onValueChange = {
             timerSpeed = it.toFloatOrNull() ?: return@InputOption

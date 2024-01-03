@@ -1,3 +1,6 @@
 package com.dasoops.common.resources
 
-actual fun getCurrentLanguage() = Language.EN_US
+import com.dasoops.common.util.languageAndControy
+import java.util.Locale
+
+actual fun getCurrentLanguage() = Language.getOrDefault(Locale.getDefault().languageAndControy)
