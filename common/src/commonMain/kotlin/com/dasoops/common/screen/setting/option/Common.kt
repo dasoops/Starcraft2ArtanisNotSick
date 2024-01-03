@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
@@ -22,6 +23,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.unit.dp
@@ -79,6 +81,45 @@ internal fun Select(
             },
             content = { dropdownMenuItemContent(expandedState) }
         )
+    }
+}
+
+@Composable
+internal fun <T> SelectOption(
+    title: String,
+    subTitle: String,
+    selectText: String,
+    items: Collection<T>,
+    itemText: (T) -> String,
+    onSelectItem: (T) -> Unit,
+) {
+    Row(
+        modifier = Modifier.height(45.dp)
+    ) {
+        Description(
+            modifier = Modifier,
+            title = title,
+            subTitle = subTitle,
+        )
+        Box(
+            modifier = Modifier,
+            contentAlignment = Alignment.CenterStart
+        ) {
+            Select(
+                text = { Text(text = selectText, style = MaterialTheme.typography.labelMedium) },
+                modifier = Modifier.size(height = 30.dp, width = 160.dp),
+            ) { (_, setExpanded) ->
+                items.forEach {
+                    DropdownMenuItem(
+                        text = { Text(text = itemText(it)) },
+                        onClick = {
+                            onSelectItem(it)
+                            setExpanded(false)
+                        }
+                    )
+                }
+            }
+        }
     }
 }
 
