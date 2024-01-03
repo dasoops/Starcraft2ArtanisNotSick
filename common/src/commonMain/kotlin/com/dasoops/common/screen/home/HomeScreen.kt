@@ -38,14 +38,14 @@ import androidx.compose.ui.unit.em
 import com.dasoops.common.LocalState
 import com.dasoops.common.component.Timer
 import com.dasoops.common.resources.AppState
-import com.dasoops.common.resources.MapState
+import com.dasoops.common.resources.MissionState
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.localization.str
-import com.dasoops.common.resources.map.Map
-import com.dasoops.common.resources.map.event.NormalTime
-import com.dasoops.common.resources.map.event.RangeTime
-import com.dasoops.common.resources.map.event.sortValue
-import com.dasoops.common.resources.map.maps
+import com.dasoops.common.resources.mission.Mission
+import com.dasoops.common.resources.mission.event.NormalTime
+import com.dasoops.common.resources.mission.event.RangeTime
+import com.dasoops.common.resources.mission.event.sortValue
+import com.dasoops.common.resources.mission.missions
 import com.dasoops.common.util.TimeUnit
 import com.dasoops.common.util.UnitTime
 import com.dasoops.common.util.text
@@ -56,19 +56,19 @@ val logger = KotlinLogging.logger {}
 
 @Composable
 fun HomeScreen() {
-    val map by LocalState.current.mapState.current
-    if (map == null) {
-        MapSelect()
+    val mission by LocalState.current.missionState.current
+    if (mission == null) {
+        MissionSelect()
     } else {
-        MapInfo()
+        MissionInfo()
     }
 }
 
 @Composable
-private fun MapSelect() {
-    var map by LocalState.current.mapState.current
-    MapContainer(
-        data = R.maps,
+private fun MissionSelect() {
+    var mission by LocalState.current.missionState.current
+    MissionContainer(
+        data = R.missions,
         columnCount = 3,
         modifier = Modifier.padding(top = 24.dp)
     ) {
@@ -82,8 +82,8 @@ private fun MapSelect() {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.clickable(onClick = {
-                    logger.trace { "map change -> $it" }
-                    map = it
+                    logger.trace { "mission change -> $it" }
+                    mission = it
                 }).padding(10.dp)
                     .weight(1f),
             ) {
@@ -99,31 +99,32 @@ private fun MapSelect() {
 }
 
 @Composable
-private fun MapInfo(
+private fun MissionInfo(
 ) {
     Timer()
     Column(Modifier.fillMaxWidth().padding(16.dp)) {
-        MapInfoTop()
-        MapInfoMain()
+        MissionInfoTop()
+        MissionInfoMain()
     }
 }
 
 @Composable
-private fun MapInfoMain(
+private fun MissionInfoMain(
     appState: AppState = LocalState.current,
-    mapState: MapState = appState.mapState,
+    missionState: MissionState = appState.missionState,
 ) {
     val scope = rememberCoroutineScope()
 
-    val map: Map? by remember { mapState.current }
-    val timer: Int by remember { mapState.timer }
+    val mission: Mission? by remember { missionState.current }
+    val timer: Int by remember { missionState.timer }
     val autoScroll: Boolean by remember { appState.setting.autoScroll }
     val showHide by remember { appState.setting.showHide }
 
     val lazyListState = rememberLazyListState()
-    val eventList = remember(map) {
-        map ?: return@remember emptyList()
-        map!!.event.filter { if (showHide) true else it.show }.sortedBy { it.sortValue }.toList()
+    val eventList = remember(mission) {
+        mission ?: return@remember emptyList()
+        mission!!.event.filter { if (showHide) true else it.show }.sortedBy { it.sortValue }
+            .toList()
     }
 
     Box(Modifier) {
@@ -164,31 +165,32 @@ private val modifier: RowScope.() -> Modifier = {
 }
 
 @Composable
-private fun MapInfoTop(
-    state: MapState = LocalState.current.mapState
+private fun MissionInfoTop(
+    state: MissionState = LocalState.current.missionState
 ) {
-    val map by remember { state.current }
-    if (null == map) return
+    val mission by remember { state.current }
+    if (null == mission) return
 
     Row(
         modifier = Modifier
             .height(110.dp)
     ) {
-        Column(modifier = Modifier
-            .clickable {
-                logger.trace { "map change -> null" }
-                state.clear()
-            }
+        Column(
+            modifier = Modifier
+                .clickable {
+                    logger.trace { "mission change -> null" }
+                    state.clear()
+                }
             .then(modifier())
             .padding(horizontal = 16.dp, vertical = 6.dp)
         ) {
             Image(
-                painter = painterResource(map!!.image),
-                contentDescription = R.str.screen.mission.mission(map!!).name,
+                painter = painterResource(mission!!.image),
+                contentDescription = R.str.screen.mission.mission(mission!!).name,
                 contentScale = ContentScale.FillBounds
             )
             Text(
-                text = R.str.screen.mission.mission(map!!).name,
+                text = R.str.screen.mission.mission(mission!!).name,
                 textAlign = TextAlign.Center,
                 maxLines = 1,
                 modifier = Modifier.fillMaxWidth()
@@ -207,7 +209,7 @@ private fun MapInfoTop(
 
 @Composable
 private fun TimeText(
-    state: MapState = LocalState.current.mapState,
+    state: MissionState = LocalState.current.missionState,
     modifier: Modifier,
 ) {
     var firstStart by rememberSaveable { mutableStateOf(true) }
@@ -237,14 +239,15 @@ private fun TimeText(
                 ),
                 textAlign = TextAlign.Center
             )
-            val nextStatus: String = if (timerStart) {
-                "stop"
+            val tips: String = if (timerStart) {
+                R.str.screen.mission.clickToPause
             } else {
-                if (firstStart) "start" else "continue"
+                if (firstStart) R.str.screen.mission.clickToStart
+                else R.str.screen.mission.clickToContinue
             }
             Text(
                 modifier = Modifier.fillMaxWidth(),
-                text = "click to $nextStatus",
+                text = tips,
                 style = MaterialTheme.typography.titleSmall,
                 textAlign = TextAlign.Center
             )
@@ -253,7 +256,7 @@ private fun TimeText(
 }
 
 @Composable
-private inline fun <T> MapContainer(
+private inline fun <T> MissionContainer(
     data: Collection<T>,
     modifier: Modifier = Modifier,
     columnCount: Int = 3,

@@ -35,16 +35,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.dasoops.common.LocalState
-import com.dasoops.common.resources.MapState
+import com.dasoops.common.resources.MissionState
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.icon
-import com.dasoops.common.resources.map.event.AssaultEvent
-import com.dasoops.common.resources.map.event.AwardEvent
-import com.dasoops.common.resources.map.event.Event
-import com.dasoops.common.resources.map.event.MonopolizeEvent
-import com.dasoops.common.resources.map.event.NormalTime
-import com.dasoops.common.resources.map.event.RangeTime
-import com.dasoops.common.resources.map.event.text
+import com.dasoops.common.resources.mission.event.AssaultEvent
+import com.dasoops.common.resources.mission.event.AwardEvent
+import com.dasoops.common.resources.mission.event.Event
+import com.dasoops.common.resources.mission.event.MonopolizeEvent
+import com.dasoops.common.resources.mission.event.NormalTime
+import com.dasoops.common.resources.mission.event.RangeTime
+import com.dasoops.common.resources.mission.event.text
 
 @Composable
 fun Event.Composable() = EventBox(
@@ -97,7 +97,7 @@ fun EventBox(
     event: Event,
     content: @Composable RowScope.(/* expanded */Boolean) -> Unit,
     expandedContent: @Composable () -> Unit,
-    state: MapState = LocalState.current.mapState,
+    state: MissionState = LocalState.current.missionState,
     timer: Int = state.timer.value,
 ) {
     var expanded by rememberSaveable { mutableStateOf(false) }

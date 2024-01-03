@@ -1,12 +1,12 @@
-package com.dasoops.common.resources.map.event
+package com.dasoops.common.resources.mission.event
 
 import com.dasoops.common.resources.R
-import com.dasoops.common.resources.map.maps
+import com.dasoops.common.resources.mission.missions
 
 /* EventTime.event */
 private val eventTimeCache by lazy {
-    R.maps.flatMap { map ->
-        map.event.map { it.time to it }
+    R.missions.flatMap { mission ->
+        mission.event.map { it.time to it }
     }.filter { null != it.first }.toMap().mapKeys { it.key!! }
 }
 

@@ -3,8 +3,8 @@ package com.dasoops.common.resources
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import com.dasoops.common.logger
-import com.dasoops.common.resources.map.Map
-import com.dasoops.common.resources.map.map
+import com.dasoops.common.resources.mission.Mission
+import com.dasoops.common.resources.mission.mission
 import com.dasoops.common.screen.Screen
 import com.dasoops.common.screen.setting.Setting
 import com.dasoops.common.util.MutableStateSerializer
@@ -24,14 +24,14 @@ class AppState {
     @Serializable(with = MutableStateSerializer::class)
     val screen: MutableState<Screen>
     val setting: Setting
-    val mapState: MapState
+    val missionState: MissionState
 
     constructor(
-        map: MapState = MapState.Default,
+        map: MissionState = MissionState.Default,
         screen: Screen = Screen.Default,
         setting: Setting = Setting.Default,
     ) {
-        this.mapState = map
+        this.missionState = map
         this.screen = mutableStateOf(screen)
         this.setting = setting
     }
@@ -42,9 +42,11 @@ class AppState {
 }
 
 @Serializable
-data class MapState(
+data class MissionState(
     @Serializable(with = MutableStateSerializer::class)
-    val current: MutableState<@Serializable(with = MapSerializer::class) Map?> = mutableStateOf(null),
+    val current: MutableState<@Serializable(with = MissionSerializer::class) Mission?> = mutableStateOf(
+        null
+    ),
     @Serializable(with = MutableStateSerializer::class)
     val showAggressiveDeploymentEvent: MutableState<Boolean?> = mutableStateOf(false),
     @Transient
@@ -61,13 +63,14 @@ data class MapState(
     }
 
     companion object {
-        object MapSerializer : KSerializer<Map> {
-            override val descriptor: SerialDescriptor = Map.serializer().descriptor
-            override fun deserialize(decoder: Decoder) = R.map(decoder.decodeString())
-            override fun serialize(encoder: Encoder, value: Map) = encoder.encodeString(value.name)
+        object MissionSerializer : KSerializer<Mission> {
+            override val descriptor: SerialDescriptor = Mission.serializer().descriptor
+            override fun deserialize(decoder: Decoder) = R.mission(decoder.decodeString())
+            override fun serialize(encoder: Encoder, value: Mission) =
+                encoder.encodeString(value.name)
         }
 
-        val Default: MapState = MapState()
+        val Default: MissionState = MissionState()
     }
 }
 

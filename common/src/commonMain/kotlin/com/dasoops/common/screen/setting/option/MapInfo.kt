@@ -15,7 +15,7 @@ import com.dasoops.common.resources.localization.str
 import com.dasoops.common.screen.setting.logger
 
 @Composable
-fun MapInfo() {
+fun MissionInfo() {
     Title(R.str.screen.setting.mission.title)
     ShowHide()
     AutoScroll()

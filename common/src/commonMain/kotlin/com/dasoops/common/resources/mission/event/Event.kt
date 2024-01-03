@@ -1,7 +1,7 @@
-package com.dasoops.common.resources.map.event
+package com.dasoops.common.resources.mission.event
 
-import com.dasoops.common.resources.map.Target
-import com.dasoops.common.resources.map.position.EventPosition
+import com.dasoops.common.resources.mission.Target
+import com.dasoops.common.resources.mission.position.EventPosition
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -16,7 +16,7 @@ sealed interface Event {
 }
 
 @Serializable
-sealed class AbstractEvent : Event, Comparable<Event> by MapEventComparable {
+sealed class AbstractEvent : Event, Comparable<Event> by MissionEventComparable {
     override fun toString(): String {
         return "${javaClass.simpleName}[id=$id]"
     }

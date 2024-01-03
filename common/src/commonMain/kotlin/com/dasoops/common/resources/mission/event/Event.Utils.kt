@@ -1,13 +1,13 @@
-package com.dasoops.common.resources.map.event
+package com.dasoops.common.resources.mission.event
 
 import com.dasoops.common.resources.R
-import com.dasoops.common.resources.map.Map
-import com.dasoops.common.resources.map.maps
+import com.dasoops.common.resources.mission.Mission
+import com.dasoops.common.resources.mission.missions
 
 /* get event by id */
-private val idEventCache: kotlin.collections.Map<String, Event> by lazy {
-    R.maps.flatMap { map ->
-        map.event.map { it.id to it }
+private val idEventCache: Map<String, Event> by lazy {
+    R.missions.flatMap { mission ->
+        mission.event.map { it.id to it }
     }.toMap()
 }
 
@@ -33,8 +33,8 @@ private fun sortValue(event: Event): Int {
     return 0
 }
 
-private val eventSortValueCache: kotlin.collections.Map<Event, Int> by lazy {
-    R.maps.flatMap { map ->
+private val eventSortValueCache: Map<Event, Int> by lazy {
+    R.missions.flatMap { map ->
         map.event.map {
             it to sortValue(it)
         }
@@ -43,15 +43,15 @@ private val eventSortValueCache: kotlin.collections.Map<Event, Int> by lazy {
 
 val Event.sortValue: Int get() = eventSortValueCache[this]!!
 
-object MapEventComparable : Comparable<Event> {
+object MissionEventComparable : Comparable<Event> {
     override fun compareTo(other: Event) = other.sortValue
 }
 
 /* Event.map */
-val eventMapCache: kotlin.collections.Map<Event, Map> by lazy {
-    R.maps.flatMap { map ->
-        map.event.map { it to map }
+val eventMissionCache: Map<Event, Mission> by lazy {
+    R.missions.flatMap { mission ->
+        mission.event.map { it to mission }
     }.toMap(hashMapOf())
 }
 
-val Event.map: Map get() = eventMapCache[this]!!
+val Event.mission: Mission get() = eventMissionCache[this]!!

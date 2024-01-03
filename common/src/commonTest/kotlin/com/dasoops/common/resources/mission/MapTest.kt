@@ -1,4 +1,4 @@
-package com.dasoops.common.resources.map
+package com.dasoops.common.resources.mission
 
 const val targetDir = "D:/temp/target.json"
 

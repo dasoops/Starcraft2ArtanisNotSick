@@ -15,7 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.dasoops.common.screen.setting.option.Appearance
-import com.dasoops.common.screen.setting.option.MapInfo
+import com.dasoops.common.screen.setting.option.MissionInfo
 import io.github.oshai.kotlinlogging.KotlinLogging
 
 val logger = KotlinLogging.logger {}
@@ -37,7 +37,7 @@ fun SettingScreen() {
             Divider(thickness = 1.dp, modifier = Modifier.padding(vertical = 16.dp))
 
             Appearance()
-            MapInfo()
+            MissionInfo()
         }
         VerticalScrollbar(
             modifier = Modifier

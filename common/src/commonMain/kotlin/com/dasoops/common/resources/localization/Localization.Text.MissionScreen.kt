@@ -10,7 +10,7 @@ data class MissionText(
     val clickToContinue: String,
     private val missions: Map<String, MissionInfoText>,
 ) {
-    fun mission(map: com.dasoops.common.resources.map.Map) = missions[map.name]!!
+    fun mission(mission: com.dasoops.common.resources.mission.Mission) = missions[mission.name]!!
 }
 
 @Serializable

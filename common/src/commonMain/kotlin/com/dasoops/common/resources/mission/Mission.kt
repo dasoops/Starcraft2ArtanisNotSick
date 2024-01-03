@@ -1,17 +1,17 @@
-package com.dasoops.common.resources.map
+package com.dasoops.common.resources.mission
 
-import com.dasoops.common.resources.map.event.Event
-import com.dasoops.common.resources.map.position.Position
+import com.dasoops.common.resources.mission.event.Event
+import com.dasoops.common.resources.mission.position.Position
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Map(
+data class Mission(
     val name: String,
     val image: String,
     val event: Collection<Event>,
     val position: Collection<Position>,
 ) {
     override fun toString(): String {
-        return "Map(name='$name')"
+        return "Mission(name='$name')"
     }
 }

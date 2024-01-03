@@ -1,4 +1,4 @@
-package com.dasoops.common.resources.map.position
+package com.dasoops.common.resources.mission.position
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

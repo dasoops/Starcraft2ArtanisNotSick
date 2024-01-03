@@ -1,7 +1,7 @@
-package com.dasoops.common.resources.map.event
+package com.dasoops.common.resources.mission.event
 
-import com.dasoops.common.resources.map.position.Position
-import com.dasoops.common.resources.map.position.position
+import com.dasoops.common.resources.mission.position.Position
+import com.dasoops.common.resources.mission.position.position
 import com.dasoops.common.util.TimeUnit
 import com.dasoops.common.util.UnitTime
 import kotlinx.serialization.SerialName

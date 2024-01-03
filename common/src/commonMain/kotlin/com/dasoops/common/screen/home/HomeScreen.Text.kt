@@ -1,19 +1,19 @@
 package com.dasoops.common.screen.home
 
-import com.dasoops.common.resources.map.event.AssaultEvent
-import com.dasoops.common.resources.map.event.AwardEvent
-import com.dasoops.common.resources.map.event.Event
-import com.dasoops.common.resources.map.event.EventOffsetTime
-import com.dasoops.common.resources.map.event.EventTime
-import com.dasoops.common.resources.map.event.MonopolizeEvent
-import com.dasoops.common.resources.map.event.NormalTime
-import com.dasoops.common.resources.map.event.RangeTime
-import com.dasoops.common.resources.map.event.Time
-import com.dasoops.common.resources.map.event.TriggerPositionTime
-import com.dasoops.common.resources.map.position.EventPosition
-import com.dasoops.common.resources.map.position.MultiplePosition
-import com.dasoops.common.resources.map.position.Position
-import com.dasoops.common.resources.map.position.SinglePosition
+import com.dasoops.common.resources.mission.event.AssaultEvent
+import com.dasoops.common.resources.mission.event.AwardEvent
+import com.dasoops.common.resources.mission.event.Event
+import com.dasoops.common.resources.mission.event.EventOffsetTime
+import com.dasoops.common.resources.mission.event.EventTime
+import com.dasoops.common.resources.mission.event.MonopolizeEvent
+import com.dasoops.common.resources.mission.event.NormalTime
+import com.dasoops.common.resources.mission.event.RangeTime
+import com.dasoops.common.resources.mission.event.Time
+import com.dasoops.common.resources.mission.event.TriggerPositionTime
+import com.dasoops.common.resources.mission.position.EventPosition
+import com.dasoops.common.resources.mission.position.MultiplePosition
+import com.dasoops.common.resources.mission.position.Position
+import com.dasoops.common.resources.mission.position.SinglePosition
 import com.dasoops.common.util.text
 
 /* position */

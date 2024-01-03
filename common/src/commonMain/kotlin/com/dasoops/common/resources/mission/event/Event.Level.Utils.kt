@@ -1,4 +1,4 @@
-package com.dasoops.common.resources.map.event
+package com.dasoops.common.resources.mission.event
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
