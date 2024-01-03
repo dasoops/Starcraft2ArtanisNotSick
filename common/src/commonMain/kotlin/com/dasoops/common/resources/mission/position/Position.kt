@@ -38,6 +38,25 @@ data class MultiplePosition(
     }
 }
 
+@SerialName(RandomPosition.SERIAL_NAME)
+@Serializable
+data class RandomPosition(
+    val position: List<WeightPosition>,
+) : AbstractEventPosition() {
+
+    @Serializable
+    data class WeightPosition(
+        val weight: Float,
+        private val id: String,
+    ) {
+        val position get() = position(this.id)
+    }
+
+    companion object Key {
+        const val SERIAL_NAME: String = "Random"
+    }
+}
+
 /* Position */
 @Serializable
 sealed interface Position {

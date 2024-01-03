@@ -16,15 +16,27 @@ import com.dasoops.common.resources.mission.event.TriggerPositionTime
 import com.dasoops.common.resources.mission.event.description
 import com.dasoops.common.resources.mission.position.EventPosition
 import com.dasoops.common.resources.mission.position.MultiplePosition
+import com.dasoops.common.resources.mission.position.RandomPosition
 import com.dasoops.common.resources.mission.position.SinglePosition
 import com.dasoops.common.resources.mission.position.description
+import com.dasoops.common.util.fillOutOfLength
 import com.dasoops.common.util.text
 
 /* position */
 val EventPosition.text
     @Composable get() = when (this) {
         is SinglePosition -> this.position.description
-        is MultiplePosition -> this.position.map { it.description }.joinToString { it }
+        is MultiplePosition ->
+            this.position
+                .map { it.description }
+                .joinToString { it }
+                .fillOutOfLength(maxLength = 12)
+
+        is RandomPosition ->
+            this.position
+                .map { it.position.description }
+                .joinToString(separator = " | ") { it }
+                .fillOutOfLength(maxLength = 12)
     }
 
 /* Time */
@@ -78,6 +90,7 @@ val Time.text: String
 val Event.text: String
     @Composable get() = (if (!show) "*" else "") + when (this) {
         is AssaultEvent -> R.str.screen.mission.event.assault(
+            description = this.description,
             position = this.position.text,
             index = (this.index + 1).toString(),
         )
