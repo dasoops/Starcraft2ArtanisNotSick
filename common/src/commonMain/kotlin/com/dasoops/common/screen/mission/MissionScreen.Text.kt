@@ -27,16 +27,16 @@ val EventPosition.text
     @Composable get() = when (this) {
         is SinglePosition -> this.position.description
         is MultiplePosition ->
-            this.position
+            "*" + this.position
                 .map { it.description }
                 .joinToString { it }
-                .fillOutOfLength(maxLength = 12)
+                .fillOutOfLength(maxLength = 7)
 
         is RandomPosition ->
-            this.position
+            "*" + this.position
                 .map { it.position.description }
                 .joinToString(separator = " | ") { it }
-                .fillOutOfLength(maxLength = 12)
+                .fillOutOfLength(maxLength = 7)
     }
 
 /* Time */
