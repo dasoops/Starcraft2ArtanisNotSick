@@ -3,12 +3,17 @@ package com.dasoops.common.screen.setting
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import com.dasoops.common.component.theme.Theme
+import com.dasoops.common.resources.Language
+import com.dasoops.common.resources.R
+import com.dasoops.common.resources.currentSystemLanguage
 import com.dasoops.common.util.MutableStateSerializer
 import kotlinx.serialization.Serializable
 
 
 @Serializable
 class Setting(
+    @Serializable(with = MutableStateSerializer::class)
+    val language: MutableState<Language>,
     @Serializable(with = MutableStateSerializer::class)
     val autoScroll: MutableState<Boolean>,
     @Serializable(with = MutableStateSerializer::class)
@@ -26,6 +31,7 @@ class Setting(
     companion object {
         val Default
             get() = Setting(
+                language = mutableStateOf(R.currentSystemLanguage),
                 autoScroll = mutableStateOf(true),
                 showHide = mutableStateOf(false),
                 theme = mutableStateOf(Theme.Default),

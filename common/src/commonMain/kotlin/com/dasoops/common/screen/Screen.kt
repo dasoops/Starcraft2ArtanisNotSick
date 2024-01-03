@@ -22,19 +22,26 @@ enum class Screen(
     override val data: String,
     val mainScreen: @Composable () -> Unit,
     val icon: ImageVector,
-    val text: String,
 ) : StringDataEnum {
     HOME(
         data = "Home",
         icon = Icons.Default.Home,
-        text = R.str.home,
-        mainScreen = { HomeScreen() }),
+        mainScreen = { HomeScreen() }
+    ) {
+        override val text: String
+            @Composable get() = R.str.home
+    },
     SETTING(
         data = "Setting",
         icon = Icons.Default.Settings,
-        text = R.str.setting,
-        mainScreen = { SettingScreen() }),
+        mainScreen = { SettingScreen() }
+    ) {
+        override val text: String
+            @Composable get() = R.str.setting
+    },
     ;
+
+    abstract val text: String @Composable get
 
     companion object {
         val Default = HOME

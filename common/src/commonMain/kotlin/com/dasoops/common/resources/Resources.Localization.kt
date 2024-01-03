@@ -1,5 +1,8 @@
 package com.dasoops.common.resources
 
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import com.dasoops.common.LocalState
 import com.dasoops.common.util.DataEnum
 import com.dasoops.common.util.Serializer
 import com.dasoops.common.util.StringDataEnum
@@ -7,7 +10,7 @@ import com.dasoops.common.util.valueMap
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
 
-val currentLanguage: Language by lazy { getCurrentLanguage() }
+val R.currentSystemLanguage: Language by lazy { getCurrentLanguage() }
 expect fun getCurrentLanguage(): Language
 
 @Serializable(with = Language.Serializer::class)
@@ -40,8 +43,14 @@ abstract class Localization(
     val simpleTitle: String by delegate
 }
 
-val Resources.str: Localization by lazy {
-    val localizationMap =
-        R.resourceConfig<Map<String, String>>("localization/${currentLanguage.data}.json")
-    object : Localization(currentLanguage, localizationMap) {}
-}
+lateinit var localization: Localization
+val Resources.str: Localization
+    @Composable get() {
+        val language by LocalState.current.setting.language
+        if (!::localization.isInitialized) {
+            val localizationMap: Map<String, String> =
+                R.resourceConfig("localization/${language.value}.json")
+            localization = object : Localization(currentSystemLanguage, localizationMap) {}
+        }
+        return localization
+    }
