@@ -13,7 +13,6 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import com.dasoops.common.component.SideBar
 import com.dasoops.common.component.theme.MyTheme
 import com.dasoops.common.resources.AppState
-import com.dasoops.common.resources.getPlatformName
 import com.dasoops.common.resources.loadAppState
 import com.dasoops.common.resources.saveAppState
 import io.github.oshai.kotlinlogging.KotlinLogging

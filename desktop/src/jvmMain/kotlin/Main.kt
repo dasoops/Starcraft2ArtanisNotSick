@@ -11,7 +11,7 @@ import com.dasoops.common.app
 import com.dasoops.common.appWrap
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.image
-import com.dasoops.common.resources.str
+import com.dasoops.common.resources.localization.str
 
 
 fun main() = application {

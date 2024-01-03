@@ -10,11 +10,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.unit.dp
+import com.dasoops.common.resources.R
+import com.dasoops.common.resources.localization.str
 import com.dasoops.common.screen.setting.logger
 
 @Composable
 fun MapInfo() {
-    Title("MapInfo")
+    Title(R.str.screen.setting.mission.title)
     ShowHide()
     AutoScroll()
     MergeSameLevel()
@@ -27,8 +29,8 @@ private fun ShowHide() {
     var showHide by setting.showHide
 
     SwitchOption(
-        title = "Show hide event",
-        subTitle = "Example for SeaRover",
+        title = R.str.screen.setting.mission.showHideEvent.title,
+        subTitle = R.str.screen.setting.mission.showHideEvent.subTitle,
         checked = showHide,
         onCheckedChange = {
             logger.debug { "setting.showHide change -> $it" }
@@ -42,8 +44,8 @@ private fun AutoScroll() {
     var autoScroll by setting.autoScroll
 
     SwitchOption(
-        title = "Auto scroll event list",
-        subTitle = "",
+        title = R.str.screen.setting.mission.autoScrollEventList.title,
+        subTitle = R.str.screen.setting.mission.autoScrollEventList.subTitle,
         checked = autoScroll,
         onCheckedChange = {
             logger.debug { "setting.autoScroll change -> $it" }
@@ -60,8 +62,10 @@ private fun MergeSameLevel() {
     ) {
         Description(
             modifier = Modifier,
-            title = "merge same level",
-            subTitle = if (mergeSameLevel) "T1" else "T1 / T1"
+            title = R.str.screen.setting.mission.mergeSameLevel.title,
+            subTitle = R.str.screen.setting.mission.mergeSameLevel.subTitle(
+                example = if (mergeSameLevel) "T1" else "T1 / T1"
+            )
         )
         Switch(
             modifier = Modifier.scale(0.7f).offset(x = (-12).dp),
@@ -78,8 +82,10 @@ private fun MergeSameLevel() {
 private fun HalfLevelSuffix() {
     var halfLevelSuffix by setting.halfLevelSuffix
     InputOption(
-        title = "half level suffix",
-        subTitle = "T1$halfLevelSuffix",
+        title = R.str.screen.setting.mission.halfLevelSuffix.title,
+        subTitle = R.str.screen.setting.mission.halfLevelSuffix.subTitle(
+            example = "T1$halfLevelSuffix"
+        ),
         value = halfLevelSuffix,
         onValueChange = {
             halfLevelSuffix = it
@@ -92,8 +98,10 @@ private fun HalfLevelSuffix() {
 private fun TimerSpeed() {
     var timerSpeed by setting.timerSpeed
     InputOption(
-        title = "timer speed",
-        subTitle = "1 seconds : $timerSpeed seconds for game",
+        title = R.str.screen.setting.mission.timerSpeed.title,
+        subTitle = R.str.screen.setting.mission.timerSpeed.subTitle(
+            timerSpeed = timerSpeed.toString()
+        ),
         value = timerSpeed.toString(),
         onValueChange = {
             timerSpeed = it.toFloatOrNull() ?: return@InputOption

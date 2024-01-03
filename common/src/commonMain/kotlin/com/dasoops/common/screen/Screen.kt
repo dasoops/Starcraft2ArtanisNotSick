@@ -6,7 +6,7 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.dasoops.common.resources.R
-import com.dasoops.common.resources.str
+import com.dasoops.common.resources.localization.str
 import com.dasoops.common.screen.home.HomeScreen
 import com.dasoops.common.screen.setting.SettingScreen
 import com.dasoops.common.util.Serializer
@@ -29,7 +29,7 @@ enum class Screen(
         mainScreen = { HomeScreen() }
     ) {
         override val text: String
-            @Composable get() = R.str.home
+            @Composable get() = R.str.screen.mission.title
     },
     SETTING(
         data = "Setting",
@@ -37,7 +37,7 @@ enum class Screen(
         mainScreen = { SettingScreen() }
     ) {
         override val text: String
-            @Composable get() = R.str.setting
+            @Composable get() = R.str.screen.setting.title
     },
     ;
 

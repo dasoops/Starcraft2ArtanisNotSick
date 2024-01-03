@@ -3,9 +3,9 @@ package com.dasoops.common.screen.setting
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import com.dasoops.common.component.theme.Theme
-import com.dasoops.common.resources.Language
 import com.dasoops.common.resources.R
-import com.dasoops.common.resources.currentSystemLanguage
+import com.dasoops.common.resources.localization.Language
+import com.dasoops.common.resources.localization.currentSystemLanguage
 import com.dasoops.common.util.MutableStateSerializer
 import kotlinx.serialization.Serializable
 

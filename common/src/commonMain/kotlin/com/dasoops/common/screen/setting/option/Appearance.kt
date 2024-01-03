@@ -4,12 +4,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import com.dasoops.common.component.theme.Theme
-import com.dasoops.common.resources.Language
+import com.dasoops.common.resources.R
+import com.dasoops.common.resources.localization.Language
+import com.dasoops.common.resources.localization.str
 import com.dasoops.common.screen.setting.logger
 
 @Composable
 fun Appearance() {
-    Title("Appearance")
+    Title(R.str.screen.setting.appearance.title)
     Language()
     Theme()
 }
@@ -18,8 +20,8 @@ fun Appearance() {
 private fun Language() {
     var language by setting.language
     SelectOption(
-        title = "Language",
-        subTitle = "select app language",
+        title = R.str.screen.setting.appearance.language.title,
+        subTitle = R.str.screen.setting.appearance.language.subTitle,
         selectText = language.show,
         items = Language.values().toList(),
         itemText = { it.show },
@@ -34,8 +36,8 @@ private fun Language() {
 private fun Theme() {
     var theme by setting.theme
     SelectOption(
-        title = "Theme",
-        subTitle = "Select app color scheme",
+        title = R.str.screen.setting.appearance.theme.subTitle,
+        subTitle = R.str.screen.setting.appearance.theme.subTitle,
         selectText = theme.data,
         items = Theme.values().toList(),
         itemText = { it.data },

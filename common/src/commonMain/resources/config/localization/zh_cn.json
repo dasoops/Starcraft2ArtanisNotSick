@@ -1,7 +1,100 @@
 {
-  "home": "Home",
-  "back": "Back",
-  "setting": "Setting",
   "title": "Starcraft2ArtanisNotSick",
-  "simpleTitle": "Sc2.Ans"
+  "simpleTitle": "Sc2.Ans",
+  "screen": {
+    "setting": {
+      "title": "设置",
+      "github": {
+        "name": "Github",
+        "sourceCode": "Source code"
+      },
+      "appearance": {
+        "title": "通用",
+        "language": {
+          "title": "语言",
+          "subTitle": "选择APP显示语言"
+        },
+        "theme": {
+          "title": "主题",
+          "subTitle": "选择App配色方案"
+        }
+      },
+      "mission": {
+        "title": "任务信息",
+        "showHideEvent": {
+          "title": "显示隐藏事件",
+          "subTitle": "例 克哈虚空裂片(2-10)"
+        },
+        "autoScrollEventList": {
+          "title": "自动滚动事件",
+          "subTitle": "开启后将在事件触发后自动滚动至当前事件"
+        },
+        "mergeSameLevel": {
+          "title": "合并相同的科技与规模等级",
+          "subTitle": "${example}"
+        },
+        "halfLevelSuffix": {
+          "title": "规模减半波次显示后缀",
+          "subTitle": "${example}"
+        },
+        "timerSpeed": {
+          "title": "地图计时器速度",
+          "subTitle": "1秒 对应游戏内 ${timerSpeed} 秒"
+        }
+      }
+    },
+    "mission": {
+      "title": "Mission",
+      "clickToStart": "单击以开始",
+      "clickToPause": "单击以暂停",
+      "clickToContinue": "单击以继续",
+      "missions": {
+        "Rifts to Korhal": {
+          "name": "克哈裂痕"
+        },
+        "Oblivion Express": {
+          "name": "湮灭快车"
+        },
+        "Void Thrashing": {
+          "name": "虚空撕裂"
+        },
+        "Void Launch": {
+          "name": "虚空降临"
+        },
+        "Temple of the Past": {
+          "name": "往日神庙"
+        },
+        "Lock & Load": {
+          "name": "天界封锁"
+        },
+        "Chain of Ascension": {
+          "name": "升格之链"
+        },
+        "The Vermillion Problem": {
+          "name": "熔火危机"
+        },
+        "Mist Opportunities": {
+          "name": "机会渺茫"
+        },
+        "Miner Evacuation": {
+          "name": "营救矿工"
+        },
+        "Dead of Night": {
+          "name": "亡者之夜"
+        },
+        "Scythe of Amon": {
+          "name": "黑暗杀星"
+        },
+        "Malwarfare": {
+          "name": "净网行动"
+        },
+        "Part and Parcel": {
+          "name": "聚铁成兵"
+        },
+        "Cradle of Death": {
+          "name": "死亡摇篮"
+        }
+      }
+    }
+  }
 }

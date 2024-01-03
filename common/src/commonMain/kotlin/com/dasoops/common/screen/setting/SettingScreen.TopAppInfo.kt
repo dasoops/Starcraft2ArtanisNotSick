@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.image
-import com.dasoops.common.resources.str
+import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.version
 import com.dasoops.common.util.hoverChangeCursor
 
@@ -73,11 +73,11 @@ private fun githubRepository() {
             verticalArrangement = Arrangement.Center,
         ) {
             Text(
-                text = "Github",
+                text = R.str.screen.setting.github.name,
                 style = MaterialTheme.typography.bodyLarge,
             )
             Text(
-                text = "Source code",
+                text = R.str.screen.setting.github.sourceCode,
                 style = MaterialTheme.typography.bodySmall,
                 textAlign = TextAlign.Left
             )

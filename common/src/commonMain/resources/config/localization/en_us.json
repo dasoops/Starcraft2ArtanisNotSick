@@ -1,7 +1,100 @@
 {
-  "home": "Home",
-  "back": "Back",
-  "setting": "Setting",
   "title": "Starcraft2ArtanisNotSick",
-  "simpleTitle": "Sc2.Ans"
+  "simpleTitle": "Sc2.Ans",
+  "screen": {
+    "setting": {
+      "title": "Setting",
+      "github": {
+        "name": "Github",
+        "sourceCode": "Source code"
+      },
+      "appearance": {
+        "title": "Apperance",
+        "language": {
+          "title": "Language",
+          "subTitle": "Select app language"
+        },
+        "theme": {
+          "title": "Theme",
+          "subTitle": "Select app color scheme"
+        }
+      },
+      "mission": {
+        "title": "Mission",
+        "showHideEvent": {
+          "title": "Show hide Event",
+          "subTitle": "Example for Void Shards(2 - 10)"
+        },
+        "autoScrollEventList": {
+          "title": "Auto scroll",
+          "subTitle": "Scroll to current event"
+        },
+        "mergeSameLevel": {
+          "title": "Merge same level",
+          "subTitle": "${example}"
+        },
+        "halfLevelSuffix": {
+          "title": "Event half level suffix",
+          "subTitle": "${example}"
+        },
+        "timerSpeed": {
+          "title": "Timer Speed",
+          "subTitle": "1 seconds : ${timerSpeed} for game"
+        }
+      }
+    },
+    "mission": {
+      "title": "Mission",
+      "clickToStart": "Click to Start",
+      "clickToPause": "Click to Pause",
+      "clickToContinue": "Click to Continue",
+      "missions": {
+        "Rifts to Korhal": {
+          "name": "Rifts to Korhal"
+        },
+        "Oblivion Express": {
+          "name": "Oblivion Express"
+        },
+        "Void Thrashing": {
+          "name": "Void Thrashing"
+        },
+        "Void Launch": {
+          "name": "Void Launch"
+        },
+        "Temple of the Past": {
+          "name": "Temple of the Past"
+        },
+        "Lock & Load": {
+          "name": "Lock & Load"
+        },
+        "Chain of Ascension": {
+          "name": "Chain of Ascension"
+        },
+        "The Vermillion Problem": {
+          "name": "The Vermillion Problem"
+        },
+        "Mist Opportunities": {
+          "name": "Mist Opportunities"
+        },
+        "Miner Evacuation": {
+          "name": "Miner Evacuation"
+        },
+        "Dead of Night": {
+          "name": "Dead of Night"
+        },
+        "Scythe of Amon": {
+          "name": "Scythe of Amon"
+        },
+        "Malwarfare": {
+          "name": "Malwarfare"
+        },
+        "Part and Parcel": {
+          "name": "Part and Parcel"
+        },
+        "Cradle of Death": {
+          "name": "Cradle of Death"
+        }
+      }
+    }
+  }
 }

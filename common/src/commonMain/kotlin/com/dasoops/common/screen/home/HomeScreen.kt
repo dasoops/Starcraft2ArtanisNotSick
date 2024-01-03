@@ -40,12 +40,12 @@ import com.dasoops.common.component.Timer
 import com.dasoops.common.resources.AppState
 import com.dasoops.common.resources.MapState
 import com.dasoops.common.resources.R
+import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.map.Map
 import com.dasoops.common.resources.map.event.NormalTime
 import com.dasoops.common.resources.map.event.RangeTime
 import com.dasoops.common.resources.map.event.sortValue
 import com.dasoops.common.resources.map.maps
-import com.dasoops.common.resources.str
 import com.dasoops.common.util.TimeUnit
 import com.dasoops.common.util.UnitTime
 import com.dasoops.common.util.text
@@ -72,7 +72,7 @@ private fun MapSelect() {
         columnCount = 3,
         modifier = Modifier.padding(top = 24.dp)
     ) {
-        if (null === it) {
+        if (null == it) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.padding(10.dp).weight(1f),
@@ -89,10 +89,10 @@ private fun MapSelect() {
             ) {
                 Image(
                     painter = painterResource(it.image),
-                    contentDescription = it.name,
+                    contentDescription = R.str.screen.mission.mission(it).name,
                     contentScale = ContentScale.FillBounds
                 )
-                Text(text = it.name, maxLines = 2)
+                Text(text = R.str.screen.mission.mission(it).name, maxLines = 1)
             }
         }
     }
@@ -184,11 +184,13 @@ private fun MapInfoTop(
         ) {
             Image(
                 painter = painterResource(map!!.image),
-                contentDescription = map!!.name,
+                contentDescription = R.str.screen.mission.mission(map!!).name,
                 contentScale = ContentScale.FillBounds
             )
             Text(
-                text = map!!.name, textAlign = TextAlign.Center, maxLines = 1,
+                text = R.str.screen.mission.mission(map!!).name,
+                textAlign = TextAlign.Center,
+                maxLines = 1,
                 modifier = Modifier.fillMaxWidth()
             )
         }
@@ -198,7 +200,7 @@ private fun MapInfoTop(
                 .clickable { }
                 .then(modifier())
         ) {
-            Text(text = R.str.setting)
+            Text(text = "placeHolder")
         }
     }
 }
