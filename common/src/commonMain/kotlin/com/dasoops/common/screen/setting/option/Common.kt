@@ -69,6 +69,7 @@ internal fun Select(
     TextButton(
         modifier = modifier,
         onClick = { expanded = true },
+        contentPadding = PaddingValues(0.dp),
         border = BorderStroke(0.5.dp, color = MaterialTheme.colorScheme.onBackground),
         shape = MaterialTheme.shapes.extraSmall,
     ) {
@@ -106,7 +107,7 @@ internal fun <T> SelectOption(
             contentAlignment = Alignment.CenterStart
         ) {
             Select(
-                text = { Text(text = selectText, style = MaterialTheme.typography.labelMedium) },
+                text = { Text(text = selectText, style = MaterialTheme.typography.bodySmall) },
                 modifier = Modifier.size(height = 30.dp, width = 160.dp),
             ) { (_, setExpanded) ->
                 items.forEach {
