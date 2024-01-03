@@ -1,6 +1,8 @@
 package com.dasoops.common.resources.mission.event
 
+import androidx.compose.runtime.Composable
 import com.dasoops.common.resources.R
+import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.mission.Mission
 import com.dasoops.common.resources.mission.missions
 
@@ -55,3 +57,7 @@ val eventMissionCache: Map<Event, Mission> by lazy {
 }
 
 val Event.mission: Mission get() = eventMissionCache[this]!!
+
+/* Event.description */
+val Event.description
+    @Composable get() = R.str.screen.mission.mission(this.mission).event(this.id).description

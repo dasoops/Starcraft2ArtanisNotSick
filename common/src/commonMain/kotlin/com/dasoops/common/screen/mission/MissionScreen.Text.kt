@@ -1,5 +1,8 @@
 package com.dasoops.common.screen.mission
 
+import androidx.compose.runtime.Composable
+import com.dasoops.common.resources.R
+import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.mission.event.AssaultEvent
 import com.dasoops.common.resources.mission.event.AwardEvent
 import com.dasoops.common.resources.mission.event.Event
@@ -10,20 +13,18 @@ import com.dasoops.common.resources.mission.event.NormalTime
 import com.dasoops.common.resources.mission.event.RangeTime
 import com.dasoops.common.resources.mission.event.Time
 import com.dasoops.common.resources.mission.event.TriggerPositionTime
+import com.dasoops.common.resources.mission.event.description
 import com.dasoops.common.resources.mission.position.EventPosition
 import com.dasoops.common.resources.mission.position.MultiplePosition
-import com.dasoops.common.resources.mission.position.Position
 import com.dasoops.common.resources.mission.position.SinglePosition
+import com.dasoops.common.resources.mission.position.description
 import com.dasoops.common.util.text
 
 /* position */
-val Position.text: String
-    get() = this.description
-
 val EventPosition.text
-    get() = when (this) {
-        is SinglePosition -> this.position.text
-        is MultiplePosition -> this.position.joinToString { it.text }
+    @Composable get() = when (this) {
+        is SinglePosition -> this.position.description
+        is MultiplePosition -> this.position.map { it.description }.joinToString { it }
     }
 
 /* Time */
@@ -35,7 +36,7 @@ val EventTime.first: Time
     }
 
 val EventTime.textFirst: String
-    get() = (if (this.trigger.size > 1) "*" else "") + when (this.first) {
+    @Composable get() = (if (this.trigger.size > 1) "*" else "") + when (this.first) {
         is NormalTime -> (first as NormalTime).text
         is RangeTime -> (first as RangeTime).text
         else -> first.text
@@ -43,28 +44,51 @@ val EventTime.textFirst: String
 
 
 val Time.text: String
-    get() = when (this) {
-        is NormalTime -> this.text
+    @Composable get() = when (this) {
+        is NormalTime -> R.str.screen.mission.time.normal(
+            text = this.text
+        )
 
-        is RangeTime -> "${begin.text} -> ${end.text}"
+        is RangeTime -> R.str.screen.mission.time.range(
+            begin = begin.text,
+            end = end.text,
+        )
 
-        is EventOffsetTime -> event.run {
+        is EventOffsetTime -> run {
             if (null == offset) {
-                "随事件[${text}]触发"
+                R.str.screen.mission.time.eventOffset.noOffset(
+                    event = this.event.text
+                )
             } else {
-                "[${text}]事件结束${offset.originSeconds}秒后触发"
+                R.str.screen.mission.time.eventOffset.offset(
+                    event = this.event.text,
+                    offsetSeconds = this.offset.originSeconds.toString()
+                )
             }
         }
 
         is TriggerPositionTime -> {
-            "玩家进入${this.position.description}点位后触发"
+            R.str.screen.mission.time.triggerPosition(
+                position = this.position.description
+            )
         }
     }
 
 /* Event */
 val Event.text: String
-    get() = (if (!show) "*" else "") + when (this) {
-        is AssaultEvent -> "${position.text} | 进攻波次 ${index + 1}"
-        is AwardEvent -> "奖励波次($description) ${index + 1}"
-        is MonopolizeEvent -> "地图事件波次($description) ${index + 1}"
+    @Composable get() = (if (!show) "*" else "") + when (this) {
+        is AssaultEvent -> R.str.screen.mission.event.assault(
+            position = this.position.text,
+            index = (this.index + 1).toString(),
+        )
+
+        is AwardEvent -> R.str.screen.mission.event.award(
+            description = this.description,
+            index = (this.index + 1).toString(),
+        )
+
+        is MonopolizeEvent -> R.str.screen.mission.event.monopolize(
+            description = this.description,
+            index = (this.index + 1).toString(),
+        )
     }

@@ -1,6 +1,8 @@
 package com.dasoops.common.resources.mission.position
 
+import androidx.compose.runtime.Composable
 import com.dasoops.common.resources.R
+import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.mission.missions
 
 /* get by id */
@@ -33,3 +35,7 @@ private val eventPositionEventCache by lazy {
     }.toMap()
 }
 val EventPosition.event get() = eventPositionEventCache[this]!!
+
+/* Position.description */
+val Position.description
+    @Composable get() = R.str.screen.mission.mission(this.mission).position(this.id).description

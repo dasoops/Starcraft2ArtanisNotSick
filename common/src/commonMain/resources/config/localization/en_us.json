@@ -48,51 +48,154 @@
       "clickToStart": "Click to Start",
       "clickToPause": "Click to Pause",
       "clickToContinue": "Click to Continue",
+      "event": {
+        "assault": "${position} | Assault [${index}]",
+        "award": "Award(${description}) [${index}]",
+        "monopolize": "Mission event(${description}) [${index}]"
+      },
+      "time": {
+        "normal": "${text}",
+        "range": "${begin} -> ${end}",
+        "eventOffset": {
+          "offset": "after [${event}] end ${offsetSeconds} seconds",
+          "noOffset": "after [${event}]"
+        },
+        "triggerPosition": "Gamer close to ${position}"
+      },
       "missions": {
         "Rifts to Korhal": {
-          "name": "Rifts to Korhal"
+          "name": "Rifts to Korhal",
+          "event": {
+            "Monopolize$f90c4224-ba70-4596-86cb-1bfdf0b422c5": {
+              "description": "Void Shard"
+            },
+            "Monopolize$07af3141-856c-47af-b58e-2c8b49251d85": {
+              "description": "Void Shard"
+            },
+            "Monopolize$b7c8399b-ee7e-4ee2-941e-e9eb014ffa3c": {
+              "description": "Void Shard"
+            },
+            "Monopolize$f860f16c-1d29-48c6-9559-54733a35a5a7": {
+              "description": "Void Shard"
+            },
+            "Award$af8ecb76-711f-4829-9fce-4c60faea94e0": {
+              "description": "Pirate Ship"
+            },
+            "Award$e15f6d60-1ea8-445a-b8db-879f1b34752b": {
+              "description": "Pirate Ship"
+            }
+          },
+          "position": {
+            "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f": {
+              "description": "Assault spawn point ↗"
+            },
+            "Point$0088b218-6d9d-4d79-8057-e6d21cec5cd0": {
+              "description": "Pirate Ship spawn point-1"
+            },
+            "Point$011accdf-3108-4cd5-8957-39bf7e3e3d01": {
+              "description": "Pirate Ship spawn point-2"
+            },
+            "Point$df817065-341a-4f5b-80a4-8331a06fed22": {
+              "description": "Void Shard spawn point-1"
+            },
+            "Point$61db8c7b-7a0a-4a70-9a67-963594791cb7": {
+              "description": "Void Shard spawn point-2"
+            },
+            "Point$0ababef9-ad00-461b-827d-e7e1d2ae3d2b": {
+              "description": "Void Shard spawn point-3"
+            },
+            "Point$45a300b8-dfb7-443d-a22e-a216cb29e31e": {
+              "description": "Void Shard spawn point-4"
+            },
+            "Point$9acd623b-99b1-41db-bbde-4e289993a819": {
+              "description": "Void Shard spawn point-5"
+            },
+            "Point$5082ccb1-9606-454d-823e-f7372c9c13d2": {
+              "description": "Void Shard spawn point-6"
+            },
+            "Point$5eb92f9f-69c9-4564-a5be-98a83ac575b3": {
+              "description": "Void Shard spawn point-7"
+            },
+            "Point$a8a2221b-872a-4843-bba1-e6f0646268c7": {
+              "description": "Void Shard spawn point-8"
+            },
+            "Point$856cc3c7-fd74-4259-b389-ced1bf5c847f": {
+              "description": "Void Shard spawn point-9"
+            },
+            "Point$89d7dd0c-9c77-40c8-a5c0-74c125ced216": {
+              "description": "Void Shard spawn point-10"
+            }
+          }
         },
         "Oblivion Express": {
-          "name": "Oblivion Express"
+          "name": "Oblivion Express",
+          "event": {},
+          "position": {}
         },
         "Void Thrashing": {
-          "name": "Void Thrashing"
+          "name": "Void Thrashing",
+          "event": {},
+          "position": {}
         },
         "Void Launch": {
-          "name": "Void Launch"
+          "name": "Void Launch",
+          "event": {},
+          "position": {}
         },
         "Temple of the Past": {
-          "name": "Temple of the Past"
+          "name": "Temple of the Past",
+          "event": {},
+          "position": {}
         },
         "Lock & Load": {
-          "name": "Lock & Load"
+          "name": "Lock & Load",
+          "event": {},
+          "position": {}
         },
         "Chain of Ascension": {
-          "name": "Chain of Ascension"
+          "name": "Chain of Ascension",
+          "event": {},
+          "position": {}
         },
         "The Vermillion Problem": {
-          "name": "The Vermillion Problem"
+          "name": "The Vermillion Problem",
+          "event": {},
+          "position": {}
         },
         "Mist Opportunities": {
-          "name": "Mist Opportunities"
+          "name": "Mist Opportunities",
+          "event": {},
+          "position": {}
         },
         "Miner Evacuation": {
-          "name": "Miner Evacuation"
+          "name": "Miner Evacuation",
+          "event": {},
+          "position": {}
         },
         "Dead of Night": {
-          "name": "Dead of Night"
+          "name": "Dead of Night",
+          "event": {},
+          "position": {}
         },
         "Scythe of Amon": {
-          "name": "Scythe of Amon"
+          "name": "Scythe of Amon",
+          "event": {},
+          "position": {}
         },
         "Malwarfare": {
-          "name": "Malwarfare"
+          "name": "Malwarfare",
+          "event": {},
+          "position": {}
         },
         "Part and Parcel": {
-          "name": "Part and Parcel"
+          "name": "Part and Parcel",
+          "event": {},
+          "position": {}
         },
         "Cradle of Death": {
-          "name": "Cradle of Death"
+          "name": "Cradle of Death",
+          "event": {},
+          "position": {}
         }
       }
     }

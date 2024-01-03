@@ -48,51 +48,154 @@
       "clickToStart": "单击以开始",
       "clickToPause": "单击以暂停",
       "clickToContinue": "单击以继续",
+      "event": {
+        "assault": "${position} | 进攻波次 ${index}",
+        "award": "奖励波次(${description}) ${index}",
+        "monopolize": "地图事件波次(${description}) ${index}"
+      },
+      "time": {
+        "normal": "${text}",
+        "range": "${begin} -> ${end}",
+        "eventOffset": {
+          "offset": "[${event}]事件结束${offsetSeconds}秒后触发",
+          "noOffset": "随事件[${event}]触发"
+        },
+        "triggerPosition": "玩家进入${position}点位后触发"
+      },
       "missions": {
         "Rifts to Korhal": {
-          "name": "克哈裂痕"
+          "name": "克哈裂痕",
+          "event": {
+            "Monopolize$f90c4224-ba70-4596-86cb-1bfdf0b422c5": {
+              "description": "虚空碎片"
+            },
+            "Monopolize$07af3141-856c-47af-b58e-2c8b49251d85": {
+              "description": "虚空碎片"
+            },
+            "Monopolize$b7c8399b-ee7e-4ee2-941e-e9eb014ffa3c": {
+              "description": "虚空碎片"
+            },
+            "Monopolize$f860f16c-1d29-48c6-9559-54733a35a5a7": {
+              "description": "虚空碎片"
+            },
+            "Award$af8ecb76-711f-4829-9fce-4c60faea94e0": {
+              "description": "海盗船"
+            },
+            "Award$e15f6d60-1ea8-445a-b8db-879f1b34752b": {
+              "description": "海盗船"
+            }
+          },
+          "position": {
+            "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f": {
+              "description": "红点刷新点 ↗"
+            },
+            "Point$0088b218-6d9d-4d79-8057-e6d21cec5cd0": {
+              "description": "海盗船刷新点-1"
+            },
+            "Point$011accdf-3108-4cd5-8957-39bf7e3e3d01": {
+              "description": "海盗船刷新点-2"
+            },
+            "Point$df817065-341a-4f5b-80a4-8331a06fed22": {
+              "description": "虚空碎片刷新点-1"
+            },
+            "Point$61db8c7b-7a0a-4a70-9a67-963594791cb7": {
+              "description": "虚空碎片刷新点-2"
+            },
+            "Point$0ababef9-ad00-461b-827d-e7e1d2ae3d2b": {
+              "description": "虚空碎片刷新点-3"
+            },
+            "Point$45a300b8-dfb7-443d-a22e-a216cb29e31e": {
+              "description": "虚空碎片刷新点-4"
+            },
+            "Point$9acd623b-99b1-41db-bbde-4e289993a819": {
+              "description": "虚空碎片刷新点-5"
+            },
+            "Point$5082ccb1-9606-454d-823e-f7372c9c13d2": {
+              "description": "虚空碎片刷新点-6"
+            },
+            "Point$5eb92f9f-69c9-4564-a5be-98a83ac575b3": {
+              "description": "虚空碎片刷新点-7"
+            },
+            "Point$a8a2221b-872a-4843-bba1-e6f0646268c7": {
+              "description": "虚空碎片刷新点-8"
+            },
+            "Point$856cc3c7-fd74-4259-b389-ced1bf5c847f": {
+              "description": "虚空碎片刷新点-9"
+            },
+            "Point$89d7dd0c-9c77-40c8-a5c0-74c125ced216": {
+              "description": "虚空碎片刷新点-10"
+            }
+          }
         },
         "Oblivion Express": {
-          "name": "湮灭快车"
+          "name": "湮灭快车",
+          "event": {},
+          "position": {}
         },
         "Void Thrashing": {
-          "name": "虚空撕裂"
+          "name": "虚空撕裂",
+          "event": {},
+          "position": {}
         },
         "Void Launch": {
-          "name": "虚空降临"
+          "name": "虚空降临",
+          "event": {},
+          "position": {}
         },
         "Temple of the Past": {
-          "name": "往日神庙"
+          "name": "往日神庙",
+          "event": {},
+          "position": {}
         },
         "Lock & Load": {
-          "name": "天界封锁"
+          "name": "天界封锁",
+          "event": {},
+          "position": {}
         },
         "Chain of Ascension": {
-          "name": "升格之链"
+          "name": "升格之链",
+          "event": {},
+          "position": {}
         },
         "The Vermillion Problem": {
-          "name": "熔火危机"
+          "name": "熔火危机",
+          "event": {},
+          "position": {}
         },
         "Mist Opportunities": {
-          "name": "机会渺茫"
+          "name": "机会渺茫",
+          "event": {},
+          "position": {}
         },
         "Miner Evacuation": {
-          "name": "营救矿工"
+          "name": "营救矿工",
+          "event": {},
+          "position": {}
         },
         "Dead of Night": {
-          "name": "亡者之夜"
+          "name": "亡者之夜",
+          "event": {},
+          "position": {}
         },
         "Scythe of Amon": {
-          "name": "黑暗杀星"
+          "name": "黑暗杀星",
+          "event": {},
+          "position": {}
         },
         "Malwarfare": {
-          "name": "净网行动"
+          "name": "净网行动",
+          "event": {},
+          "position": {}
         },
         "Part and Parcel": {
-          "name": "聚铁成兵"
+          "name": "聚铁成兵",
+          "event": {},
+          "position": {}
         },
         "Cradle of Death": {
-          "name": "死亡摇篮"
+          "name": "死亡摇篮",
+          "event": {},
+          "position": {}
         }
       }
     }

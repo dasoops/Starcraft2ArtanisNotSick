@@ -42,7 +42,6 @@ data class MultiplePosition(
 @Serializable
 sealed interface Position {
     val id: String
-    val description: String
 }
 
 @Serializable
@@ -56,7 +55,6 @@ sealed class AbstractPosition : Position {
 @Serializable
 data class PointPosition(
     override val id: String,
-    override val description: String,
 ) : AbstractPosition() {
     companion object Key {
         const val SERIAL_NAME: String = "Point"
@@ -67,7 +65,6 @@ data class PointPosition(
 @Serializable
 data class RangePosition(
     override val id: String,
-    override val description: String,
 ) : AbstractPosition() {
     companion object Key {
         const val SERIAL_NAME: String = "Range"

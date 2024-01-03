@@ -30,8 +30,6 @@ class MonopolizeEvent(
     override val time: EventTime?,
     override val index: Int,
     override val position: EventPosition,
-
-    val description: String,
 ) : AbstractEvent()
 
 @SerialName("Award")
@@ -43,7 +41,6 @@ class AwardEvent(
     override val index: Int,
     override val position: EventPosition,
 
-    val description: String,
     val target: Target? = null
 ) : AbstractEvent()
 
