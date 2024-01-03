@@ -46,6 +46,7 @@ abstract class Localization(
 }
 
 lateinit var localization: Localization
+
 val Resources.str: Localization
     @Composable get() {
         val appState = LocalState.current
@@ -53,7 +54,7 @@ val Resources.str: Localization
         if (!::localization.isInitialized || localization.language != language) {
             val localizationMap: Map<String, String> =
                 R.resourceConfig("localization/${language.value}.json")
-            localization = object : Localization(currentSystemLanguage, localizationMap) {}
+            localization = object : Localization(language, localizationMap) {}
         }
         return localization
     }
