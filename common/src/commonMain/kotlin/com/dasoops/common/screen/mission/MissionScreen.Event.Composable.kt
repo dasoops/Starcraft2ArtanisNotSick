@@ -110,10 +110,8 @@ fun EventBox(
         } else {
             Modifier.background(
                 Brush.horizontalGradient(
-                    0f to load,
                     it to load,
                     it to unLoad,
-                    1f to unLoad,
                 )
             )
         }
