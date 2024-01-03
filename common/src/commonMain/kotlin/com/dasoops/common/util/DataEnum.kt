@@ -39,3 +39,6 @@ inline fun <reified T : DataEnum<Int>> IntDataEnum.Companion.Serializer(): KSeri
 @Suppress("FunctionName")
 inline fun <reified T : DataEnum<String>> StringDataEnum.Companion.Serializer(): KSerializer<T> =
     DataEnum.Serializer(String.serializer())
+
+inline fun <reified V, reified T> DataEnum.Companion.valueMap(): Map<V, T> where T : Enum<T>, T : DataEnum<V> =
+    enumValues<T>().associateBy { it.data }
