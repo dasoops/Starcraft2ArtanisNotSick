@@ -2,6 +2,7 @@ package com.dasoops.common.resources
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import com.dasoops.common.LocalState
 import com.dasoops.common.util.DataEnum
 import com.dasoops.common.util.Serializer
@@ -47,7 +48,8 @@ abstract class Localization(
 lateinit var localization: Localization
 val Resources.str: Localization
     @Composable get() {
-        val language by LocalState.current.setting.language
+        val appState = LocalState.current
+        val language by remember { appState.setting.language }
         if (localization.language != language || !::localization.isInitialized) {
             val localizationMap: Map<String, String> =
                 R.resourceConfig("localization/${language.value}.json")
