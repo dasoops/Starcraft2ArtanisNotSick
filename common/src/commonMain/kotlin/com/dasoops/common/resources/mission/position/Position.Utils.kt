@@ -4,9 +4,10 @@ import androidx.compose.runtime.Composable
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.mission.missions
+import com.dasoops.common.util.BaseException
 
 /* get by id */
-private val idEventCache by lazy {
+private val idPositionCache by lazy {
     R.missions.flatMap { mission ->
         mission.position.map {
             it.id to it
@@ -14,7 +15,7 @@ private val idEventCache by lazy {
     }.toMap()
 }
 
-fun position(id: String) = idEventCache[id]!!
+fun position(id: String) = idPositionCache[id] ?: throw BaseException("undefined position[${id}]")
 
 /* Position.event */
 private val positionMissionCache by lazy {
