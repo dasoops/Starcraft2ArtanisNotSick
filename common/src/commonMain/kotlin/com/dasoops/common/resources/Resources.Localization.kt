@@ -15,10 +15,11 @@ expect fun getCurrentLanguage(): Language
 
 @Serializable(with = Language.Serializer::class)
 enum class Language(
-    val value: String
+    val value: String,
+    val show: String,
 ) : StringDataEnum {
-    ZH_CN("zh_cn"),
-    EN_US("en_us"),
+    ZH_CN("zh_cn", "简体中文"),
+    EN_US("en_us", "English"),
     ;
 
     override val data: String = value
