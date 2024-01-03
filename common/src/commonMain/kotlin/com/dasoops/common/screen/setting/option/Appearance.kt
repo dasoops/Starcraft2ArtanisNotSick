@@ -24,7 +24,7 @@ private fun Language() {
         items = Language.values().toList(),
         itemText = { it.show },
         onSelectItem = {
-            logger.debug { "setting.theme change -> $it" }
+            logger.debug { "setting.language change -> $it" }
             language = it
         }
     )
