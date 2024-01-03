@@ -1,5 +1,5 @@
 package com.dasoops.common.resources
 
-expect fun getPlatformName(): String
+import com.dasoops.common.getPlatformName
 
 val R.platform by lazy { getPlatformName() }
