@@ -1,6 +1,6 @@
 [
   {
-    "name": "克哈裂痕",
+    "name": "Rifts to Korhal",
     "image": "image/map/Rifts to Korhal.jpg",
     "event": [
       {
@@ -580,85 +580,85 @@
     ]
   },
   {
-    "name": "湮灭快车",
+    "name": "Oblivion Express",
     "image": "image/map/Oblivion Express.jpg",
     "event": [],
     "position": []
   },
   {
-    "name": "虚空撕裂",
+    "name": "Void Thrashing",
     "image": "image/map/Void Thrashing.jpg",
     "event": [],
     "position": []
   },
   {
-    "name": "虚空降临",
+    "name": "Void Launch",
     "image": "image/map/Void Launch.jpg",
     "event": [],
     "position": []
   },
   {
-    "name": "往日神庙",
+    "name": "Temple of the Past",
     "image": "image/map/Temple of the Past.jpg",
     "event": [],
     "position": []
   },
   {
-    "name": "天界封锁",
+    "name": "Lock & Load",
     "image": "image/map/Lock & Load.jpg",
     "event": [],
     "position": []
   },
   {
-    "name": "升格之链",
+    "name": "Chain of Ascension",
     "image": "image/map/Chain of Ascension.jpg",
     "event": [],
     "position": []
   },
   {
-    "name": "熔火危机",
+    "name": "The Vermillion Problem",
     "image": "image/map/The Vermillion Problem.jpg",
     "event": [],
     "position": []
   },
   {
-    "name": "机会渺茫",
+    "name": "Mist Opportunities",
     "image": "image/map/Mist Opportunities.jpg",
     "event": [],
     "position": []
   },
   {
-    "name": "营救矿工",
+    "name": "Miner Evacuation",
     "image": "image/map/Miner Evacuation.jpg",
     "event": [],
     "position": []
   },
   {
-    "name": "亡者之夜",
+    "name": "Dead of Night",
     "image": "image/map/Dead of Night.jpg",
     "event": [],
     "position": []
   },
   {
-    "name": "黑暗杀星",
+    "name": "Scythe of Amon",
     "image": "image/map/Scythe of Amon.jpg",
     "event": [],
     "position": []
   },
   {
-    "name": "净网行动",
+    "name": "Malwarfare",
     "image": "image/map/Malwarfare.jpg",
     "event": [],
     "position": []
   },
   {
-    "name": "聚铁成兵",
+    "name": "Part and Parcel",
     "image": "image/map/Part and Parcel.jpg",
     "event": [],
     "position": []
   },
   {
-    "name": "死亡摇篮",
+    "name": "Cradle of Death",
     "image": "image/map/Cradle of Death.jpg",
     "event": [],
     "position": []
