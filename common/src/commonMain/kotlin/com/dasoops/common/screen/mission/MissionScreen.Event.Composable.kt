@@ -49,9 +49,9 @@ import com.dasoops.common.resources.mission.event.text
 @Composable
 fun Event.Composable() = EventBox(
     event = this,
-    content = {
+    content = { expanded ->
         Icon(
-            painter = painterResource(if (it) R.icon.keyboardArrowDown else R.icon.keyboardArrowRight),
+            painter = painterResource(if (expanded) R.icon.keyboardArrowDown else R.icon.keyboardArrowRight),
             contentDescription = null,
             tint = MaterialTheme.colorScheme.primary,
             modifier = Modifier.width(40.dp),
@@ -59,13 +59,14 @@ fun Event.Composable() = EventBox(
         Row(
             modifier = Modifier.weight(1.0f)
         ) {
-            Text(
-                text = time?.textFirst ?: " - ",
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(0.5f),
-            )
-
+            if (!expanded) {
+                Text(
+                    text = time?.textFirst ?: " - ",
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(0.5f),
+                )
+            }
             Spacer(Modifier.width(20.dp))
 
             Text(
@@ -74,21 +75,39 @@ fun Event.Composable() = EventBox(
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.weight(1f),
             )
-        }
-        Box(modifier = Modifier.width(110.dp)) {
-            if (this@Composable is AssaultEvent) {
-                Text(
-                    text = level.text,
-                    modifier = Modifier.width(110.dp),
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    textAlign = TextAlign.Right
-                )
+
+            Box(modifier = Modifier.width(110.dp)) {
+                if (!expanded && this@Composable is AssaultEvent) {
+                    Text(
+                        text = level.text,
+                        modifier = Modifier.width(110.dp),
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        textAlign = TextAlign.Right
+                    )
+                }
             }
         }
     },
     expandedContent = {
-        Text(text = this.id)
+
+        if (this is AssaultEvent) {
+            Column { Text(text = this@Composable.id)
+                Text(
+                    text = time?.textFirst ?: " - ",
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                Text(
+                    text = level.text,
+                    modifier = Modifier.width(110.dp),
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                    textAlign = TextAlign.Start
+                )
+            }
+
+        }
     }
 )
 
