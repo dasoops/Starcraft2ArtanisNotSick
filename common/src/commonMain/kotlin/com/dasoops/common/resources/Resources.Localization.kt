@@ -50,7 +50,7 @@ val Resources.str: Localization
     @Composable get() {
         val appState = LocalState.current
         val language by remember { appState.setting.language }
-        if (localization.language != language || !::localization.isInitialized) {
+        if (!::localization.isInitialized || localization.language != language) {
             val localizationMap: Map<String, String> =
                 R.resourceConfig("localization/${language.value}.json")
             localization = object : Localization(currentSystemLanguage, localizationMap) {}
