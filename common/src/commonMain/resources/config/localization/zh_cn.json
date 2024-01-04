@@ -48,6 +48,10 @@
       "clickToStart": "单击以开始",
       "clickToPause": "单击以暂停",
       "clickToContinue": "单击以继续",
+      "chooseAi": "选择Ai",
+      "showAggressiveDeploymentEvent": "进攻部署",
+      "hideEvent": "隐藏事件",
+      "autoScroll": "自动滚动",
       "event": {
         "assault": "${description} ${index}",
         "award": "奖励波次(${description}) ${index}",

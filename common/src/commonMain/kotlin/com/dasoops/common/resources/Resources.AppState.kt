@@ -46,19 +46,25 @@ data class MissionState(
     val current: MutableState<@Serializable(with = MissionSerializer::class) Mission?> = mutableStateOf(
         null
     ),
-    @Serializable(with = MutableStateSerializer::class)
-    val showAggressiveDeploymentEvent: MutableState<Boolean?> = mutableStateOf(false),
     @Transient
     val timer: MutableState<Int> = mutableStateOf(0),
+    @Serializable(with = MutableStateSerializer::class)
+    val showAggressiveDeploymentEvent: MutableState<Boolean> = mutableStateOf(false),
     @Transient
     val timerStart: MutableState<Boolean> = mutableStateOf(false),
+    @Transient
+    val autoScroll: MutableState<Boolean> = mutableStateOf(false),
+    @Transient
+    val showHide: MutableState<Boolean> = mutableStateOf(false),
 ) {
 
-    fun clear() {
+    fun clear(setting: Setting) {
         current.value = null
-        showAggressiveDeploymentEvent.value = false
         timer.value = 0
         timerStart.value = false
+        showAggressiveDeploymentEvent.value = false
+        autoScroll.value = setting.autoScroll.value
+        showHide.value = setting.showHide.value
     }
 
     companion object {

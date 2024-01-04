@@ -48,6 +48,10 @@
       "clickToStart": "Click to Start",
       "clickToPause": "Click to Pause",
       "clickToContinue": "Click to Continue",
+      "chooseAi": "Choose Ai",
+      "showAggressiveDeploymentEvent": "Aggressive Deployment",
+      "hideEvent": "Hide event",
+      "autoScroll": "Auto scroll",
       "event": {
         "assault": "${position} | ${description} [${index}]",
         "award": "Award(${description}) [${index}]",

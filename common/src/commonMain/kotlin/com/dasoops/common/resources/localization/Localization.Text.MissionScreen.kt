@@ -9,12 +9,17 @@ data class MissionText(
     val title: String,
     val clickToStart: String,
     val clickToPause: String,
+    val chooseAi: String,
+    val showAggressiveDeploymentEvent: String,
+    val hideEvent: String,
+    val autoScroll: String,
     val clickToContinue: String,
     val time: TimeText,
     val level: LevelText,
     val event: EventText,
     private val missions: Map<String, MissionInfoText>,
 ) {
+
     fun mission(mission: Mission) = missions[mission.name]!!
 }
 
