@@ -1,0 +1,1223 @@
+[
+  {
+    "id": "Masters and Machines",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Zealot"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Zealot",
+          "Stalker"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Zealot",
+          "Stalker",
+          "High Templar"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Immortal",
+          "Stalker",
+          "High Templar"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Zealot",
+          "Stalker",
+          "High Templar",
+          "Archon"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Zealot",
+          "Stalker",
+          "Colossus",
+          "Archon"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Zealot",
+          "Stalker",
+          "Colossus",
+          "High Templar",
+          "Immortal"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Towering Walkers",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Zealot"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Zealot",
+          "Sentry"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Immortal",
+          "Sentry"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Immortal",
+          "Zealot",
+          "Scout"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Sentry",
+          "Zealot",
+          "Scout",
+          "Colossus"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Zealot",
+          "Scout",
+          "Colossus"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Zealot",
+          "Sentry",
+          "Colossus",
+          "Immortal"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Disruptive Artillery",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Adept"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Adept",
+          "Sentry"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Adept",
+          "Immortal"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Adept",
+          "Immortal",
+          "Scout"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Adept",
+          "Sentry",
+          "Disruptor",
+          "Reaver"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Adept",
+          "Scout",
+          "Disruptor",
+          "Reaver"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Sentry",
+          "Immortal",
+          "Disruptor",
+          "Reaver"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Hope of the Khalai",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Zealot"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Zealot",
+          "Scout"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Stalker",
+          "Scout"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Zealot",
+          "Scout",
+          "Oracle"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Zealot",
+          "Void Ray"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Zealot",
+          "Oracle",
+          "Carrier"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Zealot",
+          "Oracle",
+          "Carrier",
+          "Void Ray"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Siege of Storms",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Adept"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Adept",
+          "Phoenix"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Adept",
+          "Phoenix"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Stalker",
+          "Phoenix",
+          "Oracle"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Adept",
+          "Void Ray"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Adept",
+          "Oracle",
+          "Tempest"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Adept",
+          "Oracle",
+          "Tempest",
+          "Void Ray"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Shadow Disruption",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Adept"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Adept",
+          "Stalker"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Adept",
+          "Stalker",
+          "Sentry"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Adept",
+          "Stalker",
+          "Sentry",
+          "Dark Templar"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Adept",
+          "Phoenix",
+          "Sentry",
+          "Dark Templar"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Adept",
+          "Stalker",
+          "Sentry",
+          "Dark Templar",
+          "Disruptor"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Adept",
+          "Phoenix",
+          "Sentry",
+          "Dark Templar",
+          "Disruptor"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Vanguard of Aiur",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Zealot"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Zealot",
+          "Dragoon"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Zealot",
+          "Dragoon",
+          "High Templar"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Dragoon",
+          "Reaver"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Zealot",
+          "High Templar",
+          "Archon",
+          "Reaver"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Zealot",
+          "Dragoon",
+          "High Templar",
+          "Arbiter"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Zealot",
+          "Dragoon",
+          "High Templar",
+          "Archon",
+          "Reaver",
+          "Arbiter"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Fleet of the Matriarch",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Zealot"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Zealot",
+          "Scout"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Zealot",
+          "Scout",
+          "Corsair"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Scout",
+          "Corsair"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Scout",
+          "Carrier"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Scout",
+          "Carrier",
+          "Arbiter"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Scout",
+          "Corsair",
+          "Carrier",
+          "Arbiter"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Raiding Party",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Marine",
+          "Medic"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Marine",
+          "Medic",
+          "Marauder"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Medic",
+          "Marauder",
+          "Firebat"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Marine",
+          "Ghost",
+          "Medivac",
+          "Siege Tank"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Marine",
+          "Marauder",
+          "Medivac",
+          "Siege Tank"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Marine",
+          "Marauder",
+          "Ghost",
+          "Siege Tank",
+          "Science Vessel"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Marine",
+          "Battlecruiser",
+          "Ghost",
+          "Siege Tank",
+          "Science Vessel"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Machines of War",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Hellion"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Goliath",
+          "Hellion",
+          "Warhound",
+          "Hellion"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Goliath",
+          "Siege Tank",
+          "Hellbat",
+          "Warhound",
+          "Siege Tank",
+          "Hellbat"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Goliath",
+          "Siege Tank",
+          "Hellbat",
+          "Widow Mine",
+          "Warhound",
+          "Siege Tank",
+          "Hellbat",
+          "Widow Mine"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Goliath",
+          "Siege Tank",
+          "Science Vessel",
+          "Widow Mine",
+          "Warhound",
+          "Siege Tank",
+          "Science Vessel",
+          "Widow Mine"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Goliath",
+          "Thor",
+          "Science Vessel",
+          "Widow Mine",
+          "Warhound",
+          "Thor",
+          "Science Vessel",
+          "Widow Mine"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Siege Tank",
+          "Thor",
+          "Science Vessel"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Shadow Tech",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Reaper"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Reaper",
+          "Marauder"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Reaper",
+          "Marauder",
+          "Liberator"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Reaper",
+          "Marauder",
+          "Liberator",
+          "Reaper",
+          "Marauder",
+          "Cyclone"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Raven",
+          "Marauder",
+          "Liberator",
+          "Cyclone"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Raven",
+          "Marauder",
+          "Battlecruiser",
+          "Cyclone"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Raven",
+          "Marauder",
+          "Battlecruiser",
+          "Cyclone",
+          "Liberator"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Dominion Battlegroup",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Viking"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Viking",
+          "Banshee"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Viking",
+          "Marine",
+          "Banshee",
+          "Marine"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Viking",
+          "Banshee",
+          "Marine",
+          "Viking",
+          "Liberator",
+          "Marine"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Viking",
+          "Banshee",
+          "Raven",
+          "Liberator"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Banshee",
+          "Raven",
+          "Liberator",
+          "Battlecruiser",
+          "Marine",
+          "Viking",
+          "Raven",
+          "Liberator",
+          "Battlecruiser",
+          "Marine"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Viking",
+          "Banshee",
+          "Raven",
+          "Battlecruiser",
+          "Viking",
+          "Liberator",
+          "Raven",
+          "Battlecruiser"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Classic Infantry",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Marine"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Marine",
+          "Medic"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Marine",
+          "Medic",
+          "Firebat"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Marine",
+          "Medic",
+          "Siege Tank"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Marine",
+          "Medic",
+          "Siege Tank",
+          "Ghost"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Marine",
+          "Medic",
+          "Firebat",
+          "Siege Tank",
+          "Science Vessel"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Marine",
+          "Medic",
+          "Siege Tank",
+          "Ghost",
+          "Science Vessel"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Classic Mech",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Vulture"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Vulture",
+          "Goliath"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Vulture",
+          "Goliath",
+          "Wraith"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Vulture",
+          "Goliath",
+          "Wraith",
+          "Siege Tank"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Vulture",
+          "Goliath",
+          "Siege Tank",
+          "Battlecruiser"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Goliath",
+          "Battlecruiser",
+          "Science Vessel"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Goliath",
+          "Siege Tank",
+          "Battlecruiser",
+          "Science Vessel"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Ravaging Infestation",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Roach"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Roach",
+          "Zergling"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Roach",
+          "Hydralisk"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Roach",
+          "Hydralisk",
+          "Ravager",
+          "lurker"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Roach",
+          "Hydralisk",
+          "Infestor",
+          "lurker"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Roach",
+          "Hydralisk",
+          "Infestor",
+          "Ravager",
+          "Ultralisk"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Roach",
+          "Hydralisk",
+          "Infestor",
+          "Ravager",
+          "Ultralisk"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Broodling Corruption",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Zergling"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Zergling",
+          "Mutalisk"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Zergling",
+          "Mutalisk",
+          "Baneling"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Zergling",
+          "Mutalisk",
+          "Infestor"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Zergling",
+          "Mutalisk",
+          "Infestor",
+          "Corruptor"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Zergling",
+          "Mutalisk",
+          "Infestor",
+          "Brood Lord"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Corruptor",
+          "Mutalisk",
+          "Infestor",
+          "Brood Lord"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Explosive Threats",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Zergling"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Zergling",
+          "Baneling"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Zergling",
+          "Aberration",
+          "Scourge",
+          "Viper",
+          "Mutalisk"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Zergling",
+          "Aberration",
+          "Scourge",
+          "Swarm Host",
+          "Mutalisk"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Zergling",
+          "Aberration",
+          "Scourge",
+          "Viper",
+          "Mutalisk",
+          "Baneling"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Zergling",
+          "Swarm Host",
+          "Scourge",
+          "Viper",
+          "Mutalisk",
+          "Baneling"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Aberration",
+          "Swarm Host",
+          "Scourge",
+          "Viper",
+          "Mutalisk",
+          "Baneling"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Invasionary Swarm",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Zergling"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Zergling",
+          "Hydralisk"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Zergling",
+          "Hydralisk",
+          "Lurker"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Hydralisk",
+          "Lurker"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Hydralisk",
+          "Lurker",
+          "Brood Queen"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Zergling",
+          "Hydralisk",
+          "Ultralisk"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Zergling",
+          "Hydralisk",
+          "Lurker",
+          "Ultralisk",
+          "Brood Queen"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Devouring Scourge",
+    "race": "Protoss",
+    "troops": [
+      {
+        "level": "1",
+        "units": [
+          "Zergling"
+        ]
+      },
+      {
+        "level": "2",
+        "units": [
+          "Zergling",
+          "Mutalisk"
+        ]
+      },
+      {
+        "level": "3",
+        "units": [
+          "Zergling",
+          "Mutalisk",
+          "Scourge",
+          "Brood Queen"
+        ]
+      },
+      {
+        "level": "4",
+        "units": [
+          "Zergling",
+          "Mutalisk",
+          "Scourge",
+          "Guardian"
+        ]
+      },
+      {
+        "level": "5",
+        "units": [
+          "Mutalisk",
+          "Guardian",
+          "Devourer"
+        ]
+      },
+      {
+        "level": "6",
+        "units": [
+          "Mutalisk",
+          "Guardian",
+          "Devourer",
+          "Brood Queen"
+        ]
+      },
+      {
+        "level": "7",
+        "units": [
+          "Guardian",
+          "Devourer",
+          "Scourge",
+          "Brood Queen"
+        ]
+      }
+    ]
+  }
+]
