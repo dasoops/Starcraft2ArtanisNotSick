@@ -16,9 +16,9 @@ val Level.text: String
 val EventLevel.text: String
     @Composable get() = run {
         val mergeSameLevel by LocalState.current.setting.mergeSameLevel
-        if (mergeSameLevel && this.upgrade == this.cost) {
-            this.upgrade.text
+        if (mergeSameLevel && this.tech == this.strength) {
+            this.tech.text
         } else {
-            this.cost.text + " / " + this.upgrade.text
+            this.strength.text + " / " + this.tech.text
         }
     }

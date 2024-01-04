@@ -17,10 +17,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -46,6 +48,7 @@ import com.dasoops.common.resources.mission.event.MonopolizeEvent
 import com.dasoops.common.resources.mission.event.NormalTime
 import com.dasoops.common.resources.mission.event.RangeTime
 import com.dasoops.common.resources.mission.event.text
+import com.dasoops.common.resources.sterength
 
 @Composable
 fun Event.Composable() = EventBox(
@@ -120,12 +123,22 @@ fun Event.Composable() = EventBox(
             if (this@Composable is AssaultEvent) {
                 TextDivider(text = R.str.screen.mission.level.title)
 
+                val strengthLevel = this@Composable.level.strength.value
                 Row {
                     Text(
-                        text = "${R.str.screen.mission.level.cost}: T${this@Composable.level.cost.value} ()"
+                        text = "${R.str.screen.mission.level.strength}: T${strengthLevel}" +
+                                " - ${R.sterength(strengthLevel)}",
+                        style = MaterialTheme.typography.bodyMedium,
                     )
                 }
 
+                val techLevel = this@Composable.level.tech.value
+                Row {
+                    Text(
+                        text = "${R.str.screen.mission.level.tech}: T${techLevel}",
+                        style = MaterialTheme.typography.bodyMedium,
+                    )
+                }
             }
         }
     }
@@ -189,7 +202,11 @@ fun EventBox(
                     exit = fadeOut() + shrinkVertically(),
                     modifier = Modifier.padding(horizontal = 12.dp)
                 ) {
-                    expandedContent()
+                    CompositionLocalProvider(
+                        LocalTextStyle provides MaterialTheme.typography.bodyMedium
+                    ) {
+                        expandedContent()
+                    }
                 }
             }
         }

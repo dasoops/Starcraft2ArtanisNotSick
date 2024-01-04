@@ -5,8 +5,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class EventLevel(
-    val upgrade: UpgradeLevel,
-    val cost: CostLevel,
+    val tech: TechLevel,
+    val strength: StrengthLevel,
 )
 
 sealed interface Level {
@@ -31,16 +31,16 @@ sealed class AbstractLevel : Level {
 }
 
 @Serializable
-sealed interface UpgradeLevel : Level
+sealed interface TechLevel : Level
 
 @Serializable
-sealed interface CostLevel : Level
+sealed interface StrengthLevel : Level
 
 @Serializable
 @SerialName(value = NormalLevel.SERIAL_NAME)
 data class NormalLevel(
     override val value: Int,
-) : AbstractLevel(), UpgradeLevel, CostLevel {
+) : AbstractLevel(), TechLevel, StrengthLevel {
 
     companion object Key {
         const val SERIAL_NAME: String = "Normal"
@@ -51,7 +51,7 @@ data class NormalLevel(
 @SerialName(value = HalfLevel.SERIAL_NAME)
 data class HalfLevel(
     override val value: Int,
-) : AbstractLevel(), CostLevel {
+) : AbstractLevel(), StrengthLevel {
 
     companion object Key {
         const val SERIAL_NAME: String = "Half"

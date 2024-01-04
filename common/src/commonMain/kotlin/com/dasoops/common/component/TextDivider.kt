@@ -17,6 +17,7 @@ fun TextDivider(
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.padding(bottom = 2.dp)
     ) {
         Divider(modifier = Modifier.height(1.dp).weight(1f))
         Text(

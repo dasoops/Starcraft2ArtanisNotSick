@@ -169,11 +169,11 @@
         "id": "Assault$ca0ee731-5849-4314-a301-0d462678e79e",
         "show": true,
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 1
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 1
           }
@@ -200,11 +200,11 @@
         "id": "Assault$707db70f-84f4-47a6-83a3-931f2147c736",
         "show": true,
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 2
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 2
           }
@@ -231,11 +231,11 @@
         "id": "Assault$1aefb891-30e6-499a-8cf9-b8fc3571eabd",
         "show": true,
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 3
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 3
           }
@@ -264,11 +264,11 @@
         "id": "Assault$27d29a3a-1400-4381-b993-aba061c7d861",
         "show": true,
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 4
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 4
           }
@@ -295,11 +295,11 @@
         "id": "Assault$2b17cc44-6131-4f52-9c20-f9e3f8c2b935",
         "show": true,
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 5
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 5
           }
@@ -329,11 +329,11 @@
         "id": "Assault$d3d50049-90e2-447e-8018-3bc86f908dac",
         "show": true,
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 6
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 6
           }
@@ -360,11 +360,11 @@
         "id": "Assault$cc7b040f-d1e4-4410-929d-cc46abaf5220",
         "show": true,
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 7
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 7
           }
@@ -391,11 +391,11 @@
         "id": "Assault$ea603d01-632c-4c1f-8786-88c6fa85a17b",
         "show": true,
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 7
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 7
           }
@@ -422,11 +422,11 @@
         "id": "Assault$1cb2f6b1-fa6a-4c4f-b184-aa79a90bbd6f",
         "show": true,
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 7
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 7
           }
@@ -453,11 +453,11 @@
         "id": "Assault$741e5592-23b9-4888-821c-50f4003b8874",
         "show": true,
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 7
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 7
           }
@@ -484,11 +484,11 @@
         "id": "Assault$8face6a3-b903-472c-86f7-e13d06c6ed55",
         "show": true,
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 7
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 7
           }
@@ -585,11 +585,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 2
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 2
           }
@@ -616,11 +616,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 3
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 4
           }
@@ -647,11 +647,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 4
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 5
           }
@@ -678,11 +678,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 6
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 6
           }
@@ -712,11 +712,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 7
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 6
           }
@@ -743,11 +743,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 5
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 5
           }
@@ -774,11 +774,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 7
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 7
           }
@@ -805,11 +805,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 7
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 7
           }
@@ -845,11 +845,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 1
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 1
           }
@@ -876,11 +876,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 2
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 2
           }
@@ -907,11 +907,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 1
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 1
           }
@@ -938,11 +938,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 3
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 3
           }
@@ -969,11 +969,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 4
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 4
           }
@@ -1000,11 +1000,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 5
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 5
           }
@@ -1031,11 +1031,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 6
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 6
           }
@@ -1062,11 +1062,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 7
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 7
           }
@@ -1093,11 +1093,11 @@
           ]
         },
         "level": {
-          "upgrade": {
+          "tech": {
             "type": "Normal",
             "value": 7
           },
-          "cost": {
+          "strength": {
             "type": "Normal",
             "value": 7
           }

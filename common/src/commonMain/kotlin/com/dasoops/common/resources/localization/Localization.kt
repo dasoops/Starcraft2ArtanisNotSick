@@ -8,6 +8,7 @@ class Localization(
     val title: String,
     val simpleTitle: String,
     val screen: ScreenText,
+    val dict: Map<String, String>,
 ) {
     @Transient
     lateinit var language: Language

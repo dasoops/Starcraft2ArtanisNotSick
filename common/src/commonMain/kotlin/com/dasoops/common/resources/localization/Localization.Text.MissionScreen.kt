@@ -21,8 +21,8 @@ data class MissionText(
 @Serializable
 data class LevelText(
     val title: String,
-    val cost: String,
-    val upgrade: String,
+    val strength: String,
+    val tech: String,
     val extra: String,
 )
 
