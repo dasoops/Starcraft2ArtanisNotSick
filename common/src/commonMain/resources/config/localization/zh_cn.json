@@ -186,6 +186,33 @@
             },
             "车10": {
               "description": "列车波次"
+            },
+            "进1": {
+              "description": "进攻波次"
+            },
+            "进2": {
+              "description": "进攻波次"
+            },
+            "进3": {
+              "description": "进攻波次"
+            },
+            "进4": {
+              "description": "进攻波次"
+            },
+            "进5": {
+              "description": "进攻波次"
+            },
+            "进6": {
+              "description": "进攻波次"
+            },
+            "进7": {
+              "description": "进攻波次"
+            },
+            "进8": {
+              "description": "进攻波次"
+            },
+            "进9": {
+              "description": "进攻波次"
             }
           },
           "position": {
@@ -199,7 +226,7 @@
               "description": "列车刷新点 ↖"
             },
             "列车中": {
-              "description": "列车刷新点 ←"
+              "description": "列车刷新点 ↙"
             },
             "奖励": {
               "description": "奖励车刷新点 ↙"

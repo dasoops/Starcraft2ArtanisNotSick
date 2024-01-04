@@ -186,11 +186,38 @@
             },
             "车10": {
               "description": "Train"
+            },
+            "进1": {
+              "description": "Assault"
+            },
+            "进2": {
+              "description": "Assault"
+            },
+            "进3": {
+              "description": "Assault"
+            },
+            "进4": {
+              "description": "Assault"
+            },
+            "进5": {
+              "description": "Assault"
+            },
+            "进6": {
+              "description": "Assault"
+            },
+            "进7": {
+              "description": "Assault"
+            },
+            "进8": {
+              "description": "Assault"
+            },
+            "进9": {
+              "description": "Assault"
             }
           },
           "position": {
             "奖励": {
-              "description": "Train spawn point ↙"
+              "description": "Award train spawn point ↙"
             },
             "红点左": {
               "description": "Assault spawn point ↖"
@@ -202,7 +229,7 @@
               "description": "Train spawn point ↖"
             },
             "列车中": {
-              "description": "Train spawn point ←"
+              "description": "Train spawn point ↙"
             }
           }
         },

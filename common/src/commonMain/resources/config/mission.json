@@ -588,7 +588,7 @@
             "value": 2
           }
         },
-        "index": 1,
+        "index": 0,
         "position": {
           "type": "Single",
           "position": "列车上"
@@ -619,7 +619,7 @@
             "value": 4
           }
         },
-        "index": 2,
+        "index": 1,
         "position": {
           "type": "Single",
           "position": "列车中"
@@ -650,7 +650,7 @@
             "value": 5
           }
         },
-        "index": 3,
+        "index": 2,
         "position": {
           "type": "Single",
           "position": "列车上"
@@ -681,7 +681,7 @@
             "value": 6
           }
         },
-        "index": 4,
+        "index": 3,
         "position": {
           "type": "Multiple",
           "position": [
@@ -715,7 +715,7 @@
             "value": 6
           }
         },
-        "index": 5,
+        "index": 4,
         "position": {
           "type": "Single",
           "position": "列车上"
@@ -746,7 +746,7 @@
             "value": 5
           }
         },
-        "index": 6,
+        "index": 5,
         "position": {
           "type": "Single",
           "position": "列车上"
@@ -777,7 +777,7 @@
             "value": 7
           }
         },
-        "index": 7,
+        "index": 6,
         "position": {
           "type": "Single",
           "position": "列车上"
@@ -808,7 +808,7 @@
             "value": 7
           }
         },
-        "index": 8,
+        "index": 7,
         "position": {
           "type": "Random",
           "position": [
@@ -821,6 +821,285 @@
               "id": "列车上"
             }
           ]
+        },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "进1",
+        "show": true,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 4,
+              "unit": "Minute"
+            }
+          ]
+        },
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 1
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 1
+          }
+        },
+        "index": 0,
+        "position": {
+          "type": "Single",
+          "position": "红点左"
+        },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "进2",
+        "show": true,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 6,
+              "unit": "Minute"
+            }
+          ]
+        },
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 2
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 2
+          }
+        },
+        "index": 1,
+        "position": {
+          "type": "Single",
+          "position": "红点右"
+        },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "进3",
+        "show": true,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 7,
+              "unit": "Minute"
+            }
+          ]
+        },
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 1
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 1
+          }
+        },
+        "index": 2,
+        "position": {
+          "type": "Single",
+          "position": "红点左"
+        },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "进4",
+        "show": true,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 10,
+              "unit": "Minute"
+            }
+          ]
+        },
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 3
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 3
+          }
+        },
+        "index": 3,
+        "position": {
+          "type": "Single",
+          "position": "红点右"
+        },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "进5",
+        "show": true,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 13,
+              "unit": "Minute"
+            }
+          ]
+        },
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 4
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 4
+          }
+        },
+        "index": 4,
+        "position": {
+          "type": "Single",
+          "position": "红点左"
+        },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "进6",
+        "show": true,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 16,
+              "unit": "Minute"
+            }
+          ]
+        },
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 5
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "index": 5,
+        "position": {
+          "type": "Single",
+          "position": "红点左"
+        },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "进7",
+        "show": true,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 19,
+              "unit": "Minute"
+            }
+          ]
+        },
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 6
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 6
+          }
+        },
+        "index": 6,
+        "position": {
+          "type": "Single",
+          "position": "红点左"
+        },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "进8",
+        "show": true,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 22,
+              "unit": "Minute"
+            }
+          ]
+        },
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 7
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 7
+          }
+        },
+        "index": 7,
+        "position": {
+          "type": "Single",
+          "position": "红点左"
+        },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "进9",
+        "show": true,
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 24,
+              "unit": "Minute"
+            }
+          ]
+        },
+        "level": {
+          "upgrade": {
+            "type": "Normal",
+            "value": 7
+          },
+          "cost": {
+            "type": "Normal",
+            "value": 7
+          }
+        },
+        "index": 8,
+        "position": {
+          "type": "Single",
+          "position": "红点右"
         },
         "target": null
       }
