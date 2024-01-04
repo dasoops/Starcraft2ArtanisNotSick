@@ -111,7 +111,10 @@
         "id": "Award$af8ecb76-711f-4829-9fce-4c60faea94e0",
         "show": true,
         "time": {
-          "keep": null,
+          "keep": {
+            "value": 7,
+            "unit": "Minute"
+          },
           "trigger": [
             {
               "type": "Normal",
@@ -131,7 +134,10 @@
         "id": "Award$e15f6d60-1ea8-445a-b8db-879f1b34752b",
         "show": true,
         "time": {
-          "keep": null,
+          "keep": {
+            "value": 7,
+            "unit": "Minute"
+          },
           "trigger": [
             {
               "type": "Normal",
