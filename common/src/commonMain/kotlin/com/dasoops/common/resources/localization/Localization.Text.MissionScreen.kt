@@ -11,6 +11,7 @@ data class MissionText(
     val clickToPause: String,
     val clickToContinue: String,
     val time: TimeText,
+    val level: LevelText,
     val event: EventText,
     private val missions: Map<String, MissionInfoText>,
 ) {
@@ -18,12 +19,32 @@ data class MissionText(
 }
 
 @Serializable
+data class LevelText(
+    val title: String,
+    val cost: String,
+    val upgrade: String,
+    val extra: String,
+)
+
+@Serializable
 data class TimeText(
+    val trigger: String,
+    private val timeItem: String,
+    private val keep: String,
     private val normal: String,
     private val range: String,
     val eventOffset: EventOffsetText,
     private val triggerPosition: String,
 ) {
+    fun timeItem(index: String, timeText: String) = timeItem.fill(
+        "index" to index,
+        "timeText" to timeText,
+    )
+
+    fun keep(originSeconds: String) = keep.fill(
+        "originSeconds" to originSeconds
+    )
+
     fun normal(text: String) = normal.fill(
         "text" to text
     )

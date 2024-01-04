@@ -19,7 +19,6 @@ import com.dasoops.common.resources.mission.position.MultiplePosition
 import com.dasoops.common.resources.mission.position.RandomPosition
 import com.dasoops.common.resources.mission.position.SinglePosition
 import com.dasoops.common.resources.mission.position.description
-import com.dasoops.common.util.fillOutOfLength
 import com.dasoops.common.util.text
 
 /* position */
@@ -30,13 +29,11 @@ val EventPosition.text
             "*" + this.position
                 .map { it.description }
                 .joinToString { it }
-                .fillOutOfLength(maxLength = 7)
 
         is RandomPosition ->
             "*" + this.position
                 .map { it.position.description }
-                .joinToString(separator = " | ") { it }
-                .fillOutOfLength(maxLength = 7)
+                .joinToString(separator = " or ") { it }
     }
 
 /* Time */

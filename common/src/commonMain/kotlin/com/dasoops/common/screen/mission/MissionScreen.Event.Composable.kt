@@ -7,7 +7,6 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
@@ -35,9 +34,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.dasoops.common.LocalState
+import com.dasoops.common.component.TextDivider
 import com.dasoops.common.resources.MissionState
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.icon
+import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.mission.event.AssaultEvent
 import com.dasoops.common.resources.mission.event.AwardEvent
 import com.dasoops.common.resources.mission.event.Event
@@ -64,49 +65,68 @@ fun Event.Composable() = EventBox(
                     text = time?.textFirst ?: " - ",
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.weight(0.5f),
+                    textAlign = TextAlign.Left,
+                    modifier = Modifier.weight(1.5f),
                 )
-            }
-            Spacer(Modifier.width(20.dp))
-
-            Text(
-                text = this@Composable.text,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
-            )
-
-            Box(modifier = Modifier.width(110.dp)) {
-                if (!expanded && this@Composable is AssaultEvent) {
-                    Text(
-                        text = level.text,
-                        modifier = Modifier.width(110.dp),
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        textAlign = TextAlign.Right
-                    )
-                }
+                Text(
+                    text = this@Composable.position.text,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    textAlign = TextAlign.Left,
+                    modifier = Modifier.weight(3f),
+                )
+                Text(
+                    text = this@Composable.text,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    textAlign = TextAlign.Left,
+                    modifier = Modifier.weight(3f),
+                )
+                Text(
+                    text = if (this@Composable is AssaultEvent) level.text else "",
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    textAlign = TextAlign.Right,
+                    modifier = Modifier.weight(1f),
+                )
+            } else {
+                Text(
+                    text = this@Composable.text,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
             }
         }
     },
     expandedContent = {
-
-        if (this is AssaultEvent) {
-            Column { Text(text = this@Composable.id)
-                Text(
-                    text = time?.textFirst ?: " - ",
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-                Text(
-                    text = level.text,
-                    modifier = Modifier.width(110.dp),
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis,
-                    textAlign = TextAlign.Start
-                )
+        Column {
+            if (null != time) {
+                TextDivider(text = R.str.screen.mission.time.trigger)
+                time!!.keep?.let {
+                    Text(text = R.str.screen.mission.time.keep(it.originSeconds.toString()))
+                }
+                Column {
+                    time!!.trigger.forEachIndexed { index, it ->
+                        Text(
+                            text = R.str.screen.mission.time.timeItem(
+                                index = index.toString(),
+                                timeText = it.text
+                            ),
+                            maxLines = 1,
+                        )
+                    }
+                }
             }
+            if (this@Composable is AssaultEvent) {
+                TextDivider(text = R.str.screen.mission.level.title)
 
+                Row {
+                    Text(
+                        text = "${R.str.screen.mission.level.cost}: T${this@Composable.level.cost.value} ()"
+                    )
+                }
+
+            }
         }
     }
 )
@@ -167,6 +187,7 @@ fun EventBox(
                     visible = expanded,
                     enter = fadeIn() + expandVertically(),
                     exit = fadeOut() + shrinkVertically(),
+                    modifier = Modifier.padding(horizontal = 12.dp)
                 ) {
                     expandedContent()
                 }

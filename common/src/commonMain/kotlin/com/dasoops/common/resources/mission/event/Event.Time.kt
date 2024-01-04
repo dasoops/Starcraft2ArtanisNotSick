@@ -10,7 +10,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class EventTime(
     val trigger: List<Time>,
-    val keep: UnitTime? = null,
+    val keep: UnitTime.DefaultImpl? = null,
 )
 
 @Serializable
