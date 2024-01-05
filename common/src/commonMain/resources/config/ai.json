@@ -2,7 +2,7 @@
   {
     "id": "Masters and Machines",
     "race": "Protoss",
-    "troops": [
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -65,7 +65,7 @@
   {
     "id": "Towering Walkers",
     "race": "Protoss",
-    "troops": [
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -125,7 +125,7 @@
   {
     "id": "Disruptive Artillery",
     "race": "Protoss",
-    "troops": [
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -186,7 +186,7 @@
   {
     "id": "Hope of the Khalai",
     "race": "Protoss",
-    "troops": [
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -244,7 +244,7 @@
   {
     "id": "Siege of Storms",
     "race": "Protoss",
-    "troops": [
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -302,7 +302,7 @@
   {
     "id": "Shadow Disruption",
     "race": "Protoss",
-    "troops": [
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -367,7 +367,7 @@
   {
     "id": "Vanguard of Aiur",
     "race": "Protoss",
-    "troops": [
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -430,7 +430,7 @@
   {
     "id": "Fleet of the Matriarch",
     "race": "Protoss",
-    "troops": [
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -487,8 +487,8 @@
   },
   {
     "id": "Raiding Party",
-    "race": "Protoss",
-    "troops": [
+    "race": "Terran",
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -554,8 +554,8 @@
   },
   {
     "id": "Machines of War",
-    "race": "Protoss",
-    "troops": [
+    "race": "Terran",
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -633,8 +633,8 @@
   },
   {
     "id": "Shadow Tech",
-    "race": "Protoss",
-    "troops": [
+    "race": "Terran",
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -699,8 +699,8 @@
   },
   {
     "id": "Dominion Battlegroup",
-    "race": "Protoss",
-    "troops": [
+    "race": "Terran",
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -775,8 +775,8 @@
   },
   {
     "id": "Classic Infantry",
-    "race": "Protoss",
-    "troops": [
+    "race": "Terran",
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -839,8 +839,8 @@
   },
   {
     "id": "Classic Mech",
-    "race": "Protoss",
-    "troops": [
+    "race": "Terran",
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -901,8 +901,8 @@
   },
   {
     "id": "Ravaging Infestation",
-    "race": "Protoss",
-    "troops": [
+    "race": "Terran",
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -965,8 +965,8 @@
   },
   {
     "id": "Broodling Corruption",
-    "race": "Protoss",
-    "troops": [
+    "race": "Zerg",
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -1027,8 +1027,8 @@
   },
   {
     "id": "Explosive Threats",
-    "race": "Protoss",
-    "troops": [
+    "race": "Zerg",
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -1099,8 +1099,8 @@
   },
   {
     "id": "Invasionary Swarm",
-    "race": "Protoss",
-    "troops": [
+    "race": "Zerg",
+    "assaults": [
       {
         "level": "1",
         "units": [
@@ -1159,8 +1159,8 @@
   },
   {
     "id": "Devouring Scourge",
-    "race": "Protoss",
-    "troops": [
+    "race": "Zerg",
+    "assaults": [
       {
         "level": "1",
         "units": [
