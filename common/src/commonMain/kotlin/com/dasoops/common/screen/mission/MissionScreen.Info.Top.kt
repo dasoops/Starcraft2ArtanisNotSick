@@ -81,15 +81,15 @@ private fun RowScope.Timer(
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
+            verticalArrangement = Arrangement.Center,
         ) {
             Text(
                 modifier = Modifier.fillMaxWidth(),
                 text = timeText,
                 style = MaterialTheme.typography.titleLarge.copy(
-                    fontSize = 2.5.em
+                    fontSize = 2.5.em,
                 ),
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
             )
             val tips: String = if (timerStart) {
                 R.str.screen.mission.clickToPause
@@ -101,7 +101,7 @@ private fun RowScope.Timer(
                 modifier = Modifier.fillMaxWidth(),
                 text = tips,
                 style = MaterialTheme.typography.titleSmall,
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
             )
         }
     }
@@ -126,29 +126,28 @@ private fun RowScope.Setting(
             modifier = Modifier.weight(1f),
         ) {
             SettingBox(
-                text = R.str.screen.mission.chooseAi,
+                text = R.str.screen.mission.hideEvent,
+                selected = showHide,
+                onSelect = { showHide = !showHide }
+            )
+            SettingBox(
+                text = if (null == ai) R.str.screen.mission.chooseAi else ai!!.name,
                 selected = ai != null,
                 onSelect = { openAiChooser = true }
-            )
-
-            SettingBox(
-                text = R.str.screen.mission.showAggressiveDeploymentEvent,
-                selected = showAggressiveDeploymentEvent,
-                onSelect = { showAggressiveDeploymentEvent = !showAggressiveDeploymentEvent }
             )
         }
         Column(
             modifier = Modifier.weight(1f),
         ) {
             SettingBox(
-                text = R.str.screen.mission.hideEvent,
-                selected = showHide,
-                onSelect = { showHide = !showHide }
-            )
-            SettingBox(
                 text = R.str.screen.mission.autoScroll,
                 selected = autoScroll,
                 onSelect = { autoScroll = !autoScroll }
+            )
+            SettingBox(
+                text = R.str.screen.mission.showAggressiveDeploymentEvent,
+                selected = showAggressiveDeploymentEvent,
+                onSelect = { showAggressiveDeploymentEvent = !showAggressiveDeploymentEvent }
             )
         }
     }
@@ -159,7 +158,6 @@ private fun ColumnScope.SettingBox(
     text: String,
     selected: Boolean,
     onSelect: () -> Unit,
-    content: @Composable () -> Unit = {},
 ) {
     val useColor = if (selected) {
         MaterialTheme.colorScheme.onBackground.copy(alpha = 0.1f)

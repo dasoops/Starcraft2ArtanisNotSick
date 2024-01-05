@@ -37,6 +37,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.dasoops.common.LocalState
 import com.dasoops.common.component.TextDivider
+import com.dasoops.common.component.UnitImage
 import com.dasoops.common.resources.MissionState
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.icon
@@ -102,6 +103,7 @@ fun Event.Composable() = EventBox(
         }
     },
     expandedContent = {
+        val ai by LocalState.current.missionState.ai
         Column {
             if (null != time) {
                 TextDivider(text = R.str.screen.mission.time.trigger)
@@ -135,9 +137,20 @@ fun Event.Composable() = EventBox(
                 val techLevel = this@Composable.level.tech.value
                 Row {
                     Text(
-                        text = "${R.str.screen.mission.level.tech}: T${techLevel}",
+                        text = if (null == ai) R.str.screen.mission.level.techNotSelect(
+                            tech = R.str.screen.mission.level.tech,
+                            level = techLevel.toString(),
+                        ) else R.str.screen.mission.level.techSelect(
+                            tech = R.str.screen.mission.level.tech,
+                            level = techLevel.toString(),
+                        ),
                         style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier.align(Alignment.CenterVertically)
                     )
+                    if (null != ai) {
+                        Spacer(modifier = Modifier.width(12.dp))
+                        ai!!.units(techLevel).forEach { UnitImage(it) }
+                    }
                 }
             }
         }

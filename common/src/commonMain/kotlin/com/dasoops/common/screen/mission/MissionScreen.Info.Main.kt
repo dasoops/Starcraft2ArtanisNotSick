@@ -50,9 +50,7 @@ internal fun Main(
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
             state = lazyListState,
         ) {
-            items(eventList) {
-                it.Composable()
-            }
+            items(eventList) { it.Composable() }
         }
         VerticalScrollbar(
             modifier = Modifier.align(Alignment.CenterEnd).fillMaxHeight().padding(vertical = 8.dp),

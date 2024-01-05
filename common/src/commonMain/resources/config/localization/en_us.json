@@ -61,6 +61,8 @@
         "title": "title",
         "strength": "strength",
         "tech": "tech",
+        "techSelect": "${tech}: T${level}",
+        "techNotSelect": "${tech}: T${level} - Select ai show Icon",
         "extra": "extra"
       },
       "time": {

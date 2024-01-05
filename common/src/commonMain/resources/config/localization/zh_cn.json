@@ -61,6 +61,8 @@
         "title": "等级",
         "strength": "规模",
         "tech": "科技",
+        "techSelect": "${tech}: T${level}",
+        "techNotSelect": "${tech}: T${level} - 选择ai以显示当前科技等级单位",
         "extra": "附加项"
       },
       "time": {

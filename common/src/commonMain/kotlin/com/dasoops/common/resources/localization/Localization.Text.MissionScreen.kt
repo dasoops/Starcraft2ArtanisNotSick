@@ -29,7 +29,25 @@ data class LevelText(
     val strength: String,
     val tech: String,
     val extra: String,
-)
+    private val techSelect: String,
+    private val techNotSelect: String,
+) {
+    fun techSelect(
+        tech: String,
+        level: String,
+    ) = techSelect.fill(
+        "tech" to tech,
+        "level" to level,
+    )
+
+    fun techNotSelect(
+        tech: String,
+        level: String,
+    ) = techNotSelect.fill(
+        "tech" to tech,
+        "level" to level,
+    )
+}
 
 @Serializable
 data class TimeText(
