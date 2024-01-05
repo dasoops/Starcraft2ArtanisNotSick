@@ -1,6 +1,7 @@
 package com.dasoops.common.resources
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.painter.Painter
 import com.dasoops.common.resources.localization.str
 import com.dasoops.common.util.BaseException
 import com.dasoops.common.util.Serializer
@@ -15,9 +16,9 @@ data class Ai(
     val assaults: List<Assault>,
 ) {
     val name: String
-        @Composable get() = R.str.dict[id] ?: throw BaseException("undefined Dict[$id]")
+        @Composable get() = R.str.dict[id]
 
-    val level2Units: Map<Int, List<Unit>> by lazy { assaults.associate { it.level to it.units } }
+    private val level2Units: Map<Int, List<Unit>> by lazy { assaults.associate { it.level to it.units } }
     fun units(level: Int): List<Unit> = level2Units[level]!!
 }
 
@@ -45,11 +46,11 @@ data class Assault(
 @JvmInline
 @Serializable
 value class Unit(
-    private val _id: String
-) {
-    val name: String
-        @Composable get() = R.str.dict[_id]
-}
+    val id: String
+)
+
+val Unit.name: String @Composable get() = R.str.dict[id]
+val Unit.image: Painter @Composable get() = R.image.unit(this)
 
 private fun loadAi(): List<Ai> = R.resourceConfig<List<Ai>>("ai.json")
 internal val R.ai: List<Ai> by lazy { loadAi() }
