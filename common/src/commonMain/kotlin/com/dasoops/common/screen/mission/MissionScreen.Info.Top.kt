@@ -73,7 +73,7 @@ private fun RowScope.Timer(
     Row(
         modifier = Modifier
             .clickable {
-                logger.trace { "timerStart change -> ${!timerStart}" }
+                missionLogger.trace { "timerStart change -> ${!timerStart}" }
                 firstStart = false
                 timerStart = !timerStart
             }
@@ -199,7 +199,7 @@ private fun RowScope.Map(
     Column(
         modifier = Modifier
             .clickable {
-                logger.trace { "mission change -> null" }
+                missionLogger.trace { "mission change -> null" }
                 missionState.clear(state.setting)
             }
             .topCommon(this)

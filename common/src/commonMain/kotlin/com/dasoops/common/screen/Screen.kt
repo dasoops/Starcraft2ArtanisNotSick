@@ -15,7 +15,7 @@ import io.github.oshai.kotlinlogging.KotlinLogging
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
 
-val logger = KotlinLogging.logger { }
+internal val screenLogger = KotlinLogging.logger { }
 
 @Serializable(with = Screen.Companion.Serializer::class)
 enum class Screen(

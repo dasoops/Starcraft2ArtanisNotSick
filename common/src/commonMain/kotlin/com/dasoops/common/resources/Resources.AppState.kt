@@ -2,7 +2,6 @@ package com.dasoops.common.resources
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import com.dasoops.common.logger
 import com.dasoops.common.resources.mission.Mission
 import com.dasoops.common.resources.mission.mission
 import com.dasoops.common.screen.Screen

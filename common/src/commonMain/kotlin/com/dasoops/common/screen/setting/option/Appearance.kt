@@ -7,7 +7,7 @@ import com.dasoops.common.component.theme.Theme
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.localization.Language
 import com.dasoops.common.resources.localization.str
-import com.dasoops.common.screen.setting.logger
+import com.dasoops.common.screen.setting.settingLogger
 
 @Composable
 fun Appearance() {
@@ -26,7 +26,7 @@ private fun Language() {
         items = Language.values().toList(),
         itemText = { it.show },
         onSelectItem = {
-            logger.debug { "setting.language change -> $it" }
+            settingLogger.debug { "setting.language change -> $it" }
             language = it
         }
     )
@@ -42,7 +42,7 @@ private fun Theme() {
         items = Theme.values().toList(),
         itemText = { it.data },
         onSelectItem = {
-            logger.debug { "setting.theme change -> $it" }
+            settingLogger.debug { "setting.theme change -> $it" }
             theme = it
         }
     )

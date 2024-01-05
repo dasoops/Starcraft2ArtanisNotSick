@@ -17,7 +17,7 @@ import com.dasoops.common.resources.loadAppState
 import com.dasoops.common.resources.saveAppState
 import io.github.oshai.kotlinlogging.KotlinLogging
 
-val logger = KotlinLogging.logger { }
+private val logger = KotlinLogging.logger { }
 
 val LocalState = staticCompositionLocalOf { AppState.Default }
 val LocalDependency = staticCompositionLocalOf { getDependencies() }

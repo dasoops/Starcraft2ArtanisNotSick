@@ -41,7 +41,7 @@ internal fun MissionSelect() {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.clickable(onClick = {
-                    logger.trace { "mission change -> $it" }
+                    missionLogger.trace { "mission change -> $it" }
                     mission = it
                 }).padding(10.dp)
                     .weight(1f),

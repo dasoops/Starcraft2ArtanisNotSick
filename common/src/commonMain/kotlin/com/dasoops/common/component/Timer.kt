@@ -13,9 +13,6 @@ import androidx.compose.runtime.setValue
 import com.dasoops.common.LocalState
 import com.dasoops.common.resources.AppState
 import com.dasoops.common.resources.MissionState
-import io.github.oshai.kotlinlogging.KotlinLogging
-
-val logger = KotlinLogging.logger {}
 
 @Composable
 @Suppress("NOTHING_TO_INLINE")

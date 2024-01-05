@@ -12,7 +12,7 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.unit.dp
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.localization.str
-import com.dasoops.common.screen.setting.logger
+import com.dasoops.common.screen.setting.settingLogger
 
 @Composable
 fun MissionInfo() {
@@ -33,7 +33,7 @@ private fun ShowHide() {
         subTitle = R.str.screen.setting.mission.showHideEvent.subTitle,
         checked = showHide,
         onCheckedChange = {
-            logger.debug { "setting.showHide change -> $it" }
+            settingLogger.debug { "setting.showHide change -> $it" }
             showHide = it
         },
     )
@@ -48,7 +48,7 @@ private fun AutoScroll() {
         subTitle = R.str.screen.setting.mission.autoScrollEventList.subTitle,
         checked = autoScroll,
         onCheckedChange = {
-            logger.debug { "setting.autoScroll change -> $it" }
+            settingLogger.debug { "setting.autoScroll change -> $it" }
             autoScroll = it
         },
     )
@@ -71,7 +71,7 @@ private fun MergeSameLevel() {
             modifier = Modifier.scale(0.7f).offset(x = (-12).dp),
             checked = mergeSameLevel,
             onCheckedChange = {
-                logger.debug { "setting.mergeSameLevel change -> $it" }
+                settingLogger.debug { "setting.mergeSameLevel change -> $it" }
                 mergeSameLevel = it
             },
         )
@@ -89,7 +89,7 @@ private fun HalfLevelSuffix() {
         value = halfLevelSuffix,
         onValueChange = {
             halfLevelSuffix = it
-            logger.debug { "setting.mergeSameLevel change -> $it" }
+            settingLogger.debug { "setting.mergeSameLevel change -> $it" }
         },
     )
 }
@@ -105,7 +105,7 @@ private fun TimerSpeed() {
         value = timerSpeed.toString(),
         onValueChange = {
             timerSpeed = it.toFloatOrNull() ?: return@InputOption
-            logger.debug { "setting.timerSpeed change -> $it" }
+            settingLogger.debug { "setting.timerSpeed change -> $it" }
         },
     )
 }

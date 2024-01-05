@@ -18,7 +18,7 @@ import com.dasoops.common.screen.setting.option.Appearance
 import com.dasoops.common.screen.setting.option.MissionInfo
 import io.github.oshai.kotlinlogging.KotlinLogging
 
-val logger = KotlinLogging.logger {}
+internal val settingLogger = KotlinLogging.logger {}
 
 @Composable
 fun SettingScreen() {
