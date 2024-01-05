@@ -317,6 +317,9 @@
     }
   },
   "dict": {
+    "Terran": "人族",
+    "Protoss": "神族",
+    "Zerg": "虫族",
     "Archangel": "大天使",
     "A.R.E.S.": "武装机器人",
     "Armored Personnel Carrier": "装甲运兵车",

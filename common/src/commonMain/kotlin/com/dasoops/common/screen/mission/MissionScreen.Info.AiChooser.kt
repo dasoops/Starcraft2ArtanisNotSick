@@ -35,6 +35,7 @@ import com.dasoops.common.resources.MissionState
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.Race
 import com.dasoops.common.resources.ai
+import com.dasoops.common.resources.nameLocalization
 
 @Composable
 internal fun AiChooser(
@@ -56,7 +57,7 @@ internal fun AiChooser(
                 ) {
                     Text(
                         modifier = Modifier.padding(8.dp),
-                        text = it.value,
+                        text = it.nameLocalization,
                     )
                 }
             }

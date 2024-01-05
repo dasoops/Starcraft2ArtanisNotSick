@@ -317,6 +317,9 @@
     }
   },
   "dict": {
+    "Terran": "Terran",
+    "Protoss": "Protoss",
+    "Zerg": "Zerg",
     "Archangel": "Archangel",
     "A.R.E.S.": "A.R.E.S.",
     "Armored Personnel Carrier": "Armored Personnel Carrier",

@@ -23,7 +23,9 @@ data class Ai(
 }
 
 @Serializable(with = Race.Serializer::class)
-enum class Race(val value: String) : StringDataEnum {
+enum class Race(
+    val value: String
+) : StringDataEnum {
     Terran(value = "Terran"),
     Protoss(value = "Protoss"),
     Zerg(value = "Zerg"),
@@ -36,6 +38,8 @@ enum class Race(val value: String) : StringDataEnum {
         val Default = Terran
     }
 }
+
+val Race.nameLocalization @Composable get() = R.str.dict[this.value]
 
 @Serializable
 data class Assault(
