@@ -1,5 +1,4 @@
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
@@ -18,7 +17,7 @@ fun main() = application {
     appWrap {
         Window(
             onCloseRequest = ::exitApplication,
-            icon = painterResource(R.image.icon),
+            icon = R.image.icon,
             title = R.str.title,
             resizable = false,
             state = WindowState(

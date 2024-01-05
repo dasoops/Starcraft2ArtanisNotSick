@@ -1,7 +1,6 @@
 [
   {
     "name": "Rifts to Korhal",
-    "image": "image/map/Rifts to Korhal.jpg",
     "event": [
       {
         "type": "Monopolize",
@@ -568,7 +567,6 @@
   },
   {
     "name": "Oblivion Express",
-    "image": "image/map/Oblivion Express.jpg",
     "event": [
       {
         "type": "Assault",
@@ -1135,79 +1133,66 @@
   },
   {
     "name": "Void Thrashing",
-    "image": "image/map/Void Thrashing.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "Void Launch",
-    "image": "image/map/Void Launch.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "Temple of the Past",
-    "image": "image/map/Temple of the Past.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "Lock & Load",
-    "image": "image/map/Lock & Load.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "Chain of Ascension",
-    "image": "image/map/Chain of Ascension.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "The Vermillion Problem",
-    "image": "image/map/The Vermillion Problem.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "Mist Opportunities",
-    "image": "image/map/Mist Opportunities.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "Miner Evacuation",
-    "image": "image/map/Miner Evacuation.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "Dead of Night",
-    "image": "image/map/Dead of Night.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "Scythe of Amon",
-    "image": "image/map/Scythe of Amon.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "Malwarfare",
-    "image": "image/map/Malwarfare.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "Part and Parcel",
-    "image": "image/map/Part and Parcel.jpg",
     "event": [],
     "position": []
   },
   {
     "name": "Cradle of Death",
-    "image": "image/map/Cradle of Death.jpg",
     "event": [],
     "position": []
   }

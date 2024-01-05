@@ -43,7 +43,7 @@ fun TopAppInfo() {
             Spacer(Modifier.height(6.dp))
 
             Image(
-                painter = painterResource(R.image.main),
+                painter = R.image.main,
                 contentDescription = "App icon image",
             )
         }

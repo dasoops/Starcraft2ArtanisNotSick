@@ -1,5 +1,3 @@
-@file:JvmName("MissionKt")
-
 package com.dasoops.common.resources.mission
 
 import com.dasoops.common.resources.R

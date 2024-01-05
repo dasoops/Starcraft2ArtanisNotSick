@@ -15,11 +15,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.dasoops.common.LocalState
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.localization.str
+import com.dasoops.common.resources.mission.image
 import com.dasoops.common.resources.mission.missions
 
 
@@ -47,7 +47,7 @@ internal fun MissionSelect() {
                     .weight(1f),
             ) {
                 Image(
-                    painter = painterResource(it.image),
+                    painter = it.image,
                     contentDescription = R.str.screen.mission.mission(it).name,
                     contentScale = ContentScale.FillBounds
                 )
