@@ -22,7 +22,6 @@ import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.mission.image
 import com.dasoops.common.resources.mission.missions
 
-
 @Composable
 internal fun MissionSelect() {
     var mission by LocalState.current.missionState.current

@@ -22,7 +22,7 @@ import com.dasoops.common.resources.mission.position.description
 import com.dasoops.common.util.text
 
 /* position */
-val EventPosition.text
+internal val EventPosition.text
     @Composable get() = when (this) {
         is SinglePosition -> this.position.description
         is MultiplePosition ->
@@ -37,14 +37,14 @@ val EventPosition.text
     }
 
 /* Time */
-val EventTime.first: Time
+internal val EventTime.first: Time
     get() {
         trigger.firstOrNull { it is NormalTime }?.let { return it }
         trigger.firstOrNull { it is RangeTime }?.let { return it }
         return trigger.first()
     }
 
-val EventTime.textFirst: String
+internal val EventTime.textFirst: String
     @Composable get() = (if (this.trigger.size > 1) "*" else "") + when (this.first) {
         is NormalTime -> (first as NormalTime).text
         is RangeTime -> (first as RangeTime).text
@@ -52,7 +52,7 @@ val EventTime.textFirst: String
     }
 
 
-val Time.text: String
+internal val Time.text: String
     @Composable get() = when (this) {
         is NormalTime -> R.str.screen.mission.time.normal(
             text = this.text
@@ -84,7 +84,7 @@ val Time.text: String
     }
 
 /* Event */
-val Event.text: String
+internal val Event.text: String
     @Composable get() = (if (!show) "*" else "") + when (this) {
         is AssaultEvent -> R.str.screen.mission.event.assault(
             description = this.description,

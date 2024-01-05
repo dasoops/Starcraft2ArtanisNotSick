@@ -43,16 +43,14 @@ import com.dasoops.common.resources.R
 import com.dasoops.common.resources.icon
 import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.mission.event.AssaultEvent
-import com.dasoops.common.resources.mission.event.AwardEvent
 import com.dasoops.common.resources.mission.event.Event
-import com.dasoops.common.resources.mission.event.MonopolizeEvent
 import com.dasoops.common.resources.mission.event.NormalTime
 import com.dasoops.common.resources.mission.event.RangeTime
 import com.dasoops.common.resources.mission.event.text
 import com.dasoops.common.resources.sterength
 
 @Composable
-fun Event.Composable() = EventBox(
+internal fun Event.Composable() = EventBox(
     event = this,
     content = { expanded ->
         Icon(
@@ -158,7 +156,7 @@ fun Event.Composable() = EventBox(
 )
 
 @Composable
-fun EventBox(
+private fun EventBox(
     event: Event,
     content: @Composable RowScope.(/* expanded */Boolean) -> Unit,
     expandedContent: @Composable () -> Unit,
@@ -225,117 +223,3 @@ fun EventBox(
         }
     }
 }
-
-@Composable
-fun AssaultEvent.Composable() = EventBox(
-    event = this,
-    content = {
-        Icon(
-            painter = painterResource(if (it) R.icon.keyboardArrowDown else R.icon.keyboardArrowRight),
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.width(40.dp),
-        )
-        Row(
-            modifier = Modifier.weight(1.0f)
-        ) {
-            Text(
-                text = time.textFirst,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(0.7f),
-            )
-
-            Spacer(Modifier.width(20.dp))
-
-            Text(
-                text = text,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
-            )
-        }
-        Text(
-            text = level.text,
-            modifier = Modifier.width(110.dp),
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            textAlign = TextAlign.Right
-        )
-    },
-    expandedContent = {
-        Text(text = this.id)
-    }
-)
-
-@Composable
-fun AwardEvent.Composable() = EventBox(
-    event = this,
-    content = {
-        Icon(
-            painter = painterResource(if (it) R.icon.keyboardArrowDown else R.icon.keyboardArrowRight),
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.width(40.dp),
-        )
-        Row(
-            modifier = Modifier.weight(1.0f)
-        ) {
-            Text(
-                text = time?.textFirst ?: "",
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(0.7f),
-            )
-
-            Spacer(Modifier.width(20.dp))
-
-            Text(
-                text = text,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
-            )
-        }
-        Spacer(modifier = Modifier.width(110.dp))
-    },
-    expandedContent = {
-        Text(text = this.id)
-    }
-)
-
-@Composable
-fun MonopolizeEvent.Composable() = EventBox(
-    event = this,
-    content = {
-        Icon(
-            painter = painterResource(if (it) R.icon.keyboardArrowDown else R.icon.keyboardArrowRight),
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.width(40.dp),
-        )
-        Row(
-            modifier = Modifier.weight(1.0f)
-        ) {
-            Text(
-                text = time?.textFirst ?: "",
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(0.7f),
-            )
-
-            Spacer(Modifier.width(20.dp))
-
-            Text(
-                text = text,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f),
-            )
-        }
-        Spacer(modifier = Modifier.width(110.dp))
-    },
-    expandedContent = {
-        Text(text = this.id)
-    }
-)

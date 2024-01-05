@@ -36,9 +36,8 @@ import com.dasoops.common.resources.R
 import com.dasoops.common.resources.Race
 import com.dasoops.common.resources.ai
 
-
 @Composable
-fun AiChooser(
+internal fun AiChooser(
     appState: AppState = LocalState.current,
     missionState: MissionState = appState.missionState,
 ) {
