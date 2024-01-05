@@ -3,9 +3,9 @@ package com.dasoops.common.resources.mission
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.painter.Painter
 import com.dasoops.common.resources.R
+import com.dasoops.common.resources.event.Event
 import com.dasoops.common.resources.image
 import com.dasoops.common.resources.mission
-import com.dasoops.common.resources.mission.event.Event
 import com.dasoops.common.resources.mission.position.Position
 import kotlinx.serialization.Serializable
 

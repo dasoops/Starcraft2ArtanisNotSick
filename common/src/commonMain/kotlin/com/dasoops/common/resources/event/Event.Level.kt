@@ -1,4 +1,4 @@
-package com.dasoops.common.resources.mission.event
+package com.dasoops.common.resources.event
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

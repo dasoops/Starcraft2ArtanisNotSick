@@ -2,18 +2,18 @@ package com.dasoops.common.screen.mission
 
 import androidx.compose.runtime.Composable
 import com.dasoops.common.resources.R
+import com.dasoops.common.resources.event.AssaultEvent
+import com.dasoops.common.resources.event.AwardEvent
+import com.dasoops.common.resources.event.Event
+import com.dasoops.common.resources.event.EventOffsetTime
+import com.dasoops.common.resources.event.EventTime
+import com.dasoops.common.resources.event.MonopolizeEvent
+import com.dasoops.common.resources.event.NormalTime
+import com.dasoops.common.resources.event.RangeTime
+import com.dasoops.common.resources.event.Time
+import com.dasoops.common.resources.event.TriggerPositionTime
+import com.dasoops.common.resources.event.description
 import com.dasoops.common.resources.localization.str
-import com.dasoops.common.resources.mission.event.AssaultEvent
-import com.dasoops.common.resources.mission.event.AwardEvent
-import com.dasoops.common.resources.mission.event.Event
-import com.dasoops.common.resources.mission.event.EventOffsetTime
-import com.dasoops.common.resources.mission.event.EventTime
-import com.dasoops.common.resources.mission.event.MonopolizeEvent
-import com.dasoops.common.resources.mission.event.NormalTime
-import com.dasoops.common.resources.mission.event.RangeTime
-import com.dasoops.common.resources.mission.event.Time
-import com.dasoops.common.resources.mission.event.TriggerPositionTime
-import com.dasoops.common.resources.mission.event.description
 import com.dasoops.common.resources.mission.position.EventPosition
 import com.dasoops.common.resources.mission.position.MultiplePosition
 import com.dasoops.common.resources.mission.position.RandomPosition
@@ -22,7 +22,7 @@ import com.dasoops.common.resources.mission.position.description
 import com.dasoops.common.util.text
 
 /* position */
-internal val EventPosition.text
+internal val EventPosition.text: String
     @Composable get() = when (this) {
         is SinglePosition -> this.position.description
         is MultiplePosition ->
@@ -34,6 +34,8 @@ internal val EventPosition.text
             "*" + this.position
                 .map { it.position.description }
                 .joinToString(separator = " or ") { it }
+
+        else -> ""
     }
 
 /* Time */
@@ -85,20 +87,23 @@ internal val Time.text: String
 
 /* Event */
 internal val Event.text: String
-    @Composable get() = (if (!show) "*" else "") + when (this) {
-        is AssaultEvent -> R.str.screen.mission.event.assault(
-            description = this.description,
-            position = this.position.text,
-            index = (this.index + 1).toString(),
-        )
+    @Composable get() = run {
+        (if (!show) "*" else "") + when (this) {
+            is AssaultEvent -> R.str.screen.mission.event.assault(
+                description = this.description,
+                position = this.position.text ?: "",
+                index = (this.index + 1).toString(),
+            )
 
-        is AwardEvent -> R.str.screen.mission.event.award(
-            description = this.description,
-            index = (this.index + 1).toString(),
-        )
 
-        is MonopolizeEvent -> R.str.screen.mission.event.monopolize(
-            description = this.description,
-            index = (this.index + 1).toString(),
-        )
+            is AwardEvent -> R.str.screen.mission.event.award(
+                description = this.description,
+                index = (this.index + 1).toString(),
+            )
+
+            is MonopolizeEvent -> R.str.screen.mission.event.monopolize(
+                description = this.description,
+                index = (this.index + 1).toString(),
+            )
+        }
     }

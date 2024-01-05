@@ -40,13 +40,13 @@ import com.dasoops.common.component.TextDivider
 import com.dasoops.common.component.UnitImage
 import com.dasoops.common.resources.MissionState
 import com.dasoops.common.resources.R
+import com.dasoops.common.resources.event.AssaultEvent
+import com.dasoops.common.resources.event.Event
+import com.dasoops.common.resources.event.NormalTime
+import com.dasoops.common.resources.event.RangeTime
+import com.dasoops.common.resources.event.text
 import com.dasoops.common.resources.icon
 import com.dasoops.common.resources.localization.str
-import com.dasoops.common.resources.mission.event.AssaultEvent
-import com.dasoops.common.resources.mission.event.Event
-import com.dasoops.common.resources.mission.event.NormalTime
-import com.dasoops.common.resources.mission.event.RangeTime
-import com.dasoops.common.resources.mission.event.text
 import com.dasoops.common.resources.sterength
 
 @Composable

@@ -1,4 +1,4 @@
-package com.dasoops.common.resources.mission.event
+package com.dasoops.common.resources.event
 
 import androidx.compose.runtime.Composable
 import com.dasoops.common.resources.R

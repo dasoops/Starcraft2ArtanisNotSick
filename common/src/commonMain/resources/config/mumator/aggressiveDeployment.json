@@ -1,0 +1,607 @@
+{
+  "id": "Aggressive Deployment",
+  "event": [
+    [
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 1
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 1
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 290,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 0,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 1
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 2
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 420,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 1,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 2
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 3
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 550,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 2,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 2
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 4
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 680,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 3,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 3
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 4
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 810,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 4,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 4
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 4
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 940,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 5,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1070,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 6,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1200,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 7,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1330,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 8,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1460,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 9,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1590,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 10,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1720,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 11,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1850,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 12,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 1980,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 13,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 2110,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 14,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 2240,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 15,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 2370,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 16,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 2500,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 17,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 2630,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 18,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      },
+      {
+        "type": "Assault",
+        "id": "",
+        "show": true,
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "time": {
+          "keep": null,
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 2760,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 19,
+        "target": null,
+        "position": {
+          "type": "Unknown"
+        }
+      }
+    ]
+  ]
+}
