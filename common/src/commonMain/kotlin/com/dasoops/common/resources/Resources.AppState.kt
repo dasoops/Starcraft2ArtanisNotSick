@@ -56,6 +56,10 @@ data class MissionState(
     val autoScroll: MutableState<Boolean> = mutableStateOf(false),
     @Transient
     val showHide: MutableState<Boolean> = mutableStateOf(false),
+    @Transient
+    val openAiChooser: MutableState<Boolean> = mutableStateOf(false),
+    @Transient
+    val ai: MutableState<Ai?> = mutableStateOf(null),
 ) {
 
     fun clear(setting: Setting) {
@@ -65,6 +69,8 @@ data class MissionState(
         showAggressiveDeploymentEvent.value = false
         autoScroll.value = setting.autoScroll.value
         showHide.value = setting.showHide.value
+        openAiChooser.value = false
+        ai.value = null
     }
 
     companion object {
