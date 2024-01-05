@@ -55,9 +55,3 @@ fun app(
         }
     }
 }
-
-@Composable
-private fun mainView(
-    state: AppState = LocalState.current
-) {
-}
