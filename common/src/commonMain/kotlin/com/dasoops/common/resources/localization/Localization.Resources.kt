@@ -28,7 +28,7 @@ enum class Language(
 
     override val data: String = value
 
-    object Serializer : KSerializer<Language> by StringDataEnum.Serializer()
+    internal object Serializer : KSerializer<Language> by StringDataEnum.Serializer()
     companion object {
         val Default: Language = EN_US
         val valueMap: Map<String, Language> = DataEnum.valueMap<String, Language>()

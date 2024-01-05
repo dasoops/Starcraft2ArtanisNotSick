@@ -31,7 +31,7 @@ enum class Race(val value: String) : StringDataEnum {
 
     override val data: String = value
 
-    object Serializer : KSerializer<Race> by StringDataEnum.Serializer()
+    internal object Serializer : KSerializer<Race> by StringDataEnum.Serializer()
     companion object {
         val Default = Terran
     }

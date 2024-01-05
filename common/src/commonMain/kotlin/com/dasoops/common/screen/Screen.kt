@@ -17,7 +17,7 @@ import kotlinx.serialization.Serializable
 
 internal val screenLogger = KotlinLogging.logger { }
 
-@Serializable(with = Screen.Companion.Serializer::class)
+@Serializable(with = Screen.Serializer::class)
 enum class Screen(
     override val data: String,
     val mainScreen: @Composable () -> Unit,
@@ -43,9 +43,8 @@ enum class Screen(
 
     abstract val text: String @Composable get
 
+    internal object Serializer : KSerializer<Screen> by StringDataEnum.Serializer<Screen>()
     companion object {
         val Default = Mission
-
-        object Serializer : KSerializer<Screen> by StringDataEnum.Serializer<Screen>()
     }
 }

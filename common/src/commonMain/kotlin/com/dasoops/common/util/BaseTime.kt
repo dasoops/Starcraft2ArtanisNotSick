@@ -45,7 +45,7 @@ enum class TimeUnit(
     HOUR(data = "Hour", convertToSeconds = { it * 60 * 60 }),
     ;
 
-    object Serializer : KSerializer<TimeUnit> by StringDataEnum.Serializer<TimeUnit>()
+    internal object Serializer : KSerializer<TimeUnit> by StringDataEnum.Serializer<TimeUnit>()
 }
 
 fun TimeUnit.convertToMilloseconds(origin: Int) = this.convertToSeconds(origin) * 1000

@@ -18,7 +18,7 @@ class Dict(
     private object SuperSerializer :
         KSerializer<Map<String, String>> by MapSerializer(String.serializer(), String.serializer())
 
-    object Serializer : KSerializer<Dict> by SuperSerializer.map(
+    internal object Serializer : KSerializer<Dict> by SuperSerializer.map(
         resultantDescriptor = SuperSerializer.descriptor,
         serialize = { it.toMap() },
         deserialize = { Dict(it) },

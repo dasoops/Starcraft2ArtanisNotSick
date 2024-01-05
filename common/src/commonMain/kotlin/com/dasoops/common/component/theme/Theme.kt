@@ -90,7 +90,7 @@ enum class Theme(
     DARK_DEFAULT(data = "Dark.Default", colorScheme = darkColorScheme()),
     ;
 
-    object Serializer : KSerializer<Theme> by StringDataEnum.Serializer()
+    internal object Serializer : KSerializer<Theme> by StringDataEnum.Serializer()
     companion object {
         val Default: Theme = LIGHT
     }
