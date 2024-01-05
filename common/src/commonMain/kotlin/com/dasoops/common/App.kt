@@ -23,7 +23,7 @@ val LocalState = staticCompositionLocalOf { AppState.Default }
 val LocalDependency = staticCompositionLocalOf { getDependencies() }
 
 @Composable
-fun appWrap(content: @Composable () -> Unit) {
+private fun appWrap(content: @Composable () -> Unit) {
     logger.info { "platform: ${getPlatformName()}" }
     val state: AppState = remember { loadAppState() }
 
@@ -43,7 +43,7 @@ fun appWrap(content: @Composable () -> Unit) {
 @Composable
 fun app(
     state: AppState = LocalState.current
-) {
+) = appWrap {
     var screen by remember { state.screen }
 
     MyTheme(theme = state.setting.theme.value) {
