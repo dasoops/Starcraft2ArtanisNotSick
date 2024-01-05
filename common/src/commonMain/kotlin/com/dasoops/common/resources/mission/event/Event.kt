@@ -5,7 +5,6 @@ import com.dasoops.common.resources.mission.position.EventPosition
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-
 @Serializable
 sealed interface Event {
     val id: String

@@ -6,8 +6,7 @@ import androidx.compose.ui.res.painterResource
 import com.dasoops.common.resources.mission.Mission
 import java.io.File
 
-val R.image: Image
-    get() = Image
+val R.image: Image get() = Image
 
 object Image {
     private const val directoryDir: String = "image"
