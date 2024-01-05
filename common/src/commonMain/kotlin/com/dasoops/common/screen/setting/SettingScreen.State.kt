@@ -9,7 +9,6 @@ import com.dasoops.common.resources.localization.currentSystemLanguage
 import com.dasoops.common.util.MutableStateSerializer
 import kotlinx.serialization.Serializable
 
-
 @Serializable
 class Setting(
     @Serializable(with = MutableStateSerializer::class)

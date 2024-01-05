@@ -32,9 +32,8 @@ import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.version
 import com.dasoops.common.util.hoverChangeCursor
 
-
 @Composable
-fun TopAppInfo() {
+internal fun TopAppInfo() {
     Row(Modifier.height(160.dp)) {
         Column {
             TitleAndVersion()

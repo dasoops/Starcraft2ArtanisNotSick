@@ -10,7 +10,7 @@ import com.dasoops.common.resources.localization.str
 import com.dasoops.common.screen.setting.settingLogger
 
 @Composable
-fun Appearance() {
+internal fun Appearance() {
     Title(R.str.screen.setting.appearance.title)
     Language()
     Theme()
