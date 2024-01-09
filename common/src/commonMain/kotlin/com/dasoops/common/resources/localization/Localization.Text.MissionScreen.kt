@@ -10,7 +10,9 @@ data class MissionText(
     val clickToStart: String,
     val clickToPause: String,
     val chooseAi: String,
-    val showAggressiveDeploymentEvent: String,
+    val selectMumator: String,
+    val aggressiveDeployment: String,
+    val voidRifts: String,
     val hideEvent: String,
     val autoScroll: String,
     val clickToContinue: String,
@@ -36,25 +38,8 @@ data class LevelText(
     val strength: String,
     val tech: String,
     val extra: String,
-    private val techSelect: String,
-    private val techNotSelect: String,
-) {
-    fun techSelect(
-        tech: String,
-        level: String,
-    ) = techSelect.fill(
-        "tech" to tech,
-        "level" to level,
-    )
-
-    fun techNotSelect(
-        tech: String,
-        level: String,
-    ) = techNotSelect.fill(
-        "tech" to tech,
-        "level" to level,
-    )
-}
+    val techNotSelect: String,
+)
 
 @Serializable
 data class TimeText(

@@ -19,13 +19,11 @@ import androidx.compose.ui.unit.dp
 import com.dasoops.common.LocalState
 import com.dasoops.common.resources.AppState
 import com.dasoops.common.resources.MissionState
-import com.dasoops.common.resources.R
 import com.dasoops.common.resources.event.Event
 import com.dasoops.common.resources.event.NormalTime
 import com.dasoops.common.resources.event.RangeTime
 import com.dasoops.common.resources.event.sortValue
 import com.dasoops.common.resources.mission.Mission
-import com.dasoops.common.resources.mumator.mumator
 import kotlinx.coroutines.launch
 
 @Composable
@@ -39,18 +37,15 @@ internal fun Main(
     val timer: Int by remember { missionState.timer }
     val autoScroll: Boolean by remember { missionState.autoScroll }
     val showHide: Boolean by remember { missionState.showHide }
-    val showAggressiveDeploymentEvent: Boolean by remember { missionState.showAggressiveDeploymentEvent }
+    val selectMumatorList = remember { missionState.selectMumatorList }
 
     val lazyListState = rememberLazyListState()
-    val eventList: List<Event> = remember(mission, showHide, showAggressiveDeploymentEvent) {
+    val eventList: List<Event> = remember(mission, showHide, selectMumatorList.size) {
         mission ?: return@remember emptyList()
-        var originEventList = mission!!.event
+        val originEventList = mission!!.event.toMutableList()
 
-        if (showAggressiveDeploymentEvent) {
-            originEventList = originEventList.toMutableList().apply {
-                this.addAll(R.mumator.aggressiveDeployment.event)
-            }
-        }
+        selectMumatorList.forEach { originEventList.addAll(it.event) }
+
         originEventList
             .filter { if (showHide) true else it.show }
             .sortedBy { it.sortValue }

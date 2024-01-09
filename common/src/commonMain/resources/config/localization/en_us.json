@@ -50,11 +50,13 @@
       "clickToPause": "Click to Pause",
       "clickToContinue": "Click to Continue",
       "chooseAi": "Choose Ai",
-      "showAggressiveDeploymentEvent": "Aggressive Deployment",
+      "selectMumator": "Mumator",
+      "aggressiveDeployment": "Aggressive Deployment",
+      "voidRifts": "Void Rifts",
       "hideEvent": "Hide event",
       "autoScroll": "Auto scroll",
       "event": {
-        "assault": "${position} | ${description} [${index}]",
+        "assault": "${description} [${index}]",
         "award": "Award(${description}) [${index}]",
         "monopolize": "Mission event(${description}) [${index}]"
       },
@@ -62,8 +64,7 @@
         "title": "title",
         "strength": "strength",
         "tech": "tech",
-        "techSelect": "${tech}: T${level}",
-        "techNotSelect": "${tech}: T${level} - Select ai show Icon",
+        "techNotSelect": "Select ai show Icon",
         "extra": "extra"
       },
       "time": {
@@ -126,6 +127,66 @@
         }
       },
       "events": {
+        "裂隙0": {
+          "description": "2× Void Rifts"
+        },
+        "裂隙1": {
+          "description": "2× Void Rifts"
+        },
+        "裂隙2": {
+          "description": "2× Void Rifts"
+        },
+        "裂隙3": {
+          "description": "2× Void Rifts"
+        },
+        "裂隙4": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙5": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙6": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙7": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙8": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙9": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙10": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙11": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙12": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙13": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙14": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙15": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙16": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙17": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙18": {
+          "description": "4× Void Rifts"
+        },
+        "裂隙19": {
+          "description": "4× Void Rifts"
+        },
         "Assault$d41ee809-7d90-43b4-928d-3f31835f904c": {
           "description": "Aggressive Deployment"
         },
@@ -292,6 +353,9 @@
       "positions": {
         "Unknown": {
           "description": "Unknown"
+        },
+        "Point$b04e7281-6753-47c2-8922-52b9dbf3884d": {
+          "description": "Void Rifts spawn point(no preview)"
         },
         "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6": {
           "description": "*7 units away from the potential target"

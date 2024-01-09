@@ -12,9 +12,10 @@ val R.mumator: AnyMumator get() = AnyMumator
 
 object AnyMumator {
     val aggressiveDeployment: Mumator by lazy { R.mumator("Aggressive Deployment") }
+    val voidRifts: Mumator by lazy { R.mumator("Void Rifts") }
 }
 
-private val nameMumatorCache by lazy { R.mumators.associateBy { it.id } }
+private val idMumatorCache by lazy { R.mumators.associateBy { it.id } }
 
-fun R.mumator(name: String): Mumator = mumatorOrNull(name)!!
-fun R.mumatorOrNull(name: String): Mumator? = nameMumatorCache[name]
+fun R.mumator(id: String): Mumator = mumatorOrNull(id)!!
+fun R.mumatorOrNull(name: String): Mumator? = idMumatorCache[name]

@@ -11,8 +11,8 @@ import com.dasoops.common.util.BaseException
 /* get by id */
 private val idPositionCache: Map<String, Position> by lazy {
     listOf(
-        R.mumators.flatMap { mission ->
-            mission.position.map {
+        R.mumators.flatMap { mumator ->
+            mumator.position.map {
                 it.id to it
             }
         },

@@ -50,20 +50,21 @@
       "clickToPause": "单击以暂停",
       "clickToContinue": "单击以继续",
       "chooseAi": "选择Ai",
-      "showAggressiveDeploymentEvent": "进攻部署",
+      "selectMumator": "选择因子",
+      "aggressiveDeployment": "进攻部署",
+      "voidRifts": "虚空裂隙",
       "hideEvent": "隐藏事件",
       "autoScroll": "自动滚动",
       "event": {
-        "assault": "${description} ${index}",
-        "award": "奖励波次(${description}) ${index}",
-        "monopolize": "地图事件波次(${description}) ${index}"
+        "assault": "${description} 波次-${index}",
+        "award": "奖励(${description}) 波次-${index}",
+        "monopolize": "地图事件(${description}) 波次-${index}"
       },
       "level": {
         "title": "等级",
         "strength": "规模",
         "tech": "科技",
-        "techSelect": "${tech}: T${level}",
-        "techNotSelect": "${tech}: T${level} - 选择ai以显示当前科技等级单位",
+        "techNotSelect": "选择ai以显示当前科技等级单位",
         "extra": "附加项"
       },
       "time": {
@@ -126,6 +127,66 @@
         }
       },
       "events": {
+        "裂隙0": {
+          "description": "2× 虚空裂隙"
+        },
+        "裂隙1": {
+          "description": "2× 虚空裂隙"
+        },
+        "裂隙2": {
+          "description": "2× 虚空裂隙"
+        },
+        "裂隙3": {
+          "description": "2× 虚空裂隙"
+        },
+        "裂隙4": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙5": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙6": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙7": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙8": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙9": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙10": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙11": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙12": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙13": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙14": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙15": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙16": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙17": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙18": {
+          "description": "4× 虚空裂隙"
+        },
+        "裂隙19": {
+          "description": "4× 虚空裂隙"
+        },
         "Assault$d41ee809-7d90-43b4-928d-3f31835f904c": {
           "description": "进攻部署"
         },
@@ -187,55 +248,55 @@
           "description": "进攻部署"
         },
         "Assault$f8e2ad97-d94a-4e82-9a28-fc1ef4e0ae37": {
-          "description": "列车波次"
+          "description": "列车"
         },
         "Assault$f4f4b449-6f6d-4a59-8953-29bfcb81f6c5": {
-          "description": "列车波次"
+          "description": "列车"
         },
         "Assault$5de48822-bf55-44e7-9bda-75c0697205df": {
-          "description": "列车波次"
+          "description": "列车"
         },
         "Assault$f08c0007-8f44-4ce7-a12a-dbd61778c1e6": {
-          "description": "列车波次"
+          "description": "列车"
         },
         "Assault$ea6c03ad-9217-4433-afc4-241096795046": {
-          "description": "列车波次"
+          "description": "列车"
         },
         "Assault$3034f433-8fab-4226-a39a-9603ed2f99a9": {
-          "description": "列车波次"
+          "description": "列车"
         },
         "Assault$193bf39d-1945-49dc-864d-9984b7ed4b14": {
-          "description": "列车波次"
+          "description": "列车"
         },
         "Assault$f8e2ad97-d94a-4e82-9a28-fc1ef4e0ae370": {
-          "description": "列车波次"
+          "description": "列车"
         },
         "Assault$7c57e4e2-f95d-4518-a049-6a7dba10385b": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$61ee8d7e-c710-4f69-b20e-c4d402d875d5": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$80812a01-2185-4263-8138-12e2a75c1b79": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$25008549-84de-47ea-ae28-aba9b3f8f2e3": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$b6afcfa0-c7ce-4e7b-b44e-d545505b025e": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$8b7f10c4-696d-4876-9fdd-ba884c7ee2f7": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$2a53bc13-00e9-41f1-86eb-38380b3be914": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$47c40f7d-50d3-4d71-bca0-39e570b39f07": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$282b6085-53f5-4b31-a904-b12bc3ac59f6": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Monopolize$f90c4224-ba70-4596-86cb-1bfdf0b422c5": {
           "description": "虚空碎片"
@@ -256,42 +317,45 @@
           "description": "海盗船"
         },
         "Assault$ca0ee731-5849-4314-a301-0d462678e79e": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$707db70f-84f4-47a6-83a3-931f2147c736": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$1aefb891-30e6-499a-8cf9-b8fc3571eabd": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$27d29a3a-1400-4381-b993-aba061c7d861": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$2b17cc44-6131-4f52-9c20-f9e3f8c2b935": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$d3d50049-90e2-447e-8018-3bc86f908dac": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$cc7b040f-d1e4-4410-929d-cc46abaf5220": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$ea603d01-632c-4c1f-8786-88c6fa85a17b": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$1cb2f6b1-fa6a-4c4f-b184-aa79a90bbd6f": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$741e5592-23b9-4888-821c-50f4003b8874": {
-          "description": "进攻波次"
+          "description": "进攻"
         },
         "Assault$8face6a3-b903-472c-86f7-e13d06c6ed55": {
-          "description": "进攻波次"
+          "description": "进攻"
         }
       },
       "positions": {
         "Unknown": {
           "description": "未知刷新点"
+        },
+        "Point$b04e7281-6753-47c2-8922-52b9dbf3884d": {
+          "description": "*裂隙刷新点(暂无预览)"
         },
         "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6": {
           "description": "*玩家部队单位7格内"

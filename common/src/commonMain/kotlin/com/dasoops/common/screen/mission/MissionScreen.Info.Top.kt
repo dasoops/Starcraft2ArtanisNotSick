@@ -17,6 +17,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -37,6 +39,7 @@ import com.dasoops.common.resources.MissionState
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.mission.image
+import com.dasoops.common.resources.mumator.mumator
 import com.dasoops.common.util.TimeUnit
 import com.dasoops.common.util.UnitTime
 import com.dasoops.common.util.text
@@ -114,10 +117,12 @@ private fun RowScope.Setting(
     missionState: MissionState = state.missionState,
 ) {
     var autoScroll by remember { missionState.autoScroll }
-    var showAggressiveDeploymentEvent by remember { missionState.showAggressiveDeploymentEvent }
+    var selectMumatorList = remember { missionState.selectMumatorList }
     var showHide by remember { missionState.showHide }
     var openAiChooser by remember { missionState.openAiChooser }
     val ai by remember { missionState.ai }
+
+    var mumatorExpanded by remember { mutableStateOf(false) }
 
     Row(
         modifier = Modifier.fillMaxSize().weight(1f).padding(12.dp),
@@ -145,10 +150,36 @@ private fun RowScope.Setting(
                 onSelect = { autoScroll = !autoScroll }
             )
             SettingBox(
-                text = R.str.screen.mission.showAggressiveDeploymentEvent,
-                selected = showAggressiveDeploymentEvent,
-                onSelect = { showAggressiveDeploymentEvent = !showAggressiveDeploymentEvent }
+                text = R.str.screen.mission.selectMumator,
+                selected = selectMumatorList.isNotEmpty(),
+                onSelect = { mumatorExpanded = true }
             )
+            DropdownMenu(mumatorExpanded, onDismissRequest = { mumatorExpanded = false }) {
+                DropdownMenuItem(
+                    text = {
+                        Text(text = R.str.screen.mission.aggressiveDeployment)
+                    },
+                    onClick = {
+                        mumatorExpanded = false
+                        if (!selectMumatorList.remove(R.mumator.aggressiveDeployment)) {
+                            selectMumatorList.add(R.mumator.aggressiveDeployment)
+                        }
+                    },
+                    modifier = Modifier.background(selectedColor(selectMumatorList.contains(R.mumator.aggressiveDeployment))),
+                )
+                DropdownMenuItem(
+                    text = {
+                        Text(text = R.str.screen.mission.voidRifts)
+                    },
+                    onClick = {
+                        mumatorExpanded = false
+                        if (!selectMumatorList.remove(R.mumator.voidRifts)) {
+                            selectMumatorList.add(R.mumator.voidRifts)
+                        }
+                    },
+                    modifier = Modifier.background(selectedColor(selectMumatorList.contains(R.mumator.voidRifts))),
+                )
+            }
         }
     }
 }
@@ -159,11 +190,6 @@ private fun ColumnScope.SettingBox(
     selected: Boolean,
     onSelect: () -> Unit,
 ) {
-    val useColor = if (selected) {
-        MaterialTheme.colorScheme.onBackground.copy(alpha = 0.1f)
-    } else {
-        MaterialTheme.colorScheme.background
-    }
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -171,7 +197,7 @@ private fun ColumnScope.SettingBox(
             .clickable(onClick = {
                 onSelect()
             })
-            .background(color = useColor)
+            .background(color = selectedColor(selected))
             .border(
                 border = BorderStroke(
                     0.5.dp,
@@ -186,6 +212,13 @@ private fun ColumnScope.SettingBox(
             textAlign = TextAlign.Center
         )
     }
+}
+
+@Composable
+private fun selectedColor(selected: Boolean) = if (selected) {
+    MaterialTheme.colorScheme.onBackground.copy(alpha = 0.1f)
+} else {
+    MaterialTheme.colorScheme.background
 }
 
 @Composable

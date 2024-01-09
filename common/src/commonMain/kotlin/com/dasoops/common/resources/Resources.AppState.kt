@@ -1,9 +1,12 @@
 package com.dasoops.common.resources
 
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.snapshots.SnapshotStateList
 import com.dasoops.common.resources.mission.Mission
 import com.dasoops.common.resources.mission.mission
+import com.dasoops.common.resources.mumator.Mumator
 import com.dasoops.common.screen.Screen
 import com.dasoops.common.screen.setting.Setting
 import com.dasoops.common.util.MutableStateSerializer
@@ -47,8 +50,8 @@ data class MissionState(
     ),
     @Transient
     val timer: MutableState<Int> = mutableStateOf(0),
-    @Serializable(with = MutableStateSerializer::class)
-    val showAggressiveDeploymentEvent: MutableState<Boolean> = mutableStateOf(false),
+    @Transient
+    val selectMumatorList: SnapshotStateList<Mumator> = mutableStateListOf(),
     @Transient
     val timerStart: MutableState<Boolean> = mutableStateOf(false),
     @Transient
@@ -65,11 +68,11 @@ data class MissionState(
         current.value = null
         timer.value = 0
         timerStart.value = false
-        showAggressiveDeploymentEvent.value = false
         autoScroll.value = setting.autoScroll.value
         showHide.value = setting.showHide.value
         openAiChooser.value = false
         ai.value = null
+        selectMumatorList.clear()
     }
 
     companion object {

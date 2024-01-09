@@ -40,7 +40,7 @@ fun ClassSerialDescriptorBuilder.takeElementsFrom(descriptor: SerialDescriptor) 
 }
 
 public inline fun <T, R> KSerializer<T>.map(
-    resultantDescriptor: SerialDescriptor,
+    resultantDescriptor: SerialDescriptor = this.descriptor,
     crossinline deserialize: T.(T) -> R,
     crossinline serialize: R.(R) -> T,
 ): KSerializer<R> {

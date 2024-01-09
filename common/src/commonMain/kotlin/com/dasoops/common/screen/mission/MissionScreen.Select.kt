@@ -42,7 +42,8 @@ internal fun MissionSelect() {
                 modifier = Modifier.clickable(onClick = {
                     missionLogger.trace { "mission change -> $it" }
                     mission = it
-                }).padding(10.dp)
+                })
+                    .padding(10.dp)
                     .weight(1f),
             ) {
                 Image(

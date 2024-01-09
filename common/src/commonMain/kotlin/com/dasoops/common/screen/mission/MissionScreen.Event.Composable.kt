@@ -10,7 +10,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -39,12 +38,20 @@ import androidx.compose.ui.unit.dp
 import com.dasoops.common.LocalState
 import com.dasoops.common.component.TextDivider
 import com.dasoops.common.component.UnitImage
+import com.dasoops.common.resources.Ai
 import com.dasoops.common.resources.MissionState
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.event.AssaultEvent
 import com.dasoops.common.resources.event.Event
+import com.dasoops.common.resources.event.EventOffsetTime
+import com.dasoops.common.resources.event.FixedStrengthLevel
+import com.dasoops.common.resources.event.FixedTechLevel
+import com.dasoops.common.resources.event.HalfStrengthLevel
+import com.dasoops.common.resources.event.NormalLevel
 import com.dasoops.common.resources.event.NormalTime
 import com.dasoops.common.resources.event.RangeTime
+import com.dasoops.common.resources.event.TechLevel
+import com.dasoops.common.resources.event.TriggerPositionTime
 import com.dasoops.common.resources.event.text
 import com.dasoops.common.resources.icon
 import com.dasoops.common.resources.localization.str
@@ -130,37 +137,69 @@ internal fun Event.Composable() = EventBox(
             if (this@Composable is AssaultEvent) {
                 TextDivider(text = R.str.screen.mission.level.title)
 
-                val strengthLevel = this@Composable.level.strength.value
+                val strengthStr = R.str.screen.mission.level.strength
+                val strengthLevelValue = when (
+                    val strengthLevel = this@Composable.level.strength
+                ) {
+                    is HalfStrengthLevel ->
+                        "$strengthStr: T${strengthLevel.level} - ${R.sterength(strengthLevel.level)}"
+
+                    is NormalLevel ->
+                        "$strengthStr: T${strengthLevel.level} - ${R.sterength(strengthLevel.level)}"
+
+                    is FixedStrengthLevel ->
+                        "$strengthStr: ${strengthLevel.value} "
+                }
                 Row {
                     Text(
-                        text = "${R.str.screen.mission.level.strength}: T${strengthLevel}" +
-                                " - ${R.sterength(strengthLevel)}",
+                        text = strengthLevelValue,
                         style = MaterialTheme.typography.bodyMedium,
                     )
                 }
 
-                val techLevel = this@Composable.level.tech.value
-                Row {
-                    Text(
-                        text = if (null == ai) R.str.screen.mission.level.techNotSelect(
-                            tech = R.str.screen.mission.level.tech,
-                            level = techLevel.toString(),
-                        ) else R.str.screen.mission.level.techSelect(
-                            tech = R.str.screen.mission.level.tech,
-                            level = techLevel.toString(),
-                        ),
-                        style = MaterialTheme.typography.bodyMedium,
-                        modifier = Modifier.align(Alignment.CenterVertically)
-                    )
-                    if (null != ai) {
-                        Spacer(modifier = Modifier.width(12.dp))
-                        ai!!.units(techLevel).forEach { UnitImage(it) }
-                    }
-                }
+                val techLevel = this@Composable.level.tech
+                AiView(techLevel = techLevel, ai = ai)
             }
         }
     }
 )
+
+@Composable
+private fun AiView(
+    techLevel: TechLevel,
+    ai: Ai?,
+) {
+    Row {
+        Text(
+            text = "${R.str.screen.mission.level.tech}: ",
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.align(Alignment.CenterVertically)
+        )
+
+        when (techLevel) {
+            is NormalLevel -> {
+                Text(
+                    text = "T${techLevel.level} - ",
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier.align(Alignment.CenterVertically)
+                )
+                if (ai == null) {
+                    Text(
+                        R.str.screen.mission.level.techNotSelect,
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier.align(Alignment.CenterVertically)
+                    )
+                } else {
+                    ai.units(techLevel.level).forEach { UnitImage(it) }
+                }
+            }
+
+            is FixedTechLevel -> {
+                techLevel.units.forEach { UnitImage(it) }
+            }
+        }
+    }
+}
 
 @Composable
 private fun EventBox(
@@ -190,7 +229,9 @@ private fun EventBox(
         when (val time = event.time?.first) {
             is NormalTime -> background(1f * timer / time.originSeconds)
             is RangeTime -> background(1f * timer / time.begin.originSeconds)
-            else -> Modifier
+            is EventOffsetTime -> Modifier
+            is TriggerPositionTime -> Modifier
+            null -> Modifier
         }
     }
     Surface(

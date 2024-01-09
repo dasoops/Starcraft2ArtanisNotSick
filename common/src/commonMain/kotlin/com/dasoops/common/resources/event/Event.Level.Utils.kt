@@ -8,8 +8,10 @@ val Level.text: String
     @Composable get() = run {
         val halfSuffix by LocalState.current.setting.halfLevelSuffix
         when (this) {
-            is NormalLevel -> "T$value"
-            is HalfLevel -> "T$value$halfSuffix"
+            is NormalLevel -> "T$level"
+            is HalfStrengthLevel -> "T$level$halfSuffix"
+            is FixedStrengthLevel -> "Fixed"
+            is FixedTechLevel -> "Fixed"
         }
     }
 

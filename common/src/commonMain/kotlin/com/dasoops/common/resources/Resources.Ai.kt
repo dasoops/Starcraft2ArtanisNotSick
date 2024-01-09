@@ -1,7 +1,6 @@
 package com.dasoops.common.resources
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.painter.Painter
 import com.dasoops.common.resources.localization.str
 import com.dasoops.common.util.BaseException
 import com.dasoops.common.util.Serializer
@@ -46,15 +45,6 @@ data class Assault(
     val level: Int,
     val units: List<Unit>,
 )
-
-@JvmInline
-@Serializable
-value class Unit(
-    val id: String
-)
-
-val Unit.name: String @Composable get() = R.str.dict[id]
-val Unit.image: Painter @Composable get() = R.image.unit(this)
 
 private fun loadAi(): List<Ai> = R.resourceConfig<List<Ai>>("ai.json")
 internal val R.ai: List<Ai> by lazy { loadAi() }
