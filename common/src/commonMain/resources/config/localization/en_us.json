@@ -354,10 +354,33 @@
       "name": "Aggressive Deployment"
     }
   },
-  "dict": {
+  "ai": {
+    "Masters and Machines": "Masters and Machines",
+    "Towering Walkers": "Towering Walkers",
+    "Disruptive Artillery": "Disruptive Artillery",
+    "Hope of the Khalai": "Hope of the Khalai",
+    "Siege of Storms": "Siege of Storms",
+    "Shadow Disruption": "Shadow Disruption",
+    "Vanguard of Aiur": "Vanguard of Aiur",
+    "Fleet of the Matriarch": "Fleet of the Matriarch",
+    "Raiding Party": "Raiding Party",
+    "Machines of War": "Machines of War",
+    "Shadow Tech": "Shadow Tech",
+    "Dominion Battlegroup": "Dominion Battlegroup",
+    "Classic Infantry": "Classic Infantry",
+    "Classic Mech": "Classic Mech",
+    "Ravaging Infestation": "Ravaging Infestation",
+    "Broodling Corruption": "Broodling Corruption",
+    "Explosive Threats": "Explosive Threats",
+    "Invasionary Swarm": "Invasionary Swarm",
+    "Devouring Scourge": "Devouring Scourge"
+  },
+  "race": {
     "Terran": "Terran",
     "Protoss": "Protoss",
-    "Zerg": "Zerg",
+    "Zerg": "Zerg"
+  },
+  "dict": {
     "Archangel": "Archangel",
     "A.R.E.S.": "A.R.E.S.",
     "Armored Personnel Carrier": "Armored Personnel Carrier",

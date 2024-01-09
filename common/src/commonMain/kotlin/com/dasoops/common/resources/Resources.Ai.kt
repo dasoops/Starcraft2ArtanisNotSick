@@ -16,7 +16,7 @@ data class Ai(
     val assaults: List<Assault>,
 ) {
     val name: String
-        @Composable get() = R.str.dict[id]
+        @Composable get() = R.str.ai[id]
 
     private val level2Units: Map<Int, List<Unit>> by lazy { assaults.associate { it.level to it.units } }
     fun units(level: Int): List<Unit> = level2Units[level]!!
@@ -39,7 +39,7 @@ enum class Race(
     }
 }
 
-val Race.nameLocalization @Composable get() = R.str.dict[this.value]
+val Race.nameLocalization @Composable get() = R.str.race[this.value]
 
 @Serializable
 data class Assault(

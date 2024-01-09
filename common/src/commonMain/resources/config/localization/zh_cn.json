@@ -354,10 +354,33 @@
       "name": "进攻部署"
     }
   },
-  "dict": {
+  "ai": {
+    "Masters and Machines": "大师机械",
+    "Towering Walkers": "步战机甲",
+    "Disruptive Artillery": "袭扰炮击",
+    "Hope of the Khalai": "卡莱的希望",
+    "Siege of Storms": "风暴迫临",
+    "Shadow Disruption": "暗影袭扰",
+    "Vanguard of Aiur": "艾尔先锋",
+    "Fleet of the Matriarch": "族长之军",
+    "Raiding Party": "突击团",
+    "Machines of War": "战争机械团",
+    "Shadow Tech": "暗影科技团",
+    "Dominion Battlegroup": "帝国战斗群",
+    "Classic Infantry": "旧世步兵团",
+    "Classic Mech": "旧世机械团",
+    "Ravaging Infestation": "肆虐扩散",
+    "Broodling Corruption": "滋生腐化",
+    "Explosive Threats": "爆炸威胁",
+    "Invasionary Swarm": "侵略虫群",
+    "Devouring Scourge": "遮天蔽日"
+  },
+  "race": {
     "Terran": "人族",
     "Protoss": "神族",
-    "Zerg": "虫族",
+    "Zerg": "虫族"
+  },
+  "dict": {
     "Archangel": "大天使",
     "A.R.E.S.": "武装机器人",
     "Armored Personnel Carrier": "装甲运兵车",

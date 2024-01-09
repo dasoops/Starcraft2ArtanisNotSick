@@ -8,8 +8,8 @@ import kotlinx.serialization.builtins.serializer
 import net.mamoe.mirai.utils.map
 
 @Serializable(with = Dict.Serializer::class)
-class Dict(
-    private val delegate: Map<String, String>
+open class Dict(
+    protected val delegate: Map<String, String>
 ) : Map<String, String> by delegate {
     override fun get(key: String): String {
         return delegate[key] ?: "$$$key"
@@ -18,11 +18,15 @@ class Dict(
     private object SuperSerializer :
         KSerializer<Map<String, String>> by MapSerializer(String.serializer(), String.serializer())
 
-    internal object Serializer : KSerializer<Dict> by SuperSerializer.map(
+    open class DictSerializer<T : Dict>(
+        constructor: (Map<String, String>) -> T
+    ) : KSerializer<T> by SuperSerializer.map(
         resultantDescriptor = SuperSerializer.descriptor,
         serialize = { it.toMap() },
-        deserialize = { Dict(it) },
+        deserialize = { constructor(it) },
     )
+
+    internal object Serializer : DictSerializer<Dict>(constructor = { Dict(it) })
 }
 
 @Serializable
@@ -31,7 +35,9 @@ class Localization(
     val simpleTitle: String,
     val screen: ScreenText,
     val mumator: Map<String, MumatorText>,
+    val ai: Dict,
     val dict: Dict,
+    val race: RaceText,
 ) {
     @Transient
     lateinit var language: Language
