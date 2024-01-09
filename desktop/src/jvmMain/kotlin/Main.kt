@@ -13,6 +13,7 @@ import com.dasoops.common.resources.localization.str
 
 
 fun main() = application {
+
     Window(
         onCloseRequest = ::exitApplication,
         icon = R.image.icon,
@@ -21,7 +22,7 @@ fun main() = application {
         state = WindowState(
             placement = WindowPlacement.Floating,
             position = WindowPosition.Aligned(Alignment.Center),
-            size = DpSize(800.dp, 600.dp),
+            size = DpSize(1024.dp, 768.dp),
         )
     ) {
         app()
