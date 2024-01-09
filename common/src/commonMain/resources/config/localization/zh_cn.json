@@ -61,6 +61,7 @@
         "monopolize": "地图事件(${description}) 波次-${index}"
       },
       "level": {
+        "fixed": "固定",
         "title": "等级",
         "strength": "规模",
         "tech": "科技",

@@ -25,7 +25,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -67,9 +66,9 @@ private fun Modifier.topCommon(rowScope: RowScope): Modifier = rowScope.run {
 private fun RowScope.Timer(
     state: MissionState = LocalState.current.missionState,
 ) {
-    var firstStart by rememberSaveable { mutableStateOf(true) }
-    val timer by remember { state.timer }
+    var firstStart by remember { state.firstStart }
     var timerStart by remember { state.timerStart }
+    val timer by remember { state.timer }
     val timeText = remember(timer) {
         UnitTime.DefaultImpl(value = timer, unit = TimeUnit.SECOND).text
     }
@@ -117,7 +116,7 @@ private fun RowScope.Setting(
     missionState: MissionState = state.missionState,
 ) {
     var autoScroll by remember { missionState.autoScroll }
-    var selectMumatorList = remember { missionState.selectMumatorList }
+    val selectMumatorList = remember { missionState.selectMumatorList }
     var showHide by remember { missionState.showHide }
     var openAiChooser by remember { missionState.openAiChooser }
     val ai by remember { missionState.ai }

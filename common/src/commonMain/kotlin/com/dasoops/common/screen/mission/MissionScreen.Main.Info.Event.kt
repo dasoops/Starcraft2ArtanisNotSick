@@ -52,7 +52,6 @@ import com.dasoops.common.resources.event.NormalTime
 import com.dasoops.common.resources.event.RangeTime
 import com.dasoops.common.resources.event.TechLevel
 import com.dasoops.common.resources.event.TriggerPositionTime
-import com.dasoops.common.resources.event.text
 import com.dasoops.common.resources.icon
 import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.sterength

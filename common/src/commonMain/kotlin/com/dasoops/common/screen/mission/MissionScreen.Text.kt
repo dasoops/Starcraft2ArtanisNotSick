@@ -1,13 +1,21 @@
 package com.dasoops.common.screen.mission
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import com.dasoops.common.LocalState
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.event.AssaultEvent
 import com.dasoops.common.resources.event.AwardEvent
 import com.dasoops.common.resources.event.Event
+import com.dasoops.common.resources.event.EventLevel
 import com.dasoops.common.resources.event.EventOffsetTime
 import com.dasoops.common.resources.event.EventTime
+import com.dasoops.common.resources.event.FixedStrengthLevel
+import com.dasoops.common.resources.event.FixedTechLevel
+import com.dasoops.common.resources.event.HalfStrengthLevel
+import com.dasoops.common.resources.event.Level
 import com.dasoops.common.resources.event.MonopolizeEvent
+import com.dasoops.common.resources.event.NormalLevel
 import com.dasoops.common.resources.event.NormalTime
 import com.dasoops.common.resources.event.RangeTime
 import com.dasoops.common.resources.event.Time
@@ -105,5 +113,27 @@ internal val Event.text: String
                 description = this.description,
                 index = (this.index + 1).toString(),
             )
+        }
+    }
+
+/* Level */
+val Level.text: String
+    @Composable get() = run {
+        val halfSuffix by LocalState.current.setting.halfLevelSuffix
+        when (this) {
+            is NormalLevel -> "T$level"
+            is HalfStrengthLevel -> "T$level$halfSuffix"
+            is FixedStrengthLevel -> R.str.screen.mission.level.fixed
+            is FixedTechLevel -> R.str.screen.mission.level.fixed
+        }
+    }
+
+val EventLevel.text: String
+    @Composable get() = run {
+        val mergeSameLevel by LocalState.current.setting.mergeSameLevel
+        if (mergeSameLevel && this.tech == this.strength) {
+            this.tech.text
+        } else {
+            this.strength.text + " / " + this.tech.text
         }
     }

@@ -34,6 +34,7 @@ data class MissionText(
 
 @Serializable
 data class LevelText(
+    val fixed: String,
     val title: String,
     val strength: String,
     val tech: String,

@@ -51,6 +51,8 @@ data class MissionState(
     @Transient
     val timer: MutableState<Int> = mutableStateOf(0),
     @Transient
+    val firstStart: MutableState<Boolean> = mutableStateOf(true),
+    @Transient
     val selectMumatorList: SnapshotStateList<Mumator> = mutableStateListOf(),
     @Transient
     val timerStart: MutableState<Boolean> = mutableStateOf(false),
@@ -67,6 +69,7 @@ data class MissionState(
     fun clear(setting: Setting) {
         current.value = null
         timer.value = 0
+        firstStart.value = true
         timerStart.value = false
         autoScroll.value = setting.autoScroll.value
         showHide.value = setting.showHide.value

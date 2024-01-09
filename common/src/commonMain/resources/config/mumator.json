@@ -895,8 +895,25 @@
             "value": 600
           },
           "tech": {
-            "type": "Normal",
-            "level": 4
+            "type": "Fixed",
+            "units": [
+              "Zergling",
+              "Baneling",
+              "Roach",
+              "Hydralisk",
+              "Marine",
+              "Marauder",
+              "Hellion",
+              "Adept",
+              "Zealot",
+              "Stalker",
+              "Siege Tank",
+              "Immortal",
+              "Ravager",
+              "Mutalisk",
+              "Void Ray",
+              "Banshee"
+            ]
           }
         },
         "target": null
