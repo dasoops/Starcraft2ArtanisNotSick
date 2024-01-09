@@ -15,7 +15,7 @@ sealed interface Event {
 }
 
 @Serializable
-sealed class AbstractEvent : Event, Comparable<Event> by MissionEventComparable {
+sealed class AbstractEvent : Event, Comparable<Event> by EventComparable {
     override fun toString(): String {
         return "${javaClass.simpleName}[id=$id]"
     }

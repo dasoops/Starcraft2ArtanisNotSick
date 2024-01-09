@@ -35,17 +35,15 @@ private fun sortValue(event: Event): Int {
     return 0
 }
 
-private val eventSortValueCache: Map<Event, Int> by lazy {
-    R.missions.flatMap { map ->
-        map.event.map {
-            it to sortValue(it)
-        }
-    }.toMap()
+private val eventSortValueCache = object : HashMap<Event, Int>() {
+    override fun get(key: Event): Int {
+        return super.get(key) ?: return sortValue(key)
+    }
 }
 
-val Event.sortValue: Int get() = eventSortValueCache[this]!!
+val Event.sortValue: Int get() = eventSortValueCache[this]
 
-object MissionEventComparable : Comparable<Event> {
+object EventComparable : Comparable<Event> {
     override fun compareTo(other: Event) = other.sortValue
 }
 
@@ -60,4 +58,4 @@ val Event.mission: Mission get() = eventMissionCache[this]!!
 
 /* Event.description */
 val Event.description
-    @Composable get() = R.str.screen.mission.mission(this.mission).event(this.id).description
+    @Composable get() = R.str.screen.mission.event(this.id).description
