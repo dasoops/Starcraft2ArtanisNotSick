@@ -1,23 +1,12 @@
-{
-  "id": "Aggressive Deployment",
-  "event": [
-    [
+[
+  {
+    "id": "Aggressive Deployment",
+    "event": [
       {
         "type": "Assault",
-        "id": "",
+        "id": "Assault$d41ee809-7d90-43b4-928d-3f31835f904c",
         "show": true,
-        "level": {
-          "tech": {
-            "type": "Normal",
-            "value": 1
-          },
-          "strength": {
-            "type": "Normal",
-            "value": 1
-          }
-        },
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -27,15 +16,38 @@
           ]
         },
         "index": 0,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
+        },
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 1
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 1
+          }
+        },
+        "target": null
       },
       {
         "type": "Assault",
-        "id": "",
+        "id": "Assault$fd53ec08-891b-441b-91a5-e1bbd16390df",
         "show": true,
+        "time": {
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 420,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 1,
+        "position": {
+          "type": "Unknown"
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -46,38 +58,13 @@
             "value": 2
           }
         },
-        "time": {
-          "keep": null,
-          "trigger": [
-            {
-              "type": "Normal",
-              "value": 420,
-              "unit": "Second"
-            }
-          ]
-        },
-        "index": 1,
-        "target": null,
-        "position": {
-          "type": "Unknown"
-        }
+        "target": null
       },
       {
         "type": "Assault",
-        "id": "",
+        "id": "Assault$e6adafd2-77d9-48d8-b425-474c29600fd2",
         "show": true,
-        "level": {
-          "tech": {
-            "type": "Normal",
-            "value": 2
-          },
-          "strength": {
-            "type": "Normal",
-            "value": 3
-          }
-        },
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -87,15 +74,38 @@
           ]
         },
         "index": 2,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
+        },
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 2
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 3
+          }
+        },
+        "target": null
       },
       {
         "type": "Assault",
-        "id": "",
+        "id": "Assault$cb66890c-ea70-4221-8a15-85c823824ee8",
         "show": true,
+        "time": {
+          "trigger": [
+            {
+              "type": "Normal",
+              "value": 680,
+              "unit": "Second"
+            }
+          ]
+        },
+        "index": 3,
+        "position": {
+          "type": "Unknown"
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -106,26 +116,25 @@
             "value": 4
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$0020b490-3259-4671-a0a9-1a7ea4d566f4",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
-              "value": 680,
+              "value": 810,
               "unit": "Second"
             }
           ]
         },
-        "index": 3,
-        "target": null,
+        "index": 4,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -136,38 +145,13 @@
             "value": 4
           }
         },
-        "time": {
-          "keep": null,
-          "trigger": [
-            {
-              "type": "Normal",
-              "value": 810,
-              "unit": "Second"
-            }
-          ]
-        },
-        "index": 4,
-        "target": null,
-        "position": {
-          "type": "Unknown"
-        }
+        "target": null
       },
       {
         "type": "Assault",
-        "id": "",
+        "id": "Assault$2de67d7b-c584-4b30-be7d-55bb839c022b",
         "show": true,
-        "level": {
-          "tech": {
-            "type": "Normal",
-            "value": 4
-          },
-          "strength": {
-            "type": "Normal",
-            "value": 4
-          }
-        },
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -177,27 +161,26 @@
           ]
         },
         "index": 5,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
-            "value": 6
+            "value": 4
           },
           "strength": {
             "type": "Normal",
-            "value": 5
+            "value": 4
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$dc5669a6-69d9-4270-9de3-af82605f26a7",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -207,15 +190,9 @@
           ]
         },
         "index": 6,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -226,8 +203,13 @@
             "value": 5
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$ec3dd417-87db-41a0-835e-eb465007fd02",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -237,15 +219,9 @@
           ]
         },
         "index": 7,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -256,8 +232,13 @@
             "value": 5
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$6aa86065-13c6-45b2-bfb2-fc01c2beb5f9",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -267,15 +248,9 @@
           ]
         },
         "index": 8,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -286,8 +261,13 @@
             "value": 5
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$7bc6b542-fe5c-4330-9292-62460c958305",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -297,15 +277,9 @@
           ]
         },
         "index": 9,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -316,8 +290,13 @@
             "value": 5
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$232847e3-7bd4-4976-bbf1-95699140db47",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -327,15 +306,9 @@
           ]
         },
         "index": 10,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -346,8 +319,13 @@
             "value": 5
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$15924119-d514-4164-8668-0c79bdc45d1d",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -357,15 +335,9 @@
           ]
         },
         "index": 11,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -376,8 +348,13 @@
             "value": 5
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$3657fb02-2527-4e95-8916-b476de2fae3e",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -387,15 +364,9 @@
           ]
         },
         "index": 12,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -406,8 +377,13 @@
             "value": 5
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$81d961d4-90f2-4b09-a952-6cd2e9a22c32",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -417,15 +393,9 @@
           ]
         },
         "index": 13,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -436,8 +406,13 @@
             "value": 5
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$ddb40831-565c-455b-8a7f-f33692e343e6",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -447,15 +422,9 @@
           ]
         },
         "index": 14,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -466,8 +435,13 @@
             "value": 5
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$17aae494-2ae3-43ce-ae77-350fe9744595",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -477,15 +451,9 @@
           ]
         },
         "index": 15,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -496,8 +464,13 @@
             "value": 5
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$c186939b-ead8-4a11-95ae-5bf92c03ebff",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -507,15 +480,9 @@
           ]
         },
         "index": 16,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -526,8 +493,13 @@
             "value": 5
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$3470cd4c-3a33-4ae0-ae49-15e82a5408e0",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -537,15 +509,9 @@
           ]
         },
         "index": 17,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -556,8 +522,13 @@
             "value": 5
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$3c5f9c7d-1f09-479b-a1a9-38de0f297628",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -567,15 +538,9 @@
           ]
         },
         "index": 18,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
-      },
-      {
-        "type": "Assault",
-        "id": "",
-        "show": true,
+        },
         "level": {
           "tech": {
             "type": "Normal",
@@ -586,8 +551,13 @@
             "value": 5
           }
         },
+        "target": null
+      },
+      {
+        "type": "Assault",
+        "id": "Assault$b2484e60-193f-4105-adde-7d3b5c394a6b",
+        "show": true,
         "time": {
-          "keep": null,
           "trigger": [
             {
               "type": "Normal",
@@ -597,11 +567,22 @@
           ]
         },
         "index": 19,
-        "target": null,
         "position": {
           "type": "Unknown"
-        }
+        },
+        "level": {
+          "tech": {
+            "type": "Normal",
+            "value": 6
+          },
+          "strength": {
+            "type": "Normal",
+            "value": 5
+          }
+        },
+        "target": null
       }
-    ]
-  ]
-}
+    ],
+    "position": []
+  }
+]

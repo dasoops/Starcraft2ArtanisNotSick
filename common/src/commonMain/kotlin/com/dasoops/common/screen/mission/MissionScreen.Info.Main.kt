@@ -19,10 +19,13 @@ import androidx.compose.ui.unit.dp
 import com.dasoops.common.LocalState
 import com.dasoops.common.resources.AppState
 import com.dasoops.common.resources.MissionState
+import com.dasoops.common.resources.R
+import com.dasoops.common.resources.event.Event
 import com.dasoops.common.resources.event.NormalTime
 import com.dasoops.common.resources.event.RangeTime
 import com.dasoops.common.resources.event.sortValue
 import com.dasoops.common.resources.mission.Mission
+import com.dasoops.common.resources.mumator.mumator
 import kotlinx.coroutines.launch
 
 @Composable
@@ -39,10 +42,18 @@ internal fun Main(
     val showAggressiveDeploymentEvent: Boolean by remember { missionState.showAggressiveDeploymentEvent }
 
     val lazyListState = rememberLazyListState()
-    val eventList = remember(mission, showHide, showAggressiveDeploymentEvent) {
+    val eventList: List<Event> = remember(mission, showHide, showAggressiveDeploymentEvent) {
         mission ?: return@remember emptyList()
-        mission!!.event.filter { if (showHide) true else it.show }.sortedBy { it.sortValue }
-            .toList()
+        var originEventList = mission!!.event
+
+        if (showAggressiveDeploymentEvent) {
+            originEventList = originEventList.toMutableList().apply {
+                this.addAll(R.mumator.aggressiveDeployment.event)
+            }
+        }
+        originEventList
+            .filter { if (showHide) true else it.show }
+            .sortedBy { it.sortValue }
     }
 
     Box(Modifier) {

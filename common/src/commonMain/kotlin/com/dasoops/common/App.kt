@@ -23,35 +23,28 @@ val LocalState = staticCompositionLocalOf { AppState.Default }
 val LocalDependency = staticCompositionLocalOf { getDependencies() }
 
 @Composable
-private fun appWrap(content: @Composable () -> Unit) {
+fun app() {
     logger.info { "platform: ${getPlatformName()}" }
     val state: AppState = remember { loadAppState() }
 
     CompositionLocalProvider(
         LocalState provides state,
     ) {
-        content()
+        var screen by remember { state.screen }
+
+        MyTheme(theme = state.setting.theme.value) {
+            Surface(color = MaterialTheme.colorScheme.background) {
+                Row {
+                    SideBar(screen = screen, onScreenChange = { screen = it })
+                    screen.mainScreen()
+                }
+            }
+        }
     }
 
     DisposableEffect(Unit) {
         onDispose {
             saveAppState(state)
-        }
-    }
-}
-
-@Composable
-fun app(
-    state: AppState = LocalState.current
-) = appWrap {
-    var screen by remember { state.screen }
-
-    MyTheme(theme = state.setting.theme.value) {
-        Surface(color = MaterialTheme.colorScheme.background) {
-            Row {
-                SideBar(screen = screen, onScreenChange = { screen = it })
-                screen.mainScreen()
-            }
         }
     }
 }

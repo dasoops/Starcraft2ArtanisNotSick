@@ -21,3 +21,8 @@ data class Mission(
 }
 
 val Mission.image: Painter @Composable get() = R.image.mission(this)
+
+private val nameMissionCache by lazy { R.missions.associateBy { it.name } }
+
+fun R.mission(name: String): Mission = missionOrNull(name)!!
+fun R.missionOrNull(name: String): Mission? = nameMissionCache[name]

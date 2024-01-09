@@ -18,6 +18,7 @@ import com.dasoops.common.resources.mission.position.EventPosition
 import com.dasoops.common.resources.mission.position.MultiplePosition
 import com.dasoops.common.resources.mission.position.RandomPosition
 import com.dasoops.common.resources.mission.position.SinglePosition
+import com.dasoops.common.resources.mission.position.UnknownPosition
 import com.dasoops.common.resources.mission.position.description
 import com.dasoops.common.util.text
 
@@ -35,7 +36,7 @@ internal val EventPosition.text: String
                 .map { it.position.description }
                 .joinToString(separator = " or ") { it }
 
-        else -> ""
+        is UnknownPosition -> R.str.screen.mission.unknownPosition.description
     }
 
 /* Time */
@@ -91,10 +92,9 @@ internal val Event.text: String
         (if (!show) "*" else "") + when (this) {
             is AssaultEvent -> R.str.screen.mission.event.assault(
                 description = this.description,
-                position = this.position.text ?: "",
+                position = this.position.text,
                 index = (this.index + 1).toString(),
             )
-
 
             is AwardEvent -> R.str.screen.mission.event.award(
                 description = this.description,

@@ -45,4 +45,4 @@ val EventPosition.event
 
 /* Position.description */
 val Position.description
-    @Composable get() = R.str.screen.mission.mission(this.mission).position(this.id).description
+    @Composable get() = R.str.screen.mission.position(this.id).description

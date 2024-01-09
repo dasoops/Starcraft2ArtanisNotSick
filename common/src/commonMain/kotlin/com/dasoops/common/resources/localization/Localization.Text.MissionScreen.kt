@@ -18,9 +18,15 @@ data class MissionText(
     val level: LevelText,
     val event: EventText,
     private val missions: Map<String, MissionInfoText>,
+    private val events: Map<String, EventInfoText>,
+    private val positions: Map<String, PositionInfoText>,
 ) {
+    val unknownPosition: PositionInfoText by lazy { positions["Unknown"]!! }
 
-    fun mission(mission: Mission) = missions[mission.name]!!
+    fun event(id: String) = events[id] ?: throw BaseException("undefined event[${id}]")
+    fun position(id: String) = positions[id] ?: throw BaseException("undefined position[${id}]")
+    fun mission(mission: Mission) =
+        missions[mission.name] ?: throw BaseException("undefined event[${mission.name}]")
 }
 
 @Serializable
@@ -123,11 +129,7 @@ data class EventText(
 @Serializable
 data class MissionInfoText(
     val name: String,
-    private val event: Map<String, EventInfoText>,
-    private val position: Map<String, PositionInfoText>,
 ) {
-    fun event(id: String) = event[id] ?: throw BaseException("undefined event[${id}]")
-    fun position(id: String) = position[id] ?: throw BaseException("undefined position[${id}]")
 
 }
 

@@ -60,7 +60,6 @@ data class RandomPosition(
 @SerialName(UnknownPosition.SERIAL_NAME)
 @Serializable
 class UnknownPosition : AbstractEventPosition() {
-
     companion object Key {
         const val SERIAL_NAME: String = "Unknown"
     }

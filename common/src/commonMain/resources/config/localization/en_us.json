@@ -79,241 +79,279 @@
       },
       "missions": {
         "Rifts to Korhal": {
-          "name": "Rifts to Korhal",
-          "event": {
-            "Monopolize$f90c4224-ba70-4596-86cb-1bfdf0b422c5": {
-              "description": "Void Shard"
-            },
-            "Monopolize$07af3141-856c-47af-b58e-2c8b49251d85": {
-              "description": "Void Shard"
-            },
-            "Monopolize$b7c8399b-ee7e-4ee2-941e-e9eb014ffa3c": {
-              "description": "Void Shard"
-            },
-            "Monopolize$f860f16c-1d29-48c6-9559-54733a35a5a7": {
-              "description": "Void Shard"
-            },
-            "Award$af8ecb76-711f-4829-9fce-4c60faea94e0": {
-              "description": "Pirate Ship"
-            },
-            "Award$e15f6d60-1ea8-445a-b8db-879f1b34752b": {
-              "description": "Pirate Ship"
-            },
-            "Assault$ca0ee731-5849-4314-a301-0d462678e79e": {
-              "description": "Assault"
-            },
-            "Assault$707db70f-84f4-47a6-83a3-931f2147c736": {
-              "description": "Assault"
-            },
-            "Assault$1aefb891-30e6-499a-8cf9-b8fc3571eabd": {
-              "description": "Assault"
-            },
-            "Assault$27d29a3a-1400-4381-b993-aba061c7d861": {
-              "description": "Assault"
-            },
-            "Assault$2b17cc44-6131-4f52-9c20-f9e3f8c2b935": {
-              "description": "Assault"
-            },
-            "Assault$d3d50049-90e2-447e-8018-3bc86f908dac": {
-              "description": "Assault"
-            },
-            "Assault$cc7b040f-d1e4-4410-929d-cc46abaf5220": {
-              "description": "Assault"
-            },
-            "Assault$ea603d01-632c-4c1f-8786-88c6fa85a17b": {
-              "description": "Assault"
-            },
-            "Assault$1cb2f6b1-fa6a-4c4f-b184-aa79a90bbd6f": {
-              "description": "Assault"
-            },
-            "Assault$741e5592-23b9-4888-821c-50f4003b8874": {
-              "description": "Assault"
-            },
-            "Assault$8face6a3-b903-472c-86f7-e13d06c6ed55": {
-              "description": "Assault"
-            }
-          },
-          "position": {
-            "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f": {
-              "description": "Assault spawn point ↗"
-            },
-            "Point$0088b218-6d9d-4d79-8057-e6d21cec5cd0": {
-              "description": "Pirate Ship spawn point-1"
-            },
-            "Point$011accdf-3108-4cd5-8957-39bf7e3e3d01": {
-              "description": "Pirate Ship spawn point-2"
-            },
-            "Point$df817065-341a-4f5b-80a4-8331a06fed22": {
-              "description": "Void Shard spawn point-1"
-            },
-            "Point$61db8c7b-7a0a-4a70-9a67-963594791cb7": {
-              "description": "Void Shard spawn point-2"
-            },
-            "Point$0ababef9-ad00-461b-827d-e7e1d2ae3d2b": {
-              "description": "Void Shard spawn point-3"
-            },
-            "Point$45a300b8-dfb7-443d-a22e-a216cb29e31e": {
-              "description": "Void Shard spawn point-4"
-            },
-            "Point$9acd623b-99b1-41db-bbde-4e289993a819": {
-              "description": "Void Shard spawn point-5"
-            },
-            "Point$5082ccb1-9606-454d-823e-f7372c9c13d2": {
-              "description": "Void Shard spawn point-6"
-            },
-            "Point$5eb92f9f-69c9-4564-a5be-98a83ac575b3": {
-              "description": "Void Shard spawn point-7"
-            },
-            "Point$a8a2221b-872a-4843-bba1-e6f0646268c7": {
-              "description": "Void Shard spawn point-8"
-            },
-            "Point$856cc3c7-fd74-4259-b389-ced1bf5c847f": {
-              "description": "Void Shard spawn point-9"
-            },
-            "Point$89d7dd0c-9c77-40c8-a5c0-74c125ced216": {
-              "description": "Void Shard spawn point-10"
-            }
-          }
+          "name": "Rifts to Korhal"
         },
         "Oblivion Express": {
-          "name": "Oblivion Express",
-          "event": {
-            "车1": {
-              "description": "Train"
-            },
-            "车2": {
-              "description": "Train"
-            },
-            "车3": {
-              "description": "Train"
-            },
-            "车4,5": {
-              "description": "Train"
-            },
-            "车6": {
-              "description": "Train"
-            },
-            "车7,8": {
-              "description": "Train"
-            },
-            "车9": {
-              "description": "Train"
-            },
-            "车10": {
-              "description": "Train"
-            },
-            "进1": {
-              "description": "Assault"
-            },
-            "进2": {
-              "description": "Assault"
-            },
-            "进3": {
-              "description": "Assault"
-            },
-            "进4": {
-              "description": "Assault"
-            },
-            "进5": {
-              "description": "Assault"
-            },
-            "进6": {
-              "description": "Assault"
-            },
-            "进7": {
-              "description": "Assault"
-            },
-            "进8": {
-              "description": "Assault"
-            },
-            "进9": {
-              "description": "Assault"
-            }
-          },
-          "position": {
-            "奖励": {
-              "description": "Award train spawn point ↙"
-            },
-            "红点左": {
-              "description": "Assault spawn point ↖"
-            },
-            "红点右": {
-              "description": "Assault spawn point ↘"
-            },
-            "列车上": {
-              "description": "Train spawn point ↖"
-            },
-            "列车中": {
-              "description": "Train spawn point ↙"
-            }
-          }
+          "name": "Oblivion Express"
         },
         "Void Thrashing": {
-          "name": "Void Thrashing",
-          "event": {},
-          "position": {}
+          "name": "Void Thrashing"
         },
         "Void Launch": {
-          "name": "Void Launch",
-          "event": {},
-          "position": {}
+          "name": "Void Launch"
         },
         "Temple of the Past": {
-          "name": "Temple of the Past",
-          "event": {},
-          "position": {}
+          "name": "Temple of the Past"
         },
         "Lock & Load": {
-          "name": "Lock & Load",
-          "event": {},
-          "position": {}
+          "name": "Lock & Load"
         },
         "Chain of Ascension": {
-          "name": "Chain of Ascension",
-          "event": {},
-          "position": {}
+          "name": "Chain of Ascension"
         },
         "The Vermillion Problem": {
-          "name": "The Vermillion Problem",
-          "event": {},
-          "position": {}
+          "name": "The Vermillion Problem"
         },
         "Mist Opportunities": {
-          "name": "Mist Opportunities",
-          "event": {},
-          "position": {}
+          "name": "Mist Opportunities"
         },
         "Miner Evacuation": {
-          "name": "Miner Evacuation",
-          "event": {},
-          "position": {}
+          "name": "Miner Evacuation"
         },
         "Dead of Night": {
-          "name": "Dead of Night",
-          "event": {},
-          "position": {}
+          "name": "Dead of Night"
         },
         "Scythe of Amon": {
-          "name": "Scythe of Amon",
-          "event": {},
-          "position": {}
+          "name": "Scythe of Amon"
         },
         "Malwarfare": {
-          "name": "Malwarfare",
-          "event": {},
-          "position": {}
+          "name": "Malwarfare"
         },
         "Part and Parcel": {
-          "name": "Part and Parcel",
-          "event": {},
-          "position": {}
+          "name": "Part and Parcel"
         },
         "Cradle of Death": {
-          "name": "Cradle of Death",
-          "event": {},
-          "position": {}
+          "name": "Cradle of Death"
+        }
+      },
+      "events": {
+        "Assault$d41ee809-7d90-43b4-928d-3f31835f904c": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$fd53ec08-891b-441b-91a5-e1bbd16390df": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$e6adafd2-77d9-48d8-b425-474c29600fd2": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$cb66890c-ea70-4221-8a15-85c823824ee8": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$0020b490-3259-4671-a0a9-1a7ea4d566f4": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$2de67d7b-c584-4b30-be7d-55bb839c022b": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$dc5669a6-69d9-4270-9de3-af82605f26a7": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$ec3dd417-87db-41a0-835e-eb465007fd02": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$6aa86065-13c6-45b2-bfb2-fc01c2beb5f9": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$7bc6b542-fe5c-4330-9292-62460c958305": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$232847e3-7bd4-4976-bbf1-95699140db47": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$15924119-d514-4164-8668-0c79bdc45d1d": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$3657fb02-2527-4e95-8916-b476de2fae3e": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$81d961d4-90f2-4b09-a952-6cd2e9a22c32": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$ddb40831-565c-455b-8a7f-f33692e343e6": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$17aae494-2ae3-43ce-ae77-350fe9744595": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$c186939b-ead8-4a11-95ae-5bf92c03ebff": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$3470cd4c-3a33-4ae0-ae49-15e82a5408e0": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$3c5f9c7d-1f09-479b-a1a9-38de0f297628": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$b2484e60-193f-4105-adde-7d3b5c394a6b": {
+          "description": "Aggressive Deployment"
+        },
+        "Assault$f8e2ad97-d94a-4e82-9a28-fc1ef4e0ae37": {
+          "description": "Train"
+        },
+        "Assault$f4f4b449-6f6d-4a59-8953-29bfcb81f6c5": {
+          "description": "Train"
+        },
+        "Assault$5de48822-bf55-44e7-9bda-75c0697205df": {
+          "description": "Train"
+        },
+        "Assault$f08c0007-8f44-4ce7-a12a-dbd61778c1e6": {
+          "description": "Train"
+        },
+        "Assault$ea6c03ad-9217-4433-afc4-241096795046": {
+          "description": "Train"
+        },
+        "Assault$3034f433-8fab-4226-a39a-9603ed2f99a9": {
+          "description": "Train"
+        },
+        "Assault$193bf39d-1945-49dc-864d-9984b7ed4b14": {
+          "description": "Train"
+        },
+        "Assault$f8e2ad97-d94a-4e82-9a28-fc1ef4e0ae370": {
+          "description": "Train"
+        },
+        "Assault$7c57e4e2-f95d-4518-a049-6a7dba10385b": {
+          "description": "Assault"
+        },
+        "Assault$61ee8d7e-c710-4f69-b20e-c4d402d875d5": {
+          "description": "Assault"
+        },
+        "Assault$80812a01-2185-4263-8138-12e2a75c1b79": {
+          "description": "Assault"
+        },
+        "Assault$25008549-84de-47ea-ae28-aba9b3f8f2e3": {
+          "description": "Assault"
+        },
+        "Assault$b6afcfa0-c7ce-4e7b-b44e-d545505b025e": {
+          "description": "Assault"
+        },
+        "Assault$8b7f10c4-696d-4876-9fdd-ba884c7ee2f7": {
+          "description": "Assault"
+        },
+        "Assault$2a53bc13-00e9-41f1-86eb-38380b3be914": {
+          "description": "Assault"
+        },
+        "Assault$47c40f7d-50d3-4d71-bca0-39e570b39f07": {
+          "description": "Assault"
+        },
+        "Assault$282b6085-53f5-4b31-a904-b12bc3ac59f6": {
+          "description": "Assault"
+        },
+        "Monopolize$f90c4224-ba70-4596-86cb-1bfdf0b422c5": {
+          "description": "Void Shard"
+        },
+        "Monopolize$07af3141-856c-47af-b58e-2c8b49251d85": {
+          "description": "Void Shard"
+        },
+        "Monopolize$b7c8399b-ee7e-4ee2-941e-e9eb014ffa3c": {
+          "description": "Void Shard"
+        },
+        "Monopolize$f860f16c-1d29-48c6-9559-54733a35a5a7": {
+          "description": "Void Shard"
+        },
+        "Award$af8ecb76-711f-4829-9fce-4c60faea94e0": {
+          "description": "Pirate Ship"
+        },
+        "Award$e15f6d60-1ea8-445a-b8db-879f1b34752b": {
+          "description": "Pirate Ship"
+        },
+        "Assault$ca0ee731-5849-4314-a301-0d462678e79e": {
+          "description": "Assault"
+        },
+        "Assault$707db70f-84f4-47a6-83a3-931f2147c736": {
+          "description": "Assault"
+        },
+        "Assault$1aefb891-30e6-499a-8cf9-b8fc3571eabd": {
+          "description": "Assault"
+        },
+        "Assault$27d29a3a-1400-4381-b993-aba061c7d861": {
+          "description": "Assault"
+        },
+        "Assault$2b17cc44-6131-4f52-9c20-f9e3f8c2b935": {
+          "description": "Assault"
+        },
+        "Assault$d3d50049-90e2-447e-8018-3bc86f908dac": {
+          "description": "Assault"
+        },
+        "Assault$cc7b040f-d1e4-4410-929d-cc46abaf5220": {
+          "description": "Assault"
+        },
+        "Assault$ea603d01-632c-4c1f-8786-88c6fa85a17b": {
+          "description": "Assault"
+        },
+        "Assault$1cb2f6b1-fa6a-4c4f-b184-aa79a90bbd6f": {
+          "description": "Assault"
+        },
+        "Assault$741e5592-23b9-4888-821c-50f4003b8874": {
+          "description": "Assault"
+        },
+        "Assault$8face6a3-b903-472c-86f7-e13d06c6ed55": {
+          "description": "Assault"
+        }
+      },
+      "positions": {
+        "Unknown": {
+          "description": "Unknown"
+        },
+        "Point$da2e289c-a892-406b-a0f3-b78513b6497d": {
+          "description": "Award train spawn point ↙"
+        },
+        "Point$e4f34baf-fb5f-46e2-819d-0deeb90034f0": {
+          "description": "Assault spawn point ↖"
+        },
+        "Point$c961c58d-024b-43e8-a865-43d94fb6e6f0": {
+          "description": "Assault spawn point ↘"
+        },
+        "Point$73d45673-8d64-4cad-9ab4-b150c71a6aa1": {
+          "description": "Train spawn point ↖"
+        },
+        "Point$940758d6-a7a9-4d90-867c-7968f1d7624f": {
+          "description": "Train spawn point ↙"
+        },
+        "Point$fdce964a-3b84-4f60-a675-5d6d36d7d52f": {
+          "description": "Assault spawn point ↗"
+        },
+        "Point$0088b218-6d9d-4d79-8057-e6d21cec5cd0": {
+          "description": "Pirate Ship spawn point-1"
+        },
+        "Point$011accdf-3108-4cd5-8957-39bf7e3e3d01": {
+          "description": "Pirate Ship spawn point-2"
+        },
+        "Point$df817065-341a-4f5b-80a4-8331a06fed22": {
+          "description": "Void Shard spawn point-1"
+        },
+        "Point$61db8c7b-7a0a-4a70-9a67-963594791cb7": {
+          "description": "Void Shard spawn point-2"
+        },
+        "Point$0ababef9-ad00-461b-827d-e7e1d2ae3d2b": {
+          "description": "Void Shard spawn point-3"
+        },
+        "Point$45a300b8-dfb7-443d-a22e-a216cb29e31e": {
+          "description": "Void Shard spawn point-4"
+        },
+        "Point$9acd623b-99b1-41db-bbde-4e289993a819": {
+          "description": "Void Shard spawn point-5"
+        },
+        "Point$5082ccb1-9606-454d-823e-f7372c9c13d2": {
+          "description": "Void Shard spawn point-6"
+        },
+        "Point$5eb92f9f-69c9-4564-a5be-98a83ac575b3": {
+          "description": "Void Shard spawn point-7"
+        },
+        "Point$a8a2221b-872a-4843-bba1-e6f0646268c7": {
+          "description": "Void Shard spawn point-8"
+        },
+        "Point$856cc3c7-fd74-4259-b389-ced1bf5c847f": {
+          "description": "Void Shard spawn point-9"
+        },
+        "Point$89d7dd0c-9c77-40c8-a5c0-74c125ced216": {
+          "description": "Void Shard spawn point-10"
         }
       }
+    }
+  },
+  "mumator": {
+    "Aggressive Deployment": {
+      "name": "Aggressive Deployment"
     }
   },
   "dict": {
