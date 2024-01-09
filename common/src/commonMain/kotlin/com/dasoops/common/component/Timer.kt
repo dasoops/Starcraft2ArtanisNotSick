@@ -20,12 +20,11 @@ inline fun Timer(
     appState: AppState = LocalState.current,
     missionState: MissionState = appState.missionState,
 ) {
-    var timer by remember { missionState.timer }
     val timerSpeed by remember { appState.setting.timerSpeed }
     val timerStart by remember { missionState.timerStart }
-    var trigger by remember { mutableStateOf(timer) }
+    var trigger by remember { mutableStateOf(missionState.timer.state.value) }
 
-    val (state, stop, start) = controlAnimateValue(
+    missionState.timer = controlAnimateValue(
         targetValue = trigger,
         typeConverter = Int.VectorConverter,
         animationSpec = tween(
@@ -34,7 +33,6 @@ inline fun Timer(
         ),
         autoStart = timerStart,
     )
-    timer = state.value
 
     DisposableEffect(Unit) {
         trigger = Int.MAX_VALUE / 1000
@@ -42,6 +40,6 @@ inline fun Timer(
     }
 
     LaunchedEffect(timerStart) {
-        if (timerStart) start() else stop()
+        if (timerStart) missionState.timer.start() else missionState.timer.stop()
     }
 }

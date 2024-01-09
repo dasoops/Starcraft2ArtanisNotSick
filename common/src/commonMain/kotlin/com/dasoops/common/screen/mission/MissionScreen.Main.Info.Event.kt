@@ -5,8 +5,9 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
@@ -26,6 +27,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -55,6 +57,7 @@ import com.dasoops.common.resources.event.TriggerPositionTime
 import com.dasoops.common.resources.icon
 import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.sterength
+import kotlinx.coroutines.launch
 
 @Composable
 internal fun Event.Composable() = EventBox(
@@ -200,15 +203,18 @@ private fun AiView(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun EventBox(
     event: Event,
     content: @Composable RowScope.(/* expanded */Boolean) -> Unit,
     expandedContent: @Composable () -> Unit,
     state: MissionState = LocalState.current.missionState,
-    timer: Int = state.timer.value,
 ) {
     var expanded by rememberSaveable { mutableStateOf(false) }
+    val timer by remember { state.timer.state }
+    val changeTimer = remember { state.timer.changeValue }
+    val coroutineScope = rememberCoroutineScope()
 
     val load = MaterialTheme.colorScheme.primaryContainer
     val unLoad = MaterialTheme.colorScheme.surface
@@ -248,7 +254,21 @@ private fun EventBox(
             }
     ) {
         Row(
-            modifier = Modifier.clickable { expanded = !expanded }
+            modifier = Modifier
+                .combinedClickable(
+                    onLongClick = {
+                        val targetValue = when (val time = event.time?.first) {
+                            is NormalTime -> time.originSeconds
+                            is RangeTime -> time.begin.originSeconds
+                            else -> return@combinedClickable
+                        }
+                        coroutineScope.launch {
+                            missionLogger.trace { "changeTimer -> $targetValue" }
+                            changeTimer(targetValue)
+                        }
+                    },
+                    onClick = { expanded = !expanded }
+                )
         ) {
             Column {
                 Row(

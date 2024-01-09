@@ -34,7 +34,7 @@ internal fun Main(
     val scope = rememberCoroutineScope()
 
     val mission: Mission? by remember { missionState.current }
-    val timer: Int by remember { missionState.timer }
+    val timer: Int by remember { missionState.timer.state }
     val autoScroll: Boolean by remember { missionState.autoScroll }
     val showHide: Boolean by remember { missionState.showHide }
     val selectMumatorList = remember { missionState.selectMumatorList }

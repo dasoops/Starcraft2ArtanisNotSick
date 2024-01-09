@@ -1,9 +1,11 @@
 package com.dasoops.common.resources
 
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.snapshots.SnapshotStateList
+import com.dasoops.common.component.ControlAnimateValueModel
 import com.dasoops.common.resources.mission.Mission
 import com.dasoops.common.resources.mission.mission
 import com.dasoops.common.resources.mumator.Mumator
@@ -49,7 +51,7 @@ data class MissionState(
         null
     ),
     @Transient
-    val timer: MutableState<Int> = mutableStateOf(0),
+    var timer: ControlAnimateValueModel<Int> = emptyTimer,
     @Transient
     val firstStart: MutableState<Boolean> = mutableStateOf(true),
     @Transient
@@ -67,8 +69,8 @@ data class MissionState(
 ) {
 
     fun clear(setting: Setting) {
+        timer = emptyTimer
         current.value = null
-        timer.value = 0
         firstStart.value = true
         timerStart.value = false
         autoScroll.value = setting.autoScroll.value
@@ -79,6 +81,15 @@ data class MissionState(
     }
 
     companion object {
+        val emptyTimer = ControlAnimateValueModel(
+            start = { logger.warn { "emptyTimer.start()" } },
+            stop = { logger.warn { "emptyTimer.stop()" } },
+            changeValue = { logger.warn { "emptyTimer.changeValue()" } },
+            state = object : State<Int> {
+                override val value: Int = 0
+            },
+        )
+
         object MissionSerializer : KSerializer<Mission> {
             override val descriptor: SerialDescriptor = Mission.serializer().descriptor
             override fun deserialize(decoder: Decoder) = R.mission(decoder.decodeString())

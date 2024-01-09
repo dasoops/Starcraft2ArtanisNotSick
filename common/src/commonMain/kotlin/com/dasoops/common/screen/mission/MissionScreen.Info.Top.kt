@@ -68,7 +68,7 @@ private fun RowScope.Timer(
 ) {
     var firstStart by remember { state.firstStart }
     var timerStart by remember { state.timerStart }
-    val timer by remember { state.timer }
+    val timer by remember { state.timer.state }
     val timeText = remember(timer) {
         UnitTime.DefaultImpl(value = timer, unit = TimeUnit.SECOND).text
     }

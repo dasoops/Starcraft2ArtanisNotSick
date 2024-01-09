@@ -6,15 +6,24 @@ import androidx.compose.animation.core.AnimationVector
 import androidx.compose.animation.core.SpringSpec
 import androidx.compose.animation.core.TwoWayConverter
 import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.State
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
+
+data class ControlAnimateValueModel<T>(
+    val state: State<T>,
+    val stop: () -> Unit,
+    val start: () -> Unit,
+    val changeValue: (T) -> Unit,
+)
 
 @Composable
 fun <T, V : AnimationVector> controlAnimateValue(
@@ -25,8 +34,8 @@ fun <T, V : AnimationVector> controlAnimateValue(
     label: String = "ValueAnimation",
     finishedListener: ((T) -> Unit)? = null,
     autoStart: Boolean = true
-): Triple<State<T>, suspend () -> Unit, suspend () -> Unit> {
-
+): ControlAnimateValueModel<T> {
+    val coroutineScope = rememberCoroutineScope()
     val animatable = remember { Animatable(targetValue, typeConverter, visibilityThreshold, label) }
     val listener by rememberUpdatedState(finishedListener)
     val animSpec: AnimationSpec<T> by rememberUpdatedState(
@@ -60,9 +69,27 @@ fun <T, V : AnimationVector> controlAnimateValue(
             }
         }
     }
-    return Triple(
-        animatable.asState(),
-        { animatable.stop() },
-        { animatable.animateTo(targetValue = targetValue, animationSpec = animationSpec) }
+    return ControlAnimateValueModel(
+        state = animatable.asState(),
+        stop = {
+            coroutineScope.launch {
+                animatable.stop()
+            }
+        },
+        start = {
+            coroutineScope.launch {
+                animatable.animateTo(targetValue = targetValue, animationSpec = animationSpec)
+            }
+        },
+        changeValue = {
+            coroutineScope.launch {
+                animatable.animateTo(targetValue = it, animationSpec = tween(0)).apply {
+                    while (endState.isRunning) {
+                        // doNothing
+                    }
+                }
+                animatable.animateTo(targetValue = targetValue, animationSpec = animationSpec)
+            }
+        }
     )
 }
