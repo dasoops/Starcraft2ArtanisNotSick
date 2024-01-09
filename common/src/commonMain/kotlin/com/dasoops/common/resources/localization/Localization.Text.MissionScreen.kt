@@ -14,6 +14,7 @@ data class MissionText(
     val hideEvent: String,
     val autoScroll: String,
     val clickToContinue: String,
+    val position: String,
     val time: TimeText,
     val level: LevelText,
     val event: EventText,

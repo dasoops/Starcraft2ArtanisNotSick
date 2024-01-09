@@ -17,7 +17,8 @@
         },
         "index": 0,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -46,7 +47,8 @@
         },
         "index": 1,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -75,7 +77,8 @@
         },
         "index": 2,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -104,7 +107,8 @@
         },
         "index": 3,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -133,7 +137,8 @@
         },
         "index": 4,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -162,7 +167,8 @@
         },
         "index": 5,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -191,7 +197,8 @@
         },
         "index": 6,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -220,7 +227,8 @@
         },
         "index": 7,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -249,7 +257,8 @@
         },
         "index": 8,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -278,7 +287,8 @@
         },
         "index": 9,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -307,7 +317,8 @@
         },
         "index": 10,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -336,7 +347,8 @@
         },
         "index": 11,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -365,7 +377,8 @@
         },
         "index": 12,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -394,7 +407,8 @@
         },
         "index": 13,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -423,7 +437,8 @@
         },
         "index": 14,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -452,7 +467,8 @@
         },
         "index": 15,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -481,7 +497,8 @@
         },
         "index": 16,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -510,7 +527,8 @@
         },
         "index": 17,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -539,7 +557,8 @@
         },
         "index": 18,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -568,7 +587,8 @@
         },
         "index": 19,
         "position": {
-          "type": "Unknown"
+          "type": "Single",
+          "position": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6"
         },
         "level": {
           "tech": {
@@ -583,6 +603,11 @@
         "target": null
       }
     ],
-    "position": []
+    "position": [
+      {
+        "id": "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6",
+        "type": "Description"
+      }
+    ]
   }
 ]

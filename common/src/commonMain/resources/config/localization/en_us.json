@@ -44,6 +44,7 @@
       }
     },
     "mission": {
+      "position": "position",
       "title": "Mission",
       "clickToStart": "Click to Start",
       "clickToPause": "Click to Pause",
@@ -291,6 +292,9 @@
       "positions": {
         "Unknown": {
           "description": "Unknown"
+        },
+        "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6": {
+          "description": "*7 units away from the potential target"
         },
         "Point$da2e289c-a892-406b-a0f3-b78513b6497d": {
           "description": "Award train spawn point ↙"

@@ -5,15 +5,23 @@ import com.dasoops.common.resources.R
 import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.mission.Mission
 import com.dasoops.common.resources.mission.missions
+import com.dasoops.common.resources.mumator.mumators
 import com.dasoops.common.util.BaseException
 
 /* get by id */
 private val idPositionCache: Map<String, Position> by lazy {
-    R.missions.flatMap { mission ->
-        mission.position.map {
-            it.id to it
+    listOf(
+        R.mumators.flatMap { mission ->
+            mission.position.map {
+                it.id to it
+            }
+        },
+        R.missions.flatMap { mission ->
+            mission.position.map {
+                it.id to it
+            }
         }
-    }.toMap()
+    ).flatten().toMap()
 }
 
 fun position(id: String): Position =

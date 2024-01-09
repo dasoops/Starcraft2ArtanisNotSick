@@ -44,6 +44,7 @@
       }
     },
     "mission": {
+      "position": "刷新点",
       "title": "地图",
       "clickToStart": "单击以开始",
       "clickToPause": "单击以暂停",
@@ -291,6 +292,9 @@
       "positions": {
         "Unknown": {
           "description": "未知刷新点"
+        },
+        "Point$5aeef3cc-ad89-4d78-b9f0-5e0786cb32a6": {
+          "description": "*玩家部队单位7格内"
         },
         "Point$e4f34baf-fb5f-46e2-819d-0deeb90034f0": {
           "description": "红点刷新点 ↖"

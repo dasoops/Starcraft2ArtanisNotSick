@@ -88,6 +88,16 @@ data class PointPosition(
     }
 }
 
+@SerialName(DescriptionPosition.SERIAL_NAME)
+@Serializable
+data class DescriptionPosition(
+    override val id: String,
+) : AbstractPosition() {
+    companion object Key {
+        const val SERIAL_NAME: String = "Description"
+    }
+}
+
 @SerialName(RangePosition.SERIAL_NAME)
 @Serializable
 data class RangePosition(

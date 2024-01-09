@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -103,6 +104,12 @@ internal fun Event.Composable() = EventBox(
     expandedContent = {
         val ai by LocalState.current.missionState.ai
         Column {
+            TextDivider(text = R.str.screen.mission.position)
+            Text(
+                text = " - ${this@Composable.position.text}",
+                maxLines = 1,
+            )
+
             if (null != time) {
                 TextDivider(text = R.str.screen.mission.time.trigger)
                 time!!.keep?.let {
@@ -192,7 +199,13 @@ private fun EventBox(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 6.dp, vertical = 3.dp)
-            .height((if (!expanded) 40 else 160).dp),
+            .run {
+                if (!expanded) {
+                    this.height(40.dp)
+                } else {
+                    this.defaultMinSize(minHeight = 160.dp)
+                }
+            }
     ) {
         Row(
             modifier = Modifier.clickable { expanded = !expanded }
@@ -211,7 +224,7 @@ private fun EventBox(
                     visible = expanded,
                     enter = fadeIn() + expandVertically(),
                     exit = fadeOut() + shrinkVertically(),
-                    modifier = Modifier.padding(horizontal = 12.dp)
+                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 12.dp)
                 ) {
                     CompositionLocalProvider(
                         LocalTextStyle provides MaterialTheme.typography.bodyMedium
