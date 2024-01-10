@@ -24,6 +24,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -201,42 +202,17 @@ private fun AiView(
     }
 }
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun EventBox(
     event: Event,
     content: @Composable RowScope.(/* expanded */Boolean) -> Unit,
     expandedContent: @Composable () -> Unit,
-    missionState: LocalMissionStateModel = LocalMissionState.current,
 ) {
-    var expanded by rememberSaveable { mutableStateOf(false) }
-    val timer by remember { missionState.timer.state }
-    val changeTimer = remember { missionState.timer.setValue }
-    val coroutineScope = rememberCoroutineScope()
+    val expandedStatus = rememberSaveable { mutableStateOf(false) }
+    val expanded by remember { expandedStatus }
+    val colorModifier = rememberColorModifier(event = event)
+    val clickableMidifier = rememberClickableMidifier(event = event, expandedState = expandedStatus)
 
-    val load = MaterialTheme.colorScheme.primaryContainer
-    val unLoad = MaterialTheme.colorScheme.surface
-    val background = { it: Float ->
-        if (it > 1) {
-            Modifier.background(load)
-        } else {
-            Modifier.background(
-                Brush.horizontalGradient(
-                    it to load,
-                    it to unLoad,
-                )
-            )
-        }
-    }
-    val colorModifier: Modifier = remember(timer) {
-        when (val time = event.time?.first) {
-            is NormalTime -> background(1f * timer / time.originSeconds)
-            is RangeTime -> background(1f * timer / time.begin.originSeconds)
-            is EventOffsetTime -> Modifier
-            is TriggerPositionTime -> Modifier
-            null -> Modifier
-        }
-    }
     Surface(
         shape = MaterialTheme.shapes.extraSmall,
         shadowElevation = 2.dp,
@@ -252,21 +228,7 @@ private fun EventBox(
             }
     ) {
         Row(
-            modifier = Modifier
-                .combinedClickable(
-                    onLongClick = {
-                        val targetValue = when (val time = event.time?.first) {
-                            is NormalTime -> time.originSeconds
-                            is RangeTime -> time.begin.originSeconds
-                            else -> return@combinedClickable
-                        }
-                        coroutineScope.launch {
-                            missionLogger.trace { "changeTimer -> $targetValue" }
-                            changeTimer(targetValue)
-                        }
-                    },
-                    onClick = { expanded = !expanded }
-                )
+            modifier = clickableMidifier
         ) {
             Column {
                 Row(
@@ -291,6 +253,65 @@ private fun EventBox(
                     }
                 }
             }
+        }
+    }
+}
+
+@Composable
+@OptIn(ExperimentalFoundationApi::class)
+fun rememberClickableMidifier(
+    missionState: LocalMissionStateModel = LocalMissionState.current,
+    event: Event,
+    expandedState: MutableState<Boolean>,
+): Modifier = run {
+    val coroutineScope = rememberCoroutineScope()
+    val changeTimer = remember { missionState.timer.setValue }
+    var expanded by remember { expandedState }
+
+    Modifier.combinedClickable(
+        onLongClick = {
+            val targetValue = when (val time = event.time?.first) {
+                is NormalTime -> time.originSeconds
+                is RangeTime -> time.begin.originSeconds
+                else -> return@combinedClickable
+            }
+            coroutineScope.launch {
+                missionLogger.trace { "changeTimer -> $targetValue" }
+                changeTimer(targetValue)
+            }
+        },
+        onClick = { expanded = !expanded }
+    )
+}
+
+@Composable
+private fun rememberColorModifier(
+    missionState: LocalMissionStateModel = LocalMissionState.current,
+    event: Event,
+): Modifier {
+    val timer by remember { missionState.timer.state }
+
+    val load = MaterialTheme.colorScheme.primaryContainer
+    val unLoad = MaterialTheme.colorScheme.surface
+    val background = { capacity: Float ->
+        if (capacity > 1) {
+            Modifier.background(load)
+        } else {
+            Modifier.background(
+                Brush.horizontalGradient(
+                    capacity to load,
+                    capacity to unLoad,
+                )
+            )
+        }
+    }
+    return remember(timer) {
+        when (val time = event.time?.first) {
+            is NormalTime -> background(1f * timer / time.originSeconds)
+            is RangeTime -> background(1f * timer / time.begin.originSeconds)
+            is EventOffsetTime -> Modifier
+            is TriggerPositionTime -> Modifier
+            null -> Modifier
         }
     }
 }
