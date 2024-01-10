@@ -18,7 +18,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.dasoops.common.LocalState
 import com.dasoops.common.resources.AppState
-import com.dasoops.common.resources.MissionState
 import com.dasoops.common.resources.event.Event
 import com.dasoops.common.resources.event.NormalTime
 import com.dasoops.common.resources.event.RangeTime
@@ -29,11 +28,11 @@ import kotlinx.coroutines.launch
 @Composable
 internal fun Main(
     appState: AppState = LocalState.current,
-    missionState: MissionState = appState.missionState,
+    missionState: LocalMissionStateModel = LocalMissionState.current,
 ) {
     val scope = rememberCoroutineScope()
 
-    val mission: Mission? by remember { missionState.current }
+    val mission: Mission? by remember { appState.missionState.current }
     val timer: Int by remember { missionState.timer.state }
     val autoScroll: Boolean by remember { missionState.autoScroll }
     val showHide: Boolean by remember { missionState.showHide }

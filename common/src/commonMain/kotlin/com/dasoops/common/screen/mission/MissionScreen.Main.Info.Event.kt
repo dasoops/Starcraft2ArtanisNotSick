@@ -37,11 +37,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.dasoops.common.LocalState
 import com.dasoops.common.component.TextDivider
 import com.dasoops.common.component.UnitImage
 import com.dasoops.common.resources.Ai
-import com.dasoops.common.resources.MissionState
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.event.AssaultEvent
 import com.dasoops.common.resources.event.Event
@@ -111,7 +109,7 @@ internal fun Event.Composable() = EventBox(
         }
     },
     expandedContent = {
-        val ai by LocalState.current.missionState.ai
+        val ai by LocalMissionState.current.ai
         Column {
             TextDivider(text = R.str.screen.mission.position)
             Text(
@@ -209,11 +207,11 @@ private fun EventBox(
     event: Event,
     content: @Composable RowScope.(/* expanded */Boolean) -> Unit,
     expandedContent: @Composable () -> Unit,
-    state: MissionState = LocalState.current.missionState,
+    missionState: LocalMissionStateModel = LocalMissionState.current,
 ) {
     var expanded by rememberSaveable { mutableStateOf(false) }
-    val timer by remember { state.timer.state }
-    val changeTimer = remember { state.timer.changeValue }
+    val timer by remember { missionState.timer.state }
+    val changeTimer = remember { missionState.timer.setValue }
     val coroutineScope = rememberCoroutineScope()
 
     val load = MaterialTheme.colorScheme.primaryContainer

@@ -32,7 +32,7 @@ fun app() {
     ) {
         var screen by remember { state.screen }
 
-        MyTheme(theme = state.setting.theme.value) {
+        MyTheme(theme = state.settingState.theme.value) {
             Surface(color = MaterialTheme.colorScheme.background) {
                 Row {
                     SideBar(screen = screen, onScreenChange = { screen = it })

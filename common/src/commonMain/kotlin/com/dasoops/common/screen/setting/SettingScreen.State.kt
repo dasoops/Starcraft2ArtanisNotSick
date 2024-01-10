@@ -10,7 +10,7 @@ import com.dasoops.common.util.MutableStateSerializer
 import kotlinx.serialization.Serializable
 
 @Serializable
-class Setting(
+class SettingState(
     @Serializable(with = MutableStateSerializer::class)
     val language: MutableState<Language>,
     @Serializable(with = MutableStateSerializer::class)
@@ -29,7 +29,7 @@ class Setting(
 
     companion object {
         val Default
-            get() = Setting(
+            get() = SettingState(
                 language = mutableStateOf(R.currentSystemLanguage),
                 autoScroll = mutableStateOf(true),
                 showHide = mutableStateOf(false),

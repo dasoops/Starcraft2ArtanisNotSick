@@ -119,7 +119,7 @@ internal val Event.text: String
 /* Level */
 val Level.text: String
     @Composable get() = run {
-        val halfSuffix by LocalState.current.setting.halfLevelSuffix
+        val halfSuffix by LocalState.current.settingState.halfLevelSuffix
         when (this) {
             is NormalLevel -> "T$level"
             is HalfStrengthLevel -> "T$level$halfSuffix"
@@ -130,7 +130,7 @@ val Level.text: String
 
 val EventLevel.text: String
     @Composable get() = run {
-        val mergeSameLevel by LocalState.current.setting.mergeSameLevel
+        val mergeSameLevel by LocalState.current.settingState.mergeSameLevel
         if (mergeSameLevel && this.tech == this.strength) {
             this.tech.text
         } else {

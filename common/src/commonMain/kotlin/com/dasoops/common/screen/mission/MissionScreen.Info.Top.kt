@@ -34,7 +34,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import com.dasoops.common.LocalState
 import com.dasoops.common.resources.AppState
-import com.dasoops.common.resources.MissionState
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.localization.str
 import com.dasoops.common.resources.mission.image
@@ -64,11 +63,11 @@ private fun Modifier.topCommon(rowScope: RowScope): Modifier = rowScope.run {
 
 @Composable
 private fun RowScope.Timer(
-    state: MissionState = LocalState.current.missionState,
+    missionState: LocalMissionStateModel = LocalMissionState.current,
 ) {
-    var firstStart by remember { state.firstStart }
-    var timerStart by remember { state.timerStart }
-    val timer by remember { state.timer.state }
+    var firstStart by remember { missionState.firstStart }
+    var timerStart by remember { missionState.timerStart }
+    val timer by remember { missionState.timer.state }
     val timeText = remember(timer) {
         UnitTime.DefaultImpl(value = timer, unit = TimeUnit.SECOND).text
     }
@@ -112,8 +111,7 @@ private fun RowScope.Timer(
 
 @Composable
 private fun RowScope.Setting(
-    state: AppState = LocalState.current,
-    missionState: MissionState = state.missionState,
+    missionState: LocalMissionStateModel = LocalMissionState.current,
 ) {
     var autoScroll by remember { missionState.autoScroll }
     val selectMumatorList = remember { missionState.selectMumatorList }
@@ -222,17 +220,18 @@ private fun selectedColor(selected: Boolean) = if (selected) {
 
 @Composable
 private fun RowScope.Map(
-    state: AppState = LocalState.current,
+    appState: AppState = LocalState.current,
+    missionState: LocalMissionStateModel = LocalMissionState.current,
 ) {
-    val missionState = remember { state.missionState }
-    val mission by remember { missionState.current }
+    var mission by remember { appState.missionState.current }
     if (null == mission) return
 
     Column(
         modifier = Modifier
             .clickable {
                 missionLogger.trace { "mission change -> null" }
-                missionState.clear(state.setting)
+                missionState.clear(appState.settingState)
+                mission = null
             }
             .topCommon(this)
             .padding(horizontal = 16.dp, vertical = 6.dp)

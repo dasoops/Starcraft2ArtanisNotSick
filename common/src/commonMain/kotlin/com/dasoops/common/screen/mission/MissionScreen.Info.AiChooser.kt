@@ -27,11 +27,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.dasoops.common.LocalState
 import com.dasoops.common.component.UnitImage
 import com.dasoops.common.resources.Ai
-import com.dasoops.common.resources.AppState
-import com.dasoops.common.resources.MissionState
 import com.dasoops.common.resources.R
 import com.dasoops.common.resources.Race
 import com.dasoops.common.resources.ai
@@ -39,8 +36,7 @@ import com.dasoops.common.resources.nameLocalization
 
 @Composable
 internal fun AiChooser(
-    appState: AppState = LocalState.current,
-    missionState: MissionState = appState.missionState,
+    missionState: LocalMissionStateModel = LocalMissionState.current,
 ) {
     var openAiChooser by remember { missionState.openAiChooser }
     var ai by remember { missionState.ai }

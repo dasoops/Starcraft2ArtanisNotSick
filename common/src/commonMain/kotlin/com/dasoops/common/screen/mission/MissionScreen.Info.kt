@@ -8,13 +8,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.dasoops.common.LocalState
 import com.dasoops.common.component.Timer
-import com.dasoops.common.resources.MissionState
 
 @Composable
 internal fun MissionInfo(
-    missionState: MissionState = LocalState.current.missionState,
+    missionState: LocalMissionStateModel = LocalMissionState.current,
 ) {
     val openAiChooser by remember { missionState.openAiChooser }
 

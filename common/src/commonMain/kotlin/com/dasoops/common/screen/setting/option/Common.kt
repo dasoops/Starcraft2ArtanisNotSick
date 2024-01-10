@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.dp
 import com.dasoops.common.LocalState
 import com.dasoops.common.component.PaddingOutlinedTextField
 
-val setting @Composable get() = LocalState.current.setting
+val setting @Composable get() = LocalState.current.settingState
 
 @Composable
 internal fun Title(text: String) {
