@@ -25,6 +25,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -41,6 +42,7 @@ import com.dasoops.common.resources.mumator.mumator
 import com.dasoops.common.util.TimeUnit
 import com.dasoops.common.util.UnitTime
 import com.dasoops.common.util.text
+import kotlinx.coroutines.launch
 
 @Composable
 internal fun Top(
@@ -225,12 +227,14 @@ private fun RowScope.Map(
 ) {
     var mission by remember { appState.missionState.current }
     if (null == mission) return
+    val coroutineScope = rememberCoroutineScope()
 
     Column(
         modifier = Modifier
             .clickable {
                 missionLogger.trace { "mission change -> null" }
                 missionState.clear(appState.settingState)
+                coroutineScope.launch { appState.localMissionStateModel.timer.setValue(0) }
                 mission = null
             }
             .topCommon(this)

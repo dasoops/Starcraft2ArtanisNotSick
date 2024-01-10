@@ -15,7 +15,7 @@ val LocalMissionState =
 fun MissionScreen() {
     val mission by LocalState.current.missionState.current
     CompositionLocalProvider(
-        LocalMissionState provides LocalMissionStateModel()
+        LocalMissionState provides LocalState.current.localMissionStateModel
     ) {
         if (null == mission) {
             MissionSelect()

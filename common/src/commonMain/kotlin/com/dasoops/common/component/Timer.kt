@@ -31,7 +31,7 @@ inline fun Timer(
     val timerStart by remember { missionState.timerStart }
     var trigger by remember { mutableStateOf(missionState.timer.state.value) }
 
-    val animatable = remember { Animatable(0, Int.VectorConverter) }
+    val animatable = remember { Animatable(trigger, Int.VectorConverter) }
     missionState.timer = TimerController(
         state = animatable.asState(),
         stop = { animatable.stop() },

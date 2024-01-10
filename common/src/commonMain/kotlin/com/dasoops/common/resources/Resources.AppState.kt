@@ -5,10 +5,12 @@ import androidx.compose.runtime.mutableStateOf
 import com.dasoops.common.resources.mission.Mission
 import com.dasoops.common.resources.mission.mission
 import com.dasoops.common.screen.Screen
+import com.dasoops.common.screen.mission.LocalMissionStateModel
 import com.dasoops.common.screen.setting.SettingState
 import com.dasoops.common.util.MutableStateSerializer
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.Transient
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.encoding.Decoder
@@ -22,6 +24,9 @@ class AppState {
     val screen: MutableState<Screen>
     val settingState: SettingState
     val missionState: MissionState
+
+    @Transient
+    val localMissionStateModel: LocalMissionStateModel = LocalMissionStateModel()
 
     constructor(
         map: MissionState = MissionState.Default,

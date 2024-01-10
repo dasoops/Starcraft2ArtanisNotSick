@@ -21,7 +21,6 @@ data class LocalMissionStateModel(
 ) {
 
     fun clear(settingState: SettingState) {
-        timer = TimerController.Empty
         firstStart.value = true
         timerStart.value = false
         autoScroll.value = settingState.autoScroll.value
