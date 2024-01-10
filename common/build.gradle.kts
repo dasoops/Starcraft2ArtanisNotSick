@@ -33,6 +33,9 @@ kotlin {
                 api(compose.material3)
                 api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
                 api("io.github.oshai:kotlin-logging-jvm:5.1.0")
+                api("com.arkivanov.decompose:decompose:2.2.2")
+                api("com.badoo.reaktive:reaktive:1.2.3")
+                api("com.badoo.reaktive:coroutines-interop:1.2.3")
             }
         }
         val commonTest by getting {
