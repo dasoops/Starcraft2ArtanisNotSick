@@ -13,8 +13,6 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import com.dasoops.common.component.SideBar
 import com.dasoops.common.component.theme.MyTheme
 import com.dasoops.common.resources.AppState
-import com.dasoops.common.resources.loadAppState
-import com.dasoops.common.resources.saveAppState
 import com.dasoops.common.util.Content
 import io.github.oshai.kotlinlogging.KotlinLogging
 
@@ -28,7 +26,7 @@ fun AppWrap(
     content: Content
 ) {
     logger.info { "platform: ${getPlatformName()}" }
-    val state: AppState = remember { loadAppState() }
+    val state: AppState = remember { AppState.load() }
 
     CompositionLocalProvider(
         LocalState provides state,
@@ -38,7 +36,7 @@ fun AppWrap(
 
     DisposableEffect(Unit) {
         onDispose {
-            saveAppState(state)
+            state.save()
         }
     }
 }

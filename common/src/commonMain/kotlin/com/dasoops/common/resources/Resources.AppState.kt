@@ -38,8 +38,29 @@ class AppState {
         this.settingState = settingState
     }
 
+    fun save() {
+        val serializerAppStateString = json.encodeToString(this)
+        logger.trace { "onExit <- save state dataJson[$serializerAppStateString]" }
+        dataFile.writeText(serializerAppStateString)
+    }
+
     companion object {
         val Default = AppState()
+
+        fun load(): AppState {
+            val dataString = dataFile.readText()
+            logger.info { "read state dataJson[${dataString}]" }
+            return if (dataString.isBlank()) {
+                Default
+            } else {
+                try {
+                    json.decodeFromString<AppState>(dataString)
+                } catch (e: Exception) {
+                    logger.error(e) { "deserialize AppState failed, use default appState" }
+                    Default
+                }
+            }
+        }
     }
 }
 
@@ -65,24 +86,3 @@ data class MissionState(
 /* util */
 private val json = Json { prettyPrint = true }
 private val dataFile by lazy { R.data("appState.json") }
-
-fun loadAppState(): AppState {
-    val dataString = dataFile.readText()
-    logger.info { "read state dataJson[${dataString}]" }
-    return if (dataString.isBlank()) {
-        AppState.Default
-    } else {
-        try {
-            json.decodeFromString<AppState>(dataString)
-        } catch (e: Exception) {
-            logger.error(e) { "deserialize AppState failed, use default appState" }
-            AppState.Default
-        }
-    }
-}
-
-fun saveAppState(appState: AppState) {
-    val serializerAppStateString = json.encodeToString(appState)
-    logger.trace { "onExit <- save state dataJson[$serializerAppStateString]" }
-    dataFile.writeText(serializerAppStateString)
-}
