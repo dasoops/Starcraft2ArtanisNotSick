@@ -30,15 +30,10 @@ internal fun Main(
     appState: AppState = LocalState.current,
     missionState: LocalMissionStateModel = LocalMissionState.current,
 ) {
-    val scope = rememberCoroutineScope()
+    val showHide: Boolean by remember { missionState.showHide }
 
     val mission: Mission? by remember { appState.missionState.current }
-    val timer: Int by remember { missionState.timer.state }
-    val autoScroll: Boolean by remember { missionState.autoScroll }
-    val showHide: Boolean by remember { missionState.showHide }
     val selectMumatorList = remember { missionState.selectMumatorList }
-
-    val lazyListState = rememberLazyListState()
     val eventList: List<Event> = remember(mission, showHide, selectMumatorList.size) {
         mission ?: return@remember emptyList()
         val originEventList = mission!!.event.toMutableList()
@@ -50,6 +45,7 @@ internal fun Main(
             .sortedBy { it.sortValue }
     }
 
+    val lazyListState = rememberLazyListState()
     Box(Modifier) {
         LazyColumn(
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
@@ -63,6 +59,9 @@ internal fun Main(
         )
     }
 
+    val scope = rememberCoroutineScope()
+    val timer: Int by remember { missionState.timer.state }
+    val autoScroll: Boolean by remember { missionState.autoScroll }
     LaunchedEffect(autoScroll, timer, showHide, eventList) {
         if (!autoScroll) return@LaunchedEffect
 
