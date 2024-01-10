@@ -22,8 +22,8 @@ enum class Language(
     val value: String,
     val show: String,
 ) : StringDataEnum {
-    ZH_CN("zh_cn", "简体中文"),
-    EN_US("en_us", "English"),
+    ZH_CN("zh_CN", "简体中文"),
+    EN_US("en_US", "English"),
     ;
 
     override val data: String = value
