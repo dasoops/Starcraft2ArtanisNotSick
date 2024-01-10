@@ -16,8 +16,8 @@
         <file>${LOG_HOME}/${LOG_NAME}.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <fileNamePattern>${LOG_HOME}/%d{yyyy-MM-dd}/${LOG_NAME}-%i.log</fileNamePattern>
-            <maxFileSize>50MB</maxFileSize>
-            <maxHistory>30</maxHistory>
+            <maxFileSize>1MB</maxFileSize>
+            <maxHistory>5</maxHistory>
         </rollingPolicy>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>%-5level %d{yy-MM-dd HH:mm:ss_SSS} [%-26thread] %-20logger{0} : %msg%n
