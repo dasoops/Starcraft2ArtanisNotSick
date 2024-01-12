@@ -41,6 +41,6 @@ bin/
 ### Project ###
 wix311/
 logs/
-data/
+.data
 ./*.hprof
 local.properties
