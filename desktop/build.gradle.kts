@@ -25,7 +25,7 @@ kotlin {
 }
 compose.desktop {
     application {
-        mainClass = "MainKt"
+        mainClass = "com.dasoops.starcraft2ArtanisNotSick.MainKt"
         buildTypes {
             release.proguard.isEnabled.set(false)
         }

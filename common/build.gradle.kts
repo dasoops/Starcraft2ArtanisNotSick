@@ -31,9 +31,11 @@ kotlin {
                 api(compose.runtime)
                 api(compose.foundation)
                 api(compose.material3)
+                api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
                 api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
                 api("io.github.oshai:kotlin-logging-jvm:5.1.0")
                 api("com.arkivanov.decompose:decompose:2.2.2")
+                api("com.arkivanov.decompose:extensions-compose-jetbrains:2.2.2")
                 api("com.badoo.reaktive:reaktive:1.2.3")
                 api("com.badoo.reaktive:coroutines-interop:1.2.3")
             }
@@ -47,9 +49,10 @@ kotlin {
             dependencies {
                 api("androidx.appcompat:appcompat:1.5.1")
                 api("androidx.core:core-ktx:1.9.0")
+                api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
             }
         }
-        val androidTest by getting {
+        val androidUnitTest by getting {
             dependencies {
                 implementation("junit:junit:4.13.2")
             }
@@ -57,6 +60,7 @@ kotlin {
         val desktopMain by getting {
             dependencies {
                 api(compose.preview)
+                api("org.jetbrains.kotlinx:kotlinx-coroutines-swing:1.7.3")
                 api("org.slf4j:slf4j-api:1.7.36")
                 api("ch.qos.logback:logback-classic:1.2.9")
             }

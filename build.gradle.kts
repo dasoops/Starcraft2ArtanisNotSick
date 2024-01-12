@@ -1,5 +1,5 @@
 group = "com.dasoops"
-version = "0.0.2-beta"
+version = "1.0.1-beta"
 
 allprojects {
     repositories {
