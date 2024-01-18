@@ -32,6 +32,7 @@ import com.dasoops.starcraft2ArtanisNotSick.common.resources.Ai
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.R
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.Race
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.ai
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.name
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.nameLocalization
 
 @Composable

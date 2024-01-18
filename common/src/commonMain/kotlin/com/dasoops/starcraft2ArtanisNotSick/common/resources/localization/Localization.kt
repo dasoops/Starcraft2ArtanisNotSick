@@ -34,7 +34,6 @@ class Localization(
     val title: String,
     val simpleTitle: String,
     val screen: ScreenText,
-    val mumator: Map<String, MumatorText>,
     val ai: Dict,
     val dict: Dict,
     val race: RaceText,

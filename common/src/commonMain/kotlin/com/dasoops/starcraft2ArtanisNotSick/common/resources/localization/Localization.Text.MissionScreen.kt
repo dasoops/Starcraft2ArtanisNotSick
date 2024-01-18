@@ -20,6 +20,7 @@ data class MissionText(
     val time: TimeText,
     val level: LevelText,
     val event: EventText,
+    private val groups: Map<String, GroupText>,
     private val missions: Map<String, MissionInfoText>,
     private val events: Map<String, EventInfoText>,
     private val positions: Map<String, PositionInfoText>,
@@ -28,6 +29,7 @@ data class MissionText(
 
     fun event(id: String) = events[id] ?: throw BaseException("undefined event[${id}]")
     fun position(id: String) = positions[id] ?: throw BaseException("undefined position[${id}]")
+    fun group(id: String) = groups[id] ?: throw BaseException("undefined group[${id}]")
     fun mission(mission: Mission) =
         missions[mission.name] ?: throw BaseException("undefined event[${mission.name}]")
 }
@@ -95,8 +97,15 @@ data class EventText(
     private val assault: String,
     private val award: String,
     private val monopolize: String,
+    private val mumator: String,
 ) {
     fun assault(position: String, index: String, description: String) = assault.fill(
+        "description" to description,
+        "position" to position,
+        "index" to index,
+    )
+
+    fun mumator(position: String, index: String, description: String) = mumator.fill(
         "description" to description,
         "position" to position,
         "index" to index,
@@ -127,5 +136,10 @@ data class EventInfoText(
 
 @Serializable
 data class PositionInfoText(
+    val description: String,
+)
+
+@Serializable
+data class GroupText(
     val description: String,
 )

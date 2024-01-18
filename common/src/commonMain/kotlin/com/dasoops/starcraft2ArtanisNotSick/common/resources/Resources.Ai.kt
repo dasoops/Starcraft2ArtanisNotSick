@@ -14,14 +14,16 @@ data class Ai(
     val race: Race,
     val assaults: List<Assault>,
 ) {
-    val name: String
-        @Composable get() = R.str.ai[id]
-
     private val level2Units: Map<Int, List<Unit>> by lazy { assaults.associate { it.level to it.units } }
     fun units(level: Int): List<Unit> = level2Units[level]!!
 
     override fun toString() = "Ai(id='$id', race=$race)"
 }
+
+val Ai.name: String
+    @Composable get() {
+        return R.str.ai[id]
+    }
 
 @Serializable(with = Race.Serializer::class)
 enum class Race(

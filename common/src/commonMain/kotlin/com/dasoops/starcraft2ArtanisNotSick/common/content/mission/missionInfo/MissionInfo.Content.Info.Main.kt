@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.arkivanov.decompose.extensions.compose.jetbrains.subscribeAsState
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.AssaultEvent
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.Event
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.NormalTime
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.RangeTime
@@ -31,7 +32,12 @@ internal fun Main(
     val state by component.state.subscribeAsState()
 
     val eventList: List<Event> = remember(state) {
-        val originEventList = mission.event.toMutableList()
+        val originEventList = mission.event
+            .filter {
+                if (it !is AssaultEvent) true
+                else state.group == it.group
+            }
+            .toMutableList()
 
         state.selectMumatorList.forEach { originEventList.addAll(it.event) }
 

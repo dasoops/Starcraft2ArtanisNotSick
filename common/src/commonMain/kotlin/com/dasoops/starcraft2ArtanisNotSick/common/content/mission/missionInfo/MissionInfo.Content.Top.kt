@@ -29,14 +29,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import com.arkivanov.decompose.extensions.compose.jetbrains.subscribeAsState
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.R
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.group
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.name
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.localization.str
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.mission.Mission
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.mission.image
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.mumator.mumator
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.name
+import com.dasoops.starcraft2ArtanisNotSick.common.util.Content
 import com.dasoops.starcraft2ArtanisNotSick.common.util.TimeUnit
 import com.dasoops.starcraft2ArtanisNotSick.common.util.UnitTime
 import com.dasoops.starcraft2ArtanisNotSick.common.util.text
@@ -142,6 +147,7 @@ private fun Setting(
 ) {
     val state by component.state.subscribeAsState()
     var mumatorExpanded by remember { mutableStateOf(false) }
+    var groupExpanded by remember { mutableStateOf(false) }
     val str = R.str.screen.mission
 
     Row(
@@ -151,12 +157,32 @@ private fun Setting(
             modifier = Modifier.weight(1f),
         ) {
             SettingBox(
-                text = str.hideEvent,
-                selected = state.showHide,
-                onSelect = { component.onChangeShowHide() },
-            )
+                text = state.group.name,
+                selected = true,
+                onSelect = { groupExpanded = true },
+            ) {
+                DropdownMenu(
+                    expanded = groupExpanded,
+                    offset = DpOffset(6.dp, 12.dp),
+                    onDismissRequest = { groupExpanded = false }
+                ) {
+                    component.mission.group.keys.forEach {
+                        DropdownMenuItem(
+                            text = {
+                                Text(text = it.name)
+                            },
+                            onClick = {
+                                groupExpanded = false
+                                component.onSelectGroup(it)
+                            },
+                            modifier = Modifier
+                                .background(selectedColor(it == state.group)),
+                        )
+                    }
+                }
+            }
             SettingBox(
-                text = if (null == state.ai) str.chooseAi else state.ai!!.name,
+                text = state.ai?.name ?: str.chooseAi,
                 selected = null != state.ai,
                 onSelect = { component.goAiChooser() },
             )
@@ -173,30 +199,35 @@ private fun Setting(
                 text = str.selectMumator,
                 selected = state.selectMumatorList.isNotEmpty(),
                 onSelect = { mumatorExpanded = true }
-            )
-            DropdownMenu(mumatorExpanded, onDismissRequest = { mumatorExpanded = false }) {
-                DropdownMenuItem(
-                    text = {
-                        Text(text = str.aggressiveDeployment)
-                    },
-                    onClick = {
-                        mumatorExpanded = false
-                        component.onSelectMumator(R.mumator.aggressiveDeployment)
-                    },
-                    modifier = Modifier
-                        .background(selectedColor(state.selectMumatorList.contains(R.mumator.aggressiveDeployment))),
-                )
-                DropdownMenuItem(
-                    text = {
-                        Text(text = str.voidRifts)
-                    },
-                    onClick = {
-                        mumatorExpanded = false
-                        component.onSelectMumator(R.mumator.voidRifts)
-                    },
-                    modifier = Modifier
-                        .background(selectedColor(state.selectMumatorList.contains(R.mumator.voidRifts))),
-                )
+            ) {
+                DropdownMenu(
+                    expanded = mumatorExpanded,
+                    offset = DpOffset(6.dp, 12.dp),
+                    onDismissRequest = { mumatorExpanded = false }
+                ) {
+                    DropdownMenuItem(
+                        text = {
+                            Text(text = str.aggressiveDeployment)
+                        },
+                        onClick = {
+                            mumatorExpanded = false
+                            component.onSelectMumator(R.mumator.aggressiveDeployment)
+                        },
+                        modifier = Modifier
+                            .background(selectedColor(state.selectMumatorList.contains(R.mumator.aggressiveDeployment))),
+                    )
+                    DropdownMenuItem(
+                        text = {
+                            Text(text = str.voidRifts)
+                        },
+                        onClick = {
+                            mumatorExpanded = false
+                            component.onSelectMumator(R.mumator.voidRifts)
+                        },
+                        modifier = Modifier
+                            .background(selectedColor(state.selectMumatorList.contains(R.mumator.voidRifts))),
+                    )
+                }
             }
         }
     }
@@ -206,15 +237,22 @@ private fun Setting(
 private fun ColumnScope.SettingBox(
     text: String,
     selected: Boolean,
-    onSelect: () -> Unit,
+    onSelect: (() -> Unit)?,
+    content: Content? = null,
 ) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .weight(1f)
-            .clickable(onClick = {
-                onSelect()
-            })
+            .run {
+                if (null != onSelect) {
+                    this.clickable(onClick = {
+                        onSelect()
+                    })
+                } else {
+                    this
+                }
+            }
             .background(color = selectedColor(selected))
             .border(
                 border = BorderStroke(
@@ -229,6 +267,7 @@ private fun ColumnScope.SettingBox(
             style = MaterialTheme.typography.bodyMedium,
             textAlign = TextAlign.Center
         )
+        content?.invoke()
     }
 }
 

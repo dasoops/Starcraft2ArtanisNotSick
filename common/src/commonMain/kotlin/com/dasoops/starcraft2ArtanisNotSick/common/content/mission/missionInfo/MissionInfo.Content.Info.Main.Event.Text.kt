@@ -13,6 +13,7 @@ import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.FixedTechLeve
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.HalfStrengthLevel
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.Level
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.MonopolizeEvent
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.MumatorEvent
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.NormalLevel
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.NormalTime
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.RangeTime
@@ -21,28 +22,28 @@ import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.TriggerPositi
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.description
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.localization.str
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.mission.position.EventPosition
-import com.dasoops.starcraft2ArtanisNotSick.common.resources.mission.position.MultiplePosition
-import com.dasoops.starcraft2ArtanisNotSick.common.resources.mission.position.RandomPosition
-import com.dasoops.starcraft2ArtanisNotSick.common.resources.mission.position.SinglePosition
-import com.dasoops.starcraft2ArtanisNotSick.common.resources.mission.position.UnknownPosition
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.mission.position.MultipleEventPosition
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.mission.position.RandomEventPosition
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.mission.position.SingleEventPosition
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.mission.position.UnknownEventPosition
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.mission.position.description
 import com.dasoops.starcraft2ArtanisNotSick.common.util.text
 
 /* position */
 internal val EventPosition.text: String
     @Composable get() = when (this) {
-        is SinglePosition -> this.position.description
-        is MultiplePosition ->
+        is SingleEventPosition -> this.position.description
+        is MultipleEventPosition ->
             "*" + this.position
                 .map { it.description }
                 .joinToString { it }
 
-        is RandomPosition ->
+        is RandomEventPosition ->
             "*" + this.position
                 .map { it.position.description }
                 .joinToString(separator = " or ") { it }
 
-        is UnknownPosition -> R.str.screen.mission.unknownPosition.description
+        is UnknownEventPosition -> R.str.screen.mission.unknownPosition.description
     }
 
 /* Time */
@@ -97,6 +98,12 @@ internal val Event.text: String
     @Composable get() = run {
         (if (!show) "*" else "") + when (this) {
             is AssaultEvent -> R.str.screen.mission.event.assault(
+                description = this.description,
+                position = this.position.text,
+                index = (this.index + 1).toString(),
+            )
+
+            is MumatorEvent -> R.str.screen.mission.event.assault(
                 description = this.description,
                 position = this.position.text,
                 index = (this.index + 1).toString(),

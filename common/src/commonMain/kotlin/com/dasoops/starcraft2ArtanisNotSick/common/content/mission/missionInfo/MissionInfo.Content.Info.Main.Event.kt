@@ -51,6 +51,7 @@ import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.EventOffsetTi
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.FixedStrengthLevel
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.FixedTechLevel
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.HalfStrengthLevel
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.MumatorEvent
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.NormalLevel
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.NormalTime
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.RangeTime
@@ -59,6 +60,7 @@ import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.TriggerPositi
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.icon
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.localization.str
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.sterength
+import com.dasoops.starcraft2ArtanisNotSick.common.util.BaseException
 import kotlinx.coroutines.launch
 
 @Composable
@@ -155,13 +157,16 @@ internal fun Event.Composable(
                     }
                 }
             }
-            if (this@Composable is AssaultEvent) {
+            if (this@Composable is AssaultEvent || this@Composable is MumatorEvent) {
                 TextDivider(text = R.str.screen.mission.level.title)
 
                 val strengthStr = R.str.screen.mission.level.strength
-                val strengthLevelValue = when (
-                    val strengthLevel = this@Composable.level.strength
-                ) {
+                val eventLevel = when (this@Composable) {
+                    is AssaultEvent -> this@Composable.level
+                    is MumatorEvent -> this@Composable.level
+                    else -> throw BaseException("unExpected")
+                }
+                val strengthLevelValue = when (val strengthLevel = eventLevel.strength) {
                     is HalfStrengthLevel ->
                         "$strengthStr: T${strengthLevel.level} - ${R.sterength(strengthLevel.level)}"
 
@@ -178,7 +183,7 @@ internal fun Event.Composable(
                     )
                 }
 
-                val techLevel = this@Composable.level.tech
+                val techLevel = eventLevel.tech
                 AiView(techLevel = techLevel, ai = ai)
             }
         }

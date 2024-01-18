@@ -14,9 +14,9 @@ sealed class AbstractEventPosition : EventPosition {
     }
 }
 
-@SerialName(SinglePosition.SERIAL_NAME)
+@SerialName(SingleEventPosition.SERIAL_NAME)
 @Serializable
-data class SinglePosition(
+data class SingleEventPosition(
     @SerialName(value = "position") private val _position: String,
 ) : AbstractEventPosition() {
     val position: Position get() = position(this._position)
@@ -26,9 +26,9 @@ data class SinglePosition(
     }
 }
 
-@SerialName(MultiplePosition.SERIAL_NAME)
+@SerialName(MultipleEventPosition.SERIAL_NAME)
 @Serializable
-data class MultiplePosition(
+data class MultipleEventPosition(
     @SerialName(value = "position") private val _position: List<String>,
 ) : AbstractEventPosition() {
     val position get() = this._position.map { position(it) }
@@ -38,9 +38,9 @@ data class MultiplePosition(
     }
 }
 
-@SerialName(RandomPosition.SERIAL_NAME)
+@SerialName(RandomEventPosition.SERIAL_NAME)
 @Serializable
-data class RandomPosition(
+data class RandomEventPosition(
     val position: List<WeightPosition>,
 ) : AbstractEventPosition() {
 
@@ -57,9 +57,9 @@ data class RandomPosition(
     }
 }
 
-@SerialName(UnknownPosition.SERIAL_NAME)
+@SerialName(UnknownEventPosition.SERIAL_NAME)
 @Serializable
-class UnknownPosition : AbstractEventPosition() {
+class UnknownEventPosition : AbstractEventPosition() {
     companion object Key {
         const val SERIAL_NAME: String = "Unknown"
     }

@@ -57,6 +57,7 @@
       "autoScroll": "Auto scroll",
       "event": {
         "assault": "${description} [${index}]",
+        "mumator": "${description} [${index}]",
         "award": "Award(${description}) [${index}]",
         "monopolize": "Mission event(${description}) [${index}]"
       },
@@ -79,6 +80,29 @@
           "noOffset": "after [${event}]"
         },
         "triggerPosition": "Gamer close to ${position}"
+      },
+      "groups": {
+        "Group$ce496a56-9ab2-48d0-8d8f-b1b1d125f301": {
+          "description": "Default"
+        },
+        "Group$04ef3437-83aa-4f7f-a5b0-057c963ff60b": {
+          "description": "Default"
+        },
+        "Group$1c7f904a-ff22-457e-adf4-3ef03f49f064": {
+          "description": "type A"
+        },
+        "Group$f80f0db0-85c6-428b-82c8-408214efb175": {
+          "description": "type B"
+        },
+        "Group$b549b841-1b5c-41b6-a234-f75c42920ff9": {
+          "description": "Default"
+        },
+        "Group$a4614a5f-6b99-4f49-8e64-de690a3d4ac2": {
+          "description": "type A"
+        },
+        "Group$c683f34c-4c49-4234-873e-e6bf6d48cd3e": {
+          "description": "type B"
+        }
       },
       "missions": {
         "Rifts to Korhal": {
@@ -349,6 +373,318 @@
         },
         "Assault$8face6a3-b903-472c-86f7-e13d06c6ed55": {
           "description": "Assault"
+        },
+        "Assault$74a624a6-7628-4a27-844e-070ce7fbe4a3": {
+          "description": "Assault"
+        },
+        "Assault$35fd8060-de3d-4152-a887-7e9321ba30f0": {
+          "description": "Assault"
+        },
+        "Assault$fb588695-6b22-4f64-afbd-ccb28e681411": {
+          "description": "Assault"
+        },
+        "Assault$365042b2-e5e5-42a2-850b-4c8045fcd614": {
+          "description": "Assault"
+        },
+        "Assault$72caba2d-9916-4cca-b7b4-4889dd1a35f4": {
+          "description": "Assault"
+        },
+        "Assault$8abe9757-c24b-4713-bbc5-11a2d8dfbb0f": {
+          "description": "Assault"
+        },
+        "Assault$e04581d0-fc5a-46e8-bbe5-1146c6c96ae2": {
+          "description": "Assault"
+        },
+        "Assault$f7fe3e14-464f-48e3-adb2-b25660296526": {
+          "description": "Assault"
+        },
+        "Assault$466d0234-34ab-4af6-9a12-0a6eb12484b8": {
+          "description": "Assault"
+        },
+        "Assault$e4b859ce-ced8-4644-82d1-3527ba2d98d9": {
+          "description": "Assault"
+        },
+        "Assault$13570b97-9f52-44e6-8850-49b5e4c261cc": {
+          "description": "Assault"
+        },
+        "Assault$49bb6ec7-8dad-4959-bd67-155b45dba917": {
+          "description": "Assault"
+        },
+        "Assault$f0607724-ab2e-4c5c-9307-7d9bb7212a58": {
+          "description": "Assault"
+        },
+        "Assault$2f3c49ec-19db-473a-bd8f-faa962d285b7": {
+          "description": "Assault"
+        },
+        "Assault$dc07f20a-5d9d-420a-848e-dfd68f4f0013": {
+          "description": "Assault"
+        },
+        "Assault$5d07e0e1-291b-475a-bf38-0fb4f2fa08d0": {
+          "description": "Assault"
+        },
+        "Assault$463a032f-048c-4556-8330-68ef17fc1138": {
+          "description": "Assault"
+        },
+        "Assault$ecb643ba-ac40-49bb-9a2e-cf4b13e868dc": {
+          "description": "Assault"
+        },
+        "Assault$2a9f29d8-a2d5-45f1-aed9-f6da25c3bf1c": {
+          "description": "Assault"
+        },
+        "Assault$0b70155a-4960-4895-a36a-b13ae46eb49c": {
+          "description": "Assault"
+        },
+        "Assault$e9dfafc9-9d58-4e0c-9b5f-3756ecbb51c4": {
+          "description": "Assault"
+        },
+        "Assault$a11abaef-e74d-4d88-b51c-6d5111dbc858": {
+          "description": "Assault"
+        },
+        "Assault$ad3ffb45-c3cb-4023-8cc9-9bf67a6981f9": {
+          "description": "Assault"
+        },
+        "Assault$333b44d7-bd38-4c12-bac0-44177708aadc": {
+          "description": "Assault"
+        },
+        "Assault$b11f3f74-4c14-41f7-9185-3e56699345a0": {
+          "description": "Assault"
+        },
+        "Assault$01de7d3e-f5ac-4b8b-8158-81a8faf98ebc": {
+          "description": "Assault"
+        },
+        "Assault$1ec0a1ff-b8cd-497f-bdbd-c4ed5b1804eb": {
+          "description": "Assault"
+        },
+        "Assault$df13dbf4-7d6e-4218-9545-de792ba25dd5": {
+          "description": "Assault"
+        },
+        "Assault$0a56c6f2-58df-4454-a632-b30a25ea6c4b": {
+          "description": "Assault"
+        },
+        "Assault$5b20e0fa-4430-4c62-8b71-e68e29104bf9": {
+          "description": "Assault"
+        },
+        "Assault$213db3f1-1187-4e84-a3cd-eb5a5a53df0b": {
+          "description": "Assault"
+        },
+        "Assault$c14c38ac-f472-4f1b-bd7b-8e8309f4a7de": {
+          "description": "Assault"
+        },
+        "Assault$9a7aaf84-d28b-4f5a-8585-8252d1fe76c8": {
+          "description": "Assault"
+        },
+        "Assault$d264c8de-e4a2-4f85-9a97-ad5cd5f6b2a1": {
+          "description": "Assault"
+        },
+        "Assault$97658c2f-a447-4f4a-b64c-43dec3cd1828": {
+          "description": "Assault"
+        },
+        "Assault$d85ec7dc-a32e-4f2a-aac5-c29691478c49": {
+          "description": "Assault"
+        },
+        "Assault$3126af17-2e80-4739-831f-51f3cf430553": {
+          "description": "Assault"
+        },
+        "Assault$10b25fa9-26a2-463f-adeb-33323ea4e83f": {
+          "description": "Assault"
+        },
+        "Assault$a5741ad5-a0ee-4364-88c7-81cdac5778c0": {
+          "description": "Assault"
+        },
+        "Assault$8b59ba38-9b2a-44c4-aba2-ae5b35626432": {
+          "description": "Assault"
+        },
+        "Assault$2ebe7d04-ab8d-4d4a-9e0e-8dd6b19ee549": {
+          "description": "Assault"
+        },
+        "Assault$a169b6f9-73df-4547-b99b-af7a618d165d": {
+          "description": "Assault"
+        },
+        "Assault$3ab1e46f-23b5-4469-be38-59e043aaeeaf": {
+          "description": "Assault"
+        },
+        "Assault$2405b2af-339d-4c51-b51b-bf6e73f23fe1": {
+          "description": "Assault"
+        },
+        "Assault$87957a37-7b83-4a04-bfd2-ad86e8036563": {
+          "description": "Assault"
+        },
+        "Assault$78e4b2bd-e74b-4ea5-ba3e-9d6f27751f94": {
+          "description": "Assault"
+        },
+        "Assault$5f3b0fa4-b421-40f4-a6c4-dec5b2c1e629": {
+          "description": "Assault"
+        },
+        "Assault$cf054bac-6b21-4361-8b91-64ec0fc4bc4b": {
+          "description": "Assault"
+        },
+        "Assault$8a258765-0754-428c-bbae-b55a413cbe61": {
+          "description": "Assault"
+        },
+        "Assault$aeb2324b-d1fa-46c0-911a-7f450fe057f9": {
+          "description": "Assault"
+        },
+        "Assault$31958059-08c6-4de8-aa3b-0681225dd5bc": {
+          "description": "Assault"
+        },
+        "Assault$c2916956-0dfa-44bf-8d8c-592a80158da2": {
+          "description": "Assault"
+        },
+        "Assault$49cd368a-c98f-4e32-be92-c72cfbea2b89": {
+          "description": "Assault"
+        },
+        "Assault$c6ad511f-d2e6-4962-b42c-162b130e5ba9": {
+          "description": "Assault"
+        },
+        "Assault$d41d0abc-9c82-4a8b-bdab-835de4dcfc8a": {
+          "description": "Assault"
+        },
+        "Assault$0651e8af-79da-46d8-8b26-91c503ec4178": {
+          "description": "Assault"
+        },
+        "Assault$d9a16367-ee6c-4322-8a0a-e0d397ff9f0b": {
+          "description": "Assault"
+        },
+        "Assault$6a083e70-72ba-4651-884e-42e680549f62": {
+          "description": "Assault"
+        },
+        "Assault$33454f31-21a7-4ac3-9515-f5b5ad93e3c6": {
+          "description": "Assault"
+        },
+        "Assault$3695faf8-4a3d-4e21-be77-eb0f9412d61a": {
+          "description": "Assault"
+        },
+        "Assault$e73536a9-de30-4f09-98c7-e2ef2f62ae40": {
+          "description": "Assault"
+        },
+        "Assault$9c74545e-3fc6-4f8c-8d4d-792915eebce6": {
+          "description": "Assault"
+        },
+        "Assault$b9126bb6-aaba-4661-b10b-06a15d5a44a5": {
+          "description": "Assault"
+        },
+        "Assault$ebda814e-11f2-466e-9263-2dba023ecfe5": {
+          "description": "Assault"
+        },
+        "Assault$36cda9a8-6e25-411b-bcb8-8e8953cdcd53": {
+          "description": "Assault"
+        },
+        "Assault$783b5813-b40d-46dc-9481-f73b6195fc39": {
+          "description": "Assault"
+        },
+        "Assault$bcdefb46-8ac4-4d8a-b841-57697d3b44ca": {
+          "description": "Assault"
+        },
+        "Assault$705217c7-352d-42ff-bf6b-413c1127ee79": {
+          "description": "Assault"
+        },
+        "Assault$17404353-3822-4c09-bc36-3578eb527aad": {
+          "description": "Assault"
+        },
+        "Assault$1f3b6721-9f01-4fa3-84bd-b23bd7bab140": {
+          "description": "Assault"
+        },
+        "Assault$203ec655-8e53-445d-9130-bd89b0ad4fce": {
+          "description": "Assault"
+        },
+        "Assault$9fc93ddc-fb50-4c32-9ad3-c6e48ef29b04": {
+          "description": "Assault"
+        },
+        "Assault$f13aa1c9-b8e8-4573-868e-bda63ebbfdd4": {
+          "description": "Assault"
+        },
+        "Assault$b457d908-2dac-4b39-b163-80e706fa4af2": {
+          "description": "Assault"
+        },
+        "Assault$ccc58675-b3da-4b51-bcb6-194dc794c03b": {
+          "description": "Assault"
+        },
+        "Assault$5c031765-4fb3-49f9-b4b9-59019eda12c7": {
+          "description": "Assault"
+        },
+        "Assault$a8af520c-7657-43c8-8473-693e6deb88e0": {
+          "description": "Assault"
+        },
+        "Assault$48396b3a-2e41-47cf-88ea-5562c3aa14c5": {
+          "description": "Assault"
+        },
+        "Assault$6f3d4d3e-cc4b-4750-843b-3b7eddea1c4f": {
+          "description": "Assault"
+        },
+        "Assault$8e2a49b7-160e-4fbb-ba83-a90aa216f8e6": {
+          "description": "Assault"
+        },
+        "Assault$ae576bfd-725a-4e20-945f-79e8d5371803": {
+          "description": "Assault"
+        },
+        "Assault$115cf101-7e3b-488f-a27a-27c05a3d9666": {
+          "description": "Assault"
+        },
+        "Assault$958b54ec-9a6c-4574-929e-a18dcea591f0": {
+          "description": "Assault"
+        },
+        "Assault$11282e44-73c8-49ad-ad7f-6247fde8e18e": {
+          "description": "Assault"
+        },
+        "Assault$28580029-3323-47e3-acac-4d6bf9030686": {
+          "description": "Assault"
+        },
+        "Assault$2f3e5bdd-7fe2-48c9-a26b-8a6fd974959b": {
+          "description": "Assault"
+        },
+        "Assault$5970e977-b5f0-407e-888e-5d926b35a8a8": {
+          "description": "Assault"
+        },
+        "Assault$f9166f93-a69b-4ea6-b8bc-0d23fe3e8b37": {
+          "description": "Assault"
+        },
+        "Assault$59a10bfb-1225-4878-84c8-50d6e4b76843": {
+          "description": "Assault"
+        },
+        "Assault$63afaebd-2639-46a6-a7db-a15224425997": {
+          "description": "Assault"
+        },
+        "Assault$7fe787aa-9f16-41c8-ba4a-4ab0686457fe": {
+          "description": "Assault"
+        },
+        "Assault$2b569fbc-fce5-4c1e-b89a-be1e5d1096e2": {
+          "description": "Assault"
+        },
+        "Assault$e5b83aeb-8638-4870-b27f-d51871662db9": {
+          "description": "Assault"
+        },
+        "Assault$035d29eb-6599-4da4-b370-da5b7ab760da": {
+          "description": "Assault"
+        },
+        "Assault$56370914-981d-4d9c-84a5-8bb74cde1e8f": {
+          "description": "Assault"
+        },
+        "Assault$bca91820-fc4b-4869-aea9-a74358b5faf1": {
+          "description": "Assault"
+        },
+        "Assault$4ac44369-064b-4329-99ff-2a17b356f63c": {
+          "description": "Assault"
+        },
+        "Assault$b1046847-f368-4852-b7d8-a5c38da72948": {
+          "description": "Assault"
+        },
+        "Assault$4849993b-3482-4f73-a9de-0160ebd2ebc6": {
+          "description": "Assault"
+        },
+        "Assault$be7c0c66-e962-49ab-8565-390de0442aa4": {
+          "description": "Assault"
+        },
+        "Assault$d51f6250-d81e-4f0a-8484-0108d43f30eb": {
+          "description": "Assault"
+        },
+        "Assault$86423047-0e3f-4aa1-b6a5-91da859be2ef": {
+          "description": "Assault"
+        },
+        "Assault$a4b55f13-1c6d-4a23-8e70-139f4b2e3bd8": {
+          "description": "Assault"
+        },
+        "Assault$ca18a03d-6c0f-4fcf-835e-db426d1f9e34": {
+          "description": "Assault"
         }
       },
       "positions": {
@@ -414,13 +750,41 @@
         },
         "Point$89d7dd0c-9c77-40c8-a5c0-74c125ced216": {
           "description": "Void Shard spawn point-10"
+        },
+        "Point$63888d92-4a5a-4f08-bca7-28abcb0aff23": {
+          "description": "Assault spawn point ↖"
+        },
+        "Point$06cb0d54-3927-47ba-a8b1-5e7c4bcb451f": {
+          "description": "Assault spawn point ↗"
+        },
+        "Point$257d6bfb-5543-4752-9e91-4b026ad12997": {
+          "description": "Assault spawn point ↖"
+        },
+        "Point$c002d43e-1403-4d0e-b3c8-c5582e5207f6": {
+          "description": "Assault spawn point ↗"
+        },
+        "Point$49e044ad-088d-43fa-846a-9947c8fd77b1": {
+          "description": "Assault spawn point ↖"
+        },
+        "Point$98abccc4-68c5-4227-9a41-1b7330f534e6": {
+          "description": "Assault spawn point ↗"
+        },
+        "Point$c5beba8b-97ba-4650-98ca-6dfebc229f17": {
+          "description": "Assault spawn point ↙"
+        },
+        "Point$12235fc1-0934-406a-8d5c-7b63db3a76c0": {
+          "description": "Assault spawn point ↘"
+        },
+        "Point$1837956f-f067-4071-a3f4-88b60290ac80": {
+          "description": "Assault jump spot ↗"
+        },
+        "Point$9f5ffa3b-170d-498e-9e25-84ee327ff15c": {
+          "description": "Assault jump spot ↘"
+        },
+        "Point$90c78352-8b45-4921-ad4c-99ab1a6629df": {
+          "description": "Assault jump spot ↙"
         }
       }
-    }
-  },
-  "mumator": {
-    "Aggressive Deployment": {
-      "name": "Aggressive Deployment"
     }
   },
   "ai": {

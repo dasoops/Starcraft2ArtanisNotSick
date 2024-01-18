@@ -14,8 +14,10 @@ import com.badoo.reaktive.scheduler.mainScheduler
 import com.dasoops.starcraft2ArtanisNotSick.common.content.RootComponent
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.Ai
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.Event
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.Group
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.NormalTime
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.RangeTime
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.group
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.mission.Mission
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.mumator.Mumator
 import com.dasoops.starcraft2ArtanisNotSick.common.util.BaseException
@@ -33,6 +35,7 @@ interface MissionInfoComponent {
     fun onChangeShowHide()
     fun onChangeAutoScroll()
     fun onSelectMumator(mumator: Mumator)
+    fun onSelectGroup(group: Group)
     fun jumpToEvent(event: Event)
 
     enum class TimerStatus {
@@ -60,6 +63,7 @@ interface MissionInfoComponent {
         val selectMumatorList: List<Mumator>,
         val autoScroll: Boolean,
         val showHide: Boolean,
+        val group: Group,
     ) {
         companion object
     }
@@ -75,7 +79,18 @@ interface MissionInfoComponent {
         private val logger = KotlinLogging.logger {}
 
         val timer = Timer()
-        override val state: MutableValue<State> = MutableValue(State.Default)
+        override val state: MutableValue<State> = MutableValue(
+            State(
+                ai = null,
+                timer = 0,
+                timerStatus = TimerStatus.INITLIZATION_STOP,
+                selectMumatorList = mutableListOf(),
+                autoScroll = settingState.value.autoScroll,
+                showHide = false,
+                group = mission.group.keys.first(),
+            )
+        )
+
         override fun backChoose() {
             this.backChoose.invoke()
         }
@@ -137,6 +152,13 @@ interface MissionInfoComponent {
             }
         }
 
+        override fun onSelectGroup(group: Group) {
+            state.update {
+                logger.debug { "Mission.autoScroll change: ${it.group} -> $group" }
+                it.copy(group = group)
+            }
+        }
+
         override fun jumpToEvent(event: Event) {
             val target = when (val time = event.time?.first) {
                 is NormalTime -> time.originSeconds
@@ -182,18 +204,6 @@ interface MissionInfoComponent {
                 executor?.cancel()
                 observe?.cancel()
             }
-        }
-
-        companion object {
-            private val State.Companion.Default: State
-                get() = State(
-                    ai = null,
-                    timer = 0,
-                    timerStatus = TimerStatus.INITLIZATION_STOP,
-                    selectMumatorList = mutableListOf(),
-                    autoScroll = false,
-                    showHide = false,
-                )
         }
     }
 }

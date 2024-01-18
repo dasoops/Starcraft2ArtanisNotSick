@@ -53,5 +53,19 @@ class AssaultEvent(
     override val position: EventPosition,
 
     val level: EventLevel,
+    val group: Group,
+    val target: Target?
+) : AbstractEvent()
+
+@SerialName("Mumator")
+@Serializable
+class MumatorEvent(
+    override val id: String,
+    override val show: Boolean,
+    override val time: EventTime,
+    override val index: Int,
+    override val position: EventPosition,
+
+    val level: EventLevel,
     val target: Target?
 ) : AbstractEvent()
