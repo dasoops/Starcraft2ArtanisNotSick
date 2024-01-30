@@ -4,16 +4,15 @@
 
 [**点此下载**](https://github.com/dasoops/Starcraft2ArtanisNotSick/releases)
 
-星际2-合作模式
+- **星际2-合作模式 地图红点/奖励目标/特殊因子(进攻部署,虚空裂隙)时间轴可视化**
 
-地图红点/奖励目标/特殊因子(进攻部署,虚空裂隙)时间轴可视化
 
-可展示红点规模,选择ai后可展示科技单位
-
-此软件不保证实用价值,学东西顺带写的
-~~恁大一个,不如放个泥潭背板指南看着,(
-指路[nga-雏田君Hinata](https://bbs.nga.cn/read.php?tid=17265336))~~
-~~国服都没有的游戏还在打的肯定都背熟了()~~
+- 可展示红点规模,选择ai后可展示科技单位
+- **此软件不保证实用价值,学东西顺带写的**
+- 除克哈外的图都很敷衍,有空了再完善,部分图的红点位置联动(如黑杀第1,2波)也没做"
+- ~~恁大一个,不如放个泥潭背板指南看着,(
+  指路[nga-雏田君Hinata](https://bbs.nga.cn/read.php?tid=17265336))~~
+- ~~国服都没有的游戏还在打的肯定都背熟了()~~
 
 ### 已完成功能:
 
@@ -38,4 +37,5 @@
 
 * 数据 来源 [[nga-雏田君Hinata](https://bbs.nga.cn/read.php?tid=17265336)]
 * 数据/图片资源 来源 [[starcraft2coop.com](https://starcraft2coop.com)]
+  逛google翻到的,很棒的网站,地图数据,单位机制等等,甚至连bug都有()
 * cv了点代码,是不是放一下比较好 [[github-mamoe/mirai](https://github.com/mamoe/mirai)]
