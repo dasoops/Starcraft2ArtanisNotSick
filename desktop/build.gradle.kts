@@ -37,7 +37,8 @@ compose.desktop {
 
 
             windows {
-                this.packageVersion = rootProject.version.toString().removeSuffix("-beta")
+                this.packageVersion = rootProject.version.toString()
+                    .removeSuffix("- beta").removeSuffix("- release").trim()
                 modules.add("java.naming")
                 val iconsRoot = project.file("../common/src/desktopMain/resources/image/build")
                 iconFile.set(iconsRoot.resolve("icon-windows.ico"))

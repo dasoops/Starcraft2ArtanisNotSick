@@ -1,13 +1,16 @@
 # Stracraft2 Artanis Not Sick
 
+** | English | [简体中文](README_zh.md)
+
 [**DOWNLOAD HERE**](https://github.com/dasoops/Starcraft2ArtanisNotSick)
 
 The app shows Missions Event of StarCraft Ⅱ Co-op games.
 
 Preview:
-![MapSelect](https://raw.githubusercontent.com/dasoops/Starcraft2ArtanisNotSick/master/doc/MapSelect.jpg)
-![MapInfo](https://raw.githubusercontent.com/dasoops/Starcraft2ArtanisNotSick/master/doc/MapInfo.jpg)
-![Setting](https://raw.githubusercontent.com/dasoops/Starcraft2ArtanisNotSick/master/doc/Setting.jpg)
+
+![MissionSelect](https://raw.githubusercontent.com/dasoops/Starcraft2ArtanisNotSick/master/doc/MissionSelect.jpg)
+![MissionInfo](https://raw.githubusercontent.com/dasoops/Starcraft2ArtanisNotSick/master/doc/MissionInfo.jpg)
+![MissionInfo_expanded](https://raw.githubusercontent.com/dasoops/Starcraft2ArtanisNotSick/master/doc/MissionInfo_expanded.jpg)
 
 Thanks:
 
