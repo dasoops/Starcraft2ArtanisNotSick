@@ -43,7 +43,7 @@ compose.desktop {
                 val iconsRoot = project.file("../common/src/desktopMain/resources/image/build")
                 iconFile.set(iconsRoot.resolve("icon-windows.ico"))
                 menuGroup = "Starcraft2ArtanisNotSick"
-                console = true
+                console = false
 
             }
         }
