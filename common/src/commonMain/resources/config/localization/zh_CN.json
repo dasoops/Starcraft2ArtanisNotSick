@@ -102,6 +102,45 @@
         },
         "Group$c683f34c-4c49-4234-873e-e6bf6d48cd3e": {
           "description": "庙B"
+        },
+        "Group$dea1478d-713d-4863-9947-84baafc7f5d3": {
+          "description": "唯一类型"
+        },
+        "Group$8a6966c9-c06a-49a8-a666-b581e7517439": {
+          "description": "唯一类型"
+        },
+        "Group$fa9ddafa-d45e-495c-a631-36ae26154ae4": {
+          "description": "唯一类型"
+        },
+        "Group$417e656f-0618-41c9-b972-0f2f7ebe8681": {
+          "description": "唯一类型"
+        },
+        "Group$72f8485d-2642-4f94-814d-be77ac4bbd56": {
+          "description": "唯一类型"
+        },
+        "Group$0d8f4e57-f78c-4d6f-a3dc-43f3c0f0a1d9": {
+          "description": "唯一类型"
+        },
+        "Group$6b4e5bf8-030a-4857-bce1-d4c255c6a5a7": {
+          "description": "唯一类型"
+        },
+        "Group$3b1cbb00-415e-41a3-aa07-234901904681": {
+          "description": "唯一类型"
+        },
+        "Group$18f43ac6-23cd-482a-ab34-b63def16069d": {
+          "description": "唯一类型"
+        },
+        "Group$6a6144ec-3f5d-4f58-8145-4ed64910aabc": {
+          "description": "唯一类型"
+        },
+        "Group$7319fa42-157f-4ec5-b175-d6a4436148c9": {
+          "description": "唯一类型"
+        },
+        "Group$dbac4eb3-fe48-499a-84c9-df2445e9d9b0": {
+          "description": "红点类型 A"
+        },
+        "Group$5ff0b6d4-721a-4a1e-9d51-975994935f1c": {
+          "description": "红点类型 B"
         }
       },
       "missions": {
@@ -685,6 +724,510 @@
         },
         "Assault$ca18a03d-6c0f-4fcf-835e-db426d1f9e34": {
           "description": "进攻"
+        },
+        "Assault$24db10f2-539c-4f95-8b09-37e85d523fef": {
+          "description": "进攻"
+        },
+        "Assault$a4bb809b-afc1-4881-baa5-deb684aa83b9": {
+          "description": "进攻"
+        },
+        "Assault$6b20353d-f223-40f1-99ee-93af6501c4ba": {
+          "description": "进攻"
+        },
+        "Assault$7f11e78e-fdc2-4200-bdc7-511003d5b8e6": {
+          "description": "进攻"
+        },
+        "Assault$0edaac8d-548f-4ea1-9a33-cacf048fe4e4": {
+          "description": "进攻"
+        },
+        "Assault$eb105a1a-d791-4058-af25-af4d2ab69cd8": {
+          "description": "进攻"
+        },
+        "Assault$bb009b84-ddf7-4b84-abc6-31f53cdf1cbe": {
+          "description": "进攻"
+        },
+        "Assault$ad607b5a-3a8d-42fd-adac-1f30fd6d48e0": {
+          "description": "进攻"
+        },
+        "Assault$838fb079-0572-42f3-95de-6886f3910a5b": {
+          "description": "进攻"
+        },
+        "Assault$d7d7c65f-b93b-4521-9c3d-9cd43783528a": {
+          "description": "进攻"
+        },
+        "Assault$37b8ace3-0ace-4b06-a2e2-cbb688848cfb": {
+          "description": "进攻"
+        },
+        "Assault$b3718bc6-d4be-4ba8-a1b7-e20ff7e7cc86": {
+          "description": "进攻"
+        },
+        "Assault$85dadedd-e6cc-4f89-87bf-b7989f3a5ec5": {
+          "description": "进攻"
+        },
+        "Assault$4e124575-60cb-42d1-8573-585a6d62785a": {
+          "description": "进攻"
+        },
+        "Assault$1f3473b3-e22a-47e0-8826-faef43b93ad0": {
+          "description": "进攻"
+        },
+        "Assault$35a4e6f1-03a3-4d29-a183-e31c01dbac53": {
+          "description": "进攻"
+        },
+        "Assault$2d4fb323-10ed-4de4-ad7b-6d9df9e4e97f": {
+          "description": "进攻"
+        },
+        "Assault$cf2877db-0914-4e69-8c4a-8b26ba0312f3": {
+          "description": "进攻"
+        },
+        "Assault$344975ef-2b03-4ea8-917f-38b91a673fa9": {
+          "description": "进攻"
+        },
+        "Assault$6a62ec3e-a9f1-45cf-a9e2-889201678ccb": {
+          "description": "进攻"
+        },
+        "Assault$6942aaab-6e79-4ef1-b634-b3beec28c8d4": {
+          "description": "进攻"
+        },
+        "Assault$67cf8e11-ac85-44b9-94c2-f99eba29fdc0": {
+          "description": "进攻"
+        },
+        "Assault$bdbb7b93-b02b-4c1e-b3ca-c89bea6b1935": {
+          "description": "进攻"
+        },
+        "Assault$635dbaa7-8fb3-43dd-b11b-1b53d835532d": {
+          "description": "进攻"
+        },
+        "Assault$f122e56e-021d-44b6-9ac1-d9efa2251e51": {
+          "description": "进攻"
+        },
+        "Assault$8eba436b-29ce-453f-a6cd-0d27597c7fb6": {
+          "description": "进攻"
+        },
+        "Assault$f0d38bc1-1bcc-48f5-a505-2c5f02fd62dc": {
+          "description": "进攻"
+        },
+        "Assault$99ddfde8-84b0-4d93-a4df-de87d185fa7b": {
+          "description": "进攻"
+        },
+        "Assault$62a5fa6b-cd71-49e3-a696-81a438e84d3f": {
+          "description": "进攻"
+        },
+        "Assault$f7fc72fc-1407-4d1f-bd1d-41e1bb69e7a7": {
+          "description": "进攻"
+        },
+        "Assault$49ee3570-24d2-475e-8251-bbd7f481db76": {
+          "description": "进攻"
+        },
+        "Assault$d541380b-5da0-4c86-9cd7-d61da18073e6": {
+          "description": "进攻"
+        },
+        "Assault$f15588e2-5cf0-46fc-8892-8881b617c571": {
+          "description": "进攻"
+        },
+        "Assault$7f73bf1f-f8f6-4bf1-b2be-3aceccc61802": {
+          "description": "进攻"
+        },
+        "Assault$545f47dc-f757-4b9f-ab62-8592bf4bd4da": {
+          "description": "进攻"
+        },
+        "Assault$5826b8a1-02f9-4b3e-8ff7-42eab749a4a5": {
+          "description": "进攻"
+        },
+        "Assault$9785203a-977c-4721-a4e8-7c29d6f33993": {
+          "description": "混合体"
+        },
+        "Assault$0abf0fec-07c8-4cf7-a851-2787d1a25196": {
+          "description": "混合体"
+        },
+        "Assault$7601758b-cd2a-432a-9191-4f27585605fc": {
+          "description": "混合体"
+        },
+        "Assault$12944aff-6845-4790-ae27-a035ddd05e7e": {
+          "description": "混合体"
+        },
+        "Assault$34df8118-51fa-49e9-98c0-b9a6bb41258f": {
+          "description": "护卫队"
+        },
+        "Assault$4a0c6aca-3a52-40b4-ba7b-da304a1d7423": {
+          "description": "护卫队"
+        },
+        "Assault$dcc9260b-278b-4118-a688-33447dd25022": {
+          "description": "护卫队"
+        },
+        "Assault$8247faaa-bc21-4822-b501-9c6eb051ef18": {
+          "description": "护卫队"
+        },
+        "Assault$cceaf46a-7bd3-4c61-a393-76310a046ac5": {
+          "description": "护卫队"
+        },
+        "Assault$ebe5daf7-dc0d-4c5c-939b-8029510b00e3": {
+          "description": "护卫队"
+        },
+        "Assault$040c77ae-c6d4-429e-9a05-c2ca2f8d516c": {
+          "description": "护卫队"
+        },
+        "Assault$fce89d10-331e-43e7-b9d9-492e933b1b1d": {
+          "description": "护卫队"
+        },
+        "Assault$9c6236fb-8517-4b29-a2e0-acb32b2a4736": {
+          "description": "护卫队"
+        },
+        "Assault$a8104ae6-f242-40ab-b49c-e60aaa96cb24": {
+          "description": "护卫队"
+        },
+        "Assault$174915fa-53e8-4955-8e02-93ac1842d1a0": {
+          "description": "护卫队"
+        },
+        "Assault$36bbb632-f46b-4c4d-a84f-1ae7b13f7d19": {
+          "description": "护卫队"
+        },
+        "Assault$281a91d9-9304-4026-b6ab-83187c41af01": {
+          "description": "护卫队"
+        },
+        "Assault$5c2bd37d-6d3f-4fc9-9363-3978e3ff9c1f": {
+          "description": "护卫队"
+        },
+        "Assault$c95110f8-6cd0-46ca-aacd-aa6bd64fa7b1": {
+          "description": "护卫队"
+        },
+        "Assault$2d682f67-10c6-41d9-82fb-13103e96f2c7": {
+          "description": "护卫队"
+        },
+        "Assault$5dc8d88c-780e-48ae-99ce-b0df350712c0": {
+          "description": "护卫队"
+        },
+        "Assault$26aaa464-588e-4262-9bb7-ae71611967e3": {
+          "description": "护卫队"
+        },
+        "Assault$f0257be5-b984-4265-b2d7-dd74a9f76268": {
+          "description": "护卫队"
+        },
+        "Assault$0300c42d-15c9-4d80-8a65-e716b02d8381": {
+          "description": "护卫队"
+        },
+        "Assault$00af7ce6-9a9e-43c4-a7ea-1ef40706b0b0": {
+          "description": "护卫队"
+        },
+        "Assault$9cc89cbf-1444-4569-9df3-5e6e140f421f": {
+          "description": "护卫队"
+        },
+        "Assault$095bb3cb-b43c-4121-9d62-ab7f279a44d4": {
+          "description": "进攻"
+        },
+        "Assault$c8275e88-c24c-419c-a568-e34434bde8c8": {
+          "description": "进攻"
+        },
+        "Assault$a6b42227-4380-4ce8-9455-b0c2c6b5554a": {
+          "description": "进攻"
+        },
+        "Assault$ecc15878-1282-4645-a95d-b1c085f50013": {
+          "description": "进攻"
+        },
+        "Assault$b6dfc973-6dd9-4c11-bcb8-799af1f14fca": {
+          "description": "进攻"
+        },
+        "Assault$80955a82-3faa-40f4-8785-36af2a908f2b": {
+          "description": "进攻"
+        },
+        "Assault$0ba38930-9289-43db-aeb2-c2b87029c09a": {
+          "description": "进攻"
+        },
+        "Assault$8b6155db-27f6-4c8c-8b15-d74baead93b5": {
+          "description": "进攻"
+        },
+        "Assault$5bbbd38b-8248-47e7-b884-9bce4c87c312": {
+          "description": "进攻"
+        },
+        "Assault$d76bf038-142c-42a3-a3a0-98650a9267e6": {
+          "description": "进攻"
+        },
+        "Assault$e2cf0973-e46c-4f33-a1a7-0235b7f5b39d": {
+          "description": "进攻"
+        },
+        "Assault$1075e160-5235-4be1-92d7-6c559f4e03c2": {
+          "description": "进攻"
+        },
+        "Assault$6bc04000-f023-4b9c-a606-0086107a55f2": {
+          "description": "进攻"
+        },
+        "Assault$6d237a9c-b409-432b-970b-567e941ff68c": {
+          "description": "进攻"
+        },
+        "Assault$6f4fa662-19e1-4f70-b1a5-ad6c2b3e3da3": {
+          "description": "进攻"
+        },
+        "Assault$18cf8f42-07b6-4f49-aa7d-a5564d4242c7": {
+          "description": "进攻"
+        },
+        "Assault$8eac48f1-c6ba-418b-908a-6b74874a864d": {
+          "description": "进攻"
+        },
+        "Assault$ad43e5b8-037f-42f2-be8d-749632e7503f": {
+          "description": "进攻"
+        },
+        "Assault$682d4b74-3e8b-4dc2-bffd-6fb6d6f7d741": {
+          "description": "进攻"
+        },
+        "Assault$31327298-cd2b-42e7-82a5-ce55d5342aa5": {
+          "description": "机器人波次1 进攻"
+        },
+        "Assault$3936ed51-dab5-4efa-9278-e67f9a9a560f": {
+          "description": "机器人波次1 进攻"
+        },
+        "Assault$683a84e9-ded5-458f-b144-e7e8027b14c4": {
+          "description": "机器人波次2 进攻"
+        },
+        "Assault$c68278c6-72c3-48a0-a429-48e71802a90a": {
+          "description": "机器人波次2 进攻"
+        },
+        "Assault$906a09eb-ccd2-4406-bcd7-fcf3c2ddbeed": {
+          "description": "机器人波次2 进攻"
+        },
+        "Assault$82e8fee6-ad67-42ed-927a-977109ca1a6d": {
+          "description": "机器人波次2 进攻"
+        },
+        "Assault$3bc79532-13cc-4db0-b1c9-abcb052255ba": {
+          "description": "机器人波次3 进攻"
+        },
+        "Assault$e77c39fb-54c8-4531-a617-0567fa13f933": {
+          "description": "机器人波次3 进攻"
+        },
+        "Assault$5c19f590-e83f-4bc2-8162-75f01697fb91": {
+          "description": "机器人波次3 进攻"
+        },
+        "Assault$70e91135-1a6d-439a-b87e-4be6f4e429d1": {
+          "description": "机器人波次3 进攻"
+        },
+        "Assault$d24a7683-264d-47f0-8d04-9802251bfa09": {
+          "description": "机器人波次3 进攻"
+        },
+        "Assault$a6a5806b-f1c6-4f5d-b913-f32db65f195f": {
+          "description": "机器人波次3 进攻"
+        },
+        "Assault$6f712d88-770b-4517-8c68-9c51c260e807": {
+          "description": "机器人波次4 进攻"
+        },
+        "Assault$d6abcecf-0b57-4dc4-ac16-dc2d6988eab7": {
+          "description": "机器人波次4 进攻"
+        },
+        "Assault$e7702614-267e-4fb4-9063-79c05ec59cd9": {
+          "description": "机器人波次4 进攻"
+        },
+        "Assault$4529f620-17a2-4d2c-bf38-52e1a95f20cb": {
+          "description": "机器人波次4 进攻"
+        },
+        "Assault$e5bb14b5-6b61-42c3-a212-442ff20ea5b0": {
+          "description": "机器人波次4 进攻"
+        },
+        "Assault$7db270ad-ad1f-4695-aad9-e20b7afe05bd": {
+          "description": "机器人波次4 进攻"
+        },
+        "Assault$2e7c039b-23ec-4bed-bbd3-935b42a49b07": {
+          "description": "机器人波次5 进攻"
+        },
+        "Assault$0d4b251e-45b2-4cd2-b6d6-9bce06e38365": {
+          "description": "机器人波次5 进攻"
+        },
+        "Assault$7b64e8ff-83a2-4664-95fa-8494d61432b8": {
+          "description": "机器人波次5 进攻"
+        },
+        "Assault$7fbd79f9-f4c8-4d5a-a1b6-4a2d5fd0b13c": {
+          "description": "机器人波次5 进攻"
+        },
+        "Assault$98c019af-7918-4658-bb3d-5dfadb7c6c4f": {
+          "description": "机器人波次5 进攻"
+        },
+        "Assault$b400069e-d2aa-48a0-9241-39bbc9040c03": {
+          "description": "机器人波次5 进攻"
+        },
+        "Assault$4a728d0b-c366-44d1-982d-bd97cbd5380a": {
+          "description": "机器人波次5 进攻"
+        },
+        "Assault$98d1db19-4a52-4eaf-a2aa-8b5abebf09a2": {
+          "description": "机器人波次5 进攻"
+        },
+        "Assault$091bb153-9605-4ff6-89f8-b7596c444dbb": {
+          "description": "机器人波次5 进攻"
+        },
+        "Assault$2ce8ce38-79a1-4211-8688-16509977f2b0": {
+          "description": "进攻"
+        },
+        "Assault$f2c63b0f-d896-4d62-a182-867e2a347cc6": {
+          "description": "进攻"
+        },
+        "Assault$234191ba-b284-442b-8ca1-f237d6ee5e12": {
+          "description": "进攻"
+        },
+        "Assault$fe0b0b4b-31eb-472b-970f-77a8e1be3696": {
+          "description": "进攻"
+        },
+        "Assault$065db6e5-eb75-4ef5-b6c8-c763765e5529": {
+          "description": "进攻"
+        },
+        "Assault$da9996c6-c235-4c17-9470-d5cec89c231b": {
+          "description": "进攻"
+        },
+        "Assault$c17f48f6-2f2e-49b2-a287-799a8da5a840": {
+          "description": "进攻"
+        },
+        "Assault$626a72a2-bb42-498b-94c3-80e3db5e1c58": {
+          "description": "进攻"
+        },
+        "Assault$25f5d8b4-7154-4c36-b4b3-2cde23367cee": {
+          "description": "进攻"
+        },
+        "Assault$3456b312-2c76-4f28-9f67-44c25fcedc2b": {
+          "description": "进攻"
+        },
+        "Assault$d2109204-42bd-42ba-bb68-f52badf952db": {
+          "description": "进攻"
+        },
+        "Assault$81ffaefc-c105-4698-839d-565e2e709198": {
+          "description": "进攻"
+        },
+        "Assault$a09cfbad-7eb1-4162-a996-b1faff67bf14": {
+          "description": "进攻"
+        },
+        "Assault$37a94716-56d8-4068-b087-a17adb5540f4": {
+          "description": "进攻"
+        },
+        "Assault$89296ddf-de48-4c75-9239-dbc10c997037": {
+          "description": "进攻"
+        },
+        "Assault$dad7854f-1b50-4fb7-80e7-26dd6e66f52f": {
+          "description": "进攻"
+        },
+        "Assault$bdca9c5f-3005-4c55-9256-8f4951945875": {
+          "description": "进攻"
+        },
+        "Assault$2fd3cd34-aba1-417c-9598-dbca660a56be": {
+          "description": "进攻"
+        },
+        "Assault$7e3f8875-c5ba-41ed-96fb-05e340b09a6b": {
+          "description": "进攻"
+        },
+        "Assault$c01c8a14-2028-40c9-b117-d6ea94af3e22": {
+          "description": "进攻"
+        },
+        "Assault$3803fcc8-f6ba-4418-91e2-71327ab0d284": {
+          "description": "进攻"
+        },
+        "Assault$71955a4f-35fc-4c58-8387-49c01bed07cf": {
+          "description": "进攻"
+        },
+        "Assault$a7641bb3-bc4a-4ff2-99a4-121ffc3805db": {
+          "description": "进攻"
+        },
+        "Assault$4a16feb5-ef3f-4302-9aa8-70c7afd8b521": {
+          "description": "进攻"
+        },
+        "Assault$558e74aa-47a1-4d72-8e98-d2a50660bdc0": {
+          "description": "进攻"
+        },
+        "Assault$65a0fc53-8ac4-4d44-8c0e-5f41f057a421": {
+          "description": "进攻"
+        },
+        "Assault$bd26a476-e155-4ebf-b28f-c9d2cddae922": {
+          "description": "进攻"
+        },
+        "Assault$38f254f3-0174-4863-a15c-82c8dc560e05": {
+          "description": "进攻"
+        },
+        "Assault$8ad6ea2a-acc5-4d45-9aeb-321606074c6c": {
+          "description": "进攻"
+        },
+        "Assault$98fce1fe-b195-4391-b452-b9a455bcb42c": {
+          "description": "进攻"
+        },
+        "Assault$1a4e04ab-c8e5-430e-99e1-42d64af65277": {
+          "description": "进攻"
+        },
+        "Assault$1e707694-7a76-45d6-b4a4-80cc44ff9cad": {
+          "description": "进攻"
+        },
+        "Assault$dfd39f2f-10ff-49b3-9d78-0fd7137bb072": {
+          "description": "进攻"
+        },
+        "Assault$77f21efb-da2c-41fb-a115-cc937a24e70c": {
+          "description": "进攻"
+        },
+        "Assault$8ed08548-a505-41b0-a46c-002e455d68ec": {
+          "description": "进攻"
+        },
+        "Assault$e648b8c5-a788-4d0a-af62-bbd408e322cd": {
+          "description": "进攻"
+        },
+        "Assault$d0d35c8c-79bb-4adc-881a-2ca9b5734ae2": {
+          "description": "进攻"
+        },
+        "Assault$917d897a-f4be-47a9-8d8e-9be9818522a1": {
+          "description": "进攻"
+        },
+        "Assault$cbdd70ba-5769-486f-95f1-5e5d3f33eb79": {
+          "description": "进攻"
+        },
+        "Assault$e7581777-be6b-4b3f-a521-101ed79b5add": {
+          "description": "进攻"
+        },
+        "Assault$52788ca2-ca9e-46a5-8cd8-6b0678fec40b": {
+          "description": "进攻"
+        },
+        "Assault$a83acc62-253a-4643-907e-9b5cd0ead760": {
+          "description": "进攻"
+        },
+        "Assault$0ca19cef-1725-491b-8a7c-5f38b10a7af6": {
+          "description": "进攻"
+        },
+        "Assault$dee550e7-9c06-4d93-9dc5-77652fd597b5": {
+          "description": "进攻"
+        },
+        "Assault$1316840f-b16d-4a41-b056-a7215e05870c": {
+          "description": "进攻"
+        },
+        "Assault$026d0b0a-d954-4ece-80ad-17c66de064d3": {
+          "description": "进攻"
+        },
+        "Assault$7c69f70a-382d-4c84-900f-c14764506da8": {
+          "description": "进攻"
+        },
+        "Assault$108ba017-f8ae-45db-9295-da50ff26132e": {
+          "description": "进攻"
+        },
+        "Assault$802b492f-d39a-4750-8884-a4dc3a7c0bd1": {
+          "description": "进攻"
+        },
+        "Assault$2c1a27c1-f066-4541-87ab-99573cb5ab42": {
+          "description": "进攻"
+        },
+        "Assault$9ac5efc3-c2d2-4cb0-a67c-425cafabfaba": {
+          "description": "进攻"
+        },
+        "Assault$6cc1046e-499a-4f19-be6f-c763ba2c4388": {
+          "description": "进攻"
+        },
+        "Assault$7e8d7ac2-1953-4ffa-a354-38a17669e66f": {
+          "description": "进攻"
+        },
+        "Assault$a6958009-51d5-469b-92ac-35c37bc30f13": {
+          "description": "进攻"
+        },
+        "Assault$1bd4ec01-cf18-4240-b7e6-807262b3ac5b": {
+          "description": "进攻"
+        },
+        "Assault$6332bd77-e7c0-4098-9acb-7393ea67259e": {
+          "description": "进攻"
+        },
+        "Assault$6f69be14-37ca-48d2-962d-3c4aea8a0d71": {
+          "description": "进攻"
+        },
+        "Assault$6e8b847c-6145-4c06-8045-587192a7ddfb": {
+          "description": "进攻"
+        },
+        "Assault$58fe0583-49e6-4b8c-ad71-98b6abefb4de": {
+          "description": "进攻"
+        },
+        "Assault$07e79f1b-e9a9-458d-8d5d-0bfe85558f14": {
+          "description": "进攻"
         }
       },
       "positions": {
@@ -783,6 +1326,126 @@
         },
         "Point$90c78352-8b45-4921-ad4c-99ab1a6629df": {
           "description": "空投刷新点 ↙"
+        },
+        "Point$2fae7d75-6bdb-412b-a119-d6147a00cad6": {
+          "description": "红点刷新点 ↖"
+        },
+        "Point$e3d6cbb7-0ae6-4719-b6da-e2276b8b605d": {
+          "description": "红点刷新点 ↗"
+        },
+        "Point$62acdb31-376d-469b-83b2-9a30e906653d": {
+          "description": "混合体波次刷新点 ↙"
+        },
+        "Point$4c7d80ab-c1d7-4b33-bbc9-5d0b84b1aaf3": {
+          "description": "混合体波次刷新点 ↑"
+        },
+        "Point$7cd55c0f-ef03-46be-8b48-411a6f9bf69f": {
+          "description": "混合体波次刷新点 ↓"
+        },
+        "Point$51ef47de-c2e3-4512-bf39-2772ca62ecac": {
+          "description": "混合体波次刷新点 →"
+        },
+        "Point$00a2fdcd-3b25-43bb-858c-495e8abe50ff": {
+          "description": "护卫队波次刷新点 ↓"
+        },
+        "Point$9ae00511-175d-41d4-9845-738ea776f16c": {
+          "description": "护卫队波次刷新点 ↗"
+        },
+        "Point$1986b615-b318-4549-a50c-ef036a7b1fd7": {
+          "description": "护卫队波次刷新点 →"
+        },
+        "Point$d5b40a77-05d6-4038-a30a-21f13fc4d045": {
+          "description": "红点刷新点 ↓"
+        },
+        "Point$72f2bfe4-4012-471e-baeb-108a6fdbed86": {
+          "description": "红点刷新点 ↗"
+        },
+        "Point$7315320b-3fe2-46b8-8bef-342c9f05e4aa": {
+          "description": "红点刷新点 →"
+        },
+        "Point$eb6d2603-794a-4838-ad6c-53a37df4bbb2": {
+          "description": "红点刷新点 ←"
+        },
+        "Point$46ffefa2-d92b-4698-8d74-fbced2625ad8": {
+          "description": "红点刷新点 ↓"
+        },
+        "Point$11559e80-cfbe-4e2a-88eb-9fa4056b7715": {
+          "description": "红点刷新点 ↗"
+        },
+        "Point$37ee7953-b26a-4e2c-82b8-fc5818bd899f": {
+          "description": "红点刷新点 ↘"
+        },
+        "Point$f69e4190-460c-4565-9692-243772381d5a": {
+          "description": "红点刷新点 ↑"
+        },
+        "Point$a8428fd4-3902-4fa2-9d84-8455d6c7dba9": {
+          "description": "红点刷新点 ↗"
+        },
+        "Point$61c4169c-92e1-4bf3-afb4-d1642a980265": {
+          "description": "未知刷新点 ↗"
+        },
+        "Point$4cb83e70-9288-44d9-a187-031c049455b1": {
+          "description": "红点刷新点 ↑"
+        },
+        "Point$cd3e21c4-240a-48b1-8fa7-106a45afadf6": {
+          "description": "红点刷新点 ↖"
+        },
+        "Point$7b8f5803-998c-4f71-9fe0-92b7b7b2580a": {
+          "description": "红点刷新点 ↘"
+        },
+        "Point$d08539bf-d48d-4a67-a05c-27608ef75343": {
+          "description": "红点刷新点 ↑"
+        },
+        "Point$39e7dcaf-3fe5-403a-a76b-1df47711b939": {
+          "description": "红点刷新点 ↖"
+        },
+        "Point$d650f6aa-9ea1-4628-8a81-fef9dc924ad7": {
+          "description": "红点刷新点 ↘"
+        },
+        "Point$30b06e26-5a03-4109-943c-614e5f477dea": {
+          "description": "红点刷新点 ↑"
+        },
+        "Point$47aa5405-ca69-42d0-8e3d-da5acc96f13d": {
+          "description": "红点刷新点 ↖"
+        },
+        "Point$311002b4-6671-4aad-9eba-1c30bfff6e8c": {
+          "description": "红点刷新点 ↘"
+        },
+        "Point$824db149-9b05-45d6-bbea-c7909e6d8f2e": {
+          "description": "未知刷新点"
+        },
+        "Point$e500ea42-a7a4-403f-b231-ecfb70741344": {
+          "description": "红点刷新点 ←"
+        },
+        "Point$c592e53c-cff2-4f28-bc20-86f3439ad2e8": {
+          "description": "红点刷新点 ↑"
+        },
+        "Point$f5104313-f524-4649-bf3d-6791405b9231": {
+          "description": "红点刷新点 ↖"
+        },
+        "Point$8363066c-204a-49b7-a69d-c1c947b1b519": {
+          "description": "红点刷新点 ↑"
+        },
+        "Point$b91f5b94-93a5-4356-ae5d-823341c3c262": {
+          "description": "红点刷新点 →"
+        },
+        "Point$ff6c0ae7-9da2-4bad-ab3d-3171aa3cfd89": {
+          "description": "红点刷新点 ↓"
+        },
+        "Point$9651d62d-a249-475d-8ad0-500ff5c3db3f": {
+          "description": "下一处主目标方向"
+        },
+        "Point$b393ffe7-4e1a-4a35-b8fe-0755b2a367bb": {
+          "description": "卡车附近"
+        },
+        "Point$d7228081-1b91-4522-b109-2d6941918265": {
+          "description": "红点刷新点 ↖"
+        },
+        "Point$6bd62025-c0b3-47a6-b8f6-b2fa86c2da8d": {
+          "description": "红点刷新点 ↑"
+        },
+        "Point$b34e8d68-a4d6-4aba-a98d-fd47364f5b31": {
+          "description": "红点刷新点 ↗"
         }
       }
     }

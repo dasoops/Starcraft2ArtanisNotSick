@@ -567,8 +567,7 @@
         "units": [
           "Goliath",
           "Hellion",
-          "Warhound",
-          "Hellion"
+          "Warhound"
         ]
       },
       {
@@ -577,9 +576,7 @@
           "Goliath",
           "Siege Tank",
           "Hellbat",
-          "Warhound",
-          "Siege Tank",
-          "Hellbat"
+          "Warhound"
         ]
       },
       {
@@ -589,10 +586,7 @@
           "Siege Tank",
           "Hellbat",
           "Widow Mine",
-          "Warhound",
-          "Siege Tank",
-          "Hellbat",
-          "Widow Mine"
+          "Warhound"
         ]
       },
       {
@@ -602,10 +596,7 @@
           "Siege Tank",
           "Science Vessel",
           "Widow Mine",
-          "Warhound",
-          "Siege Tank",
-          "Science Vessel",
-          "Widow Mine"
+          "Warhound"
         ]
       },
       {
@@ -615,10 +606,7 @@
           "Thor",
           "Science Vessel",
           "Widow Mine",
-          "Warhound",
-          "Thor",
-          "Science Vessel",
-          "Widow Mine"
+          "Warhound"
         ]
       },
       {
@@ -719,8 +707,7 @@
         "units": [
           "Viking",
           "Marine",
-          "Banshee",
-          "Marine"
+          "Banshee"
         ]
       },
       {
@@ -729,9 +716,7 @@
           "Viking",
           "Banshee",
           "Marine",
-          "Viking",
-          "Liberator",
-          "Marine"
+          "Liberator"
         ]
       },
       {
@@ -751,11 +736,7 @@
           "Liberator",
           "Battlecruiser",
           "Marine",
-          "Viking",
-          "Raven",
-          "Liberator",
-          "Battlecruiser",
-          "Marine"
+          "Viking"
         ]
       },
       {
@@ -765,10 +746,7 @@
           "Banshee",
           "Raven",
           "Battlecruiser",
-          "Viking",
-          "Liberator",
-          "Raven",
-          "Battlecruiser"
+          "Liberator"
         ]
       }
     ]

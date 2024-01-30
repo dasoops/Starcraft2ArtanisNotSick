@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
@@ -49,10 +48,11 @@ import com.dasoops.starcraft2ArtanisNotSick.common.util.text
 @Composable
 internal fun Top(
     component: MissionInfoComponent,
+    modifier: Modifier,
 ) {
-    val model by component.state.subscribeAsState()
+    val state by component.state.subscribeAsState()
     Row(
-        modifier = Modifier.height(110.dp)
+        modifier = modifier,
     ) {
         Map(
             mission = component.mission,
@@ -65,8 +65,8 @@ internal fun Top(
                 .wrapContentHeight(align = Alignment.CenterVertically),
         )
         Timer(
-            time = model.timer,
-            timerStatus = model.timerStatus,
+            time = state.timer,
+            timerStatus = state.timerStatus,
             modifier = Modifier
                 .fillMaxSize()
                 .weight(1f)
@@ -75,7 +75,7 @@ internal fun Top(
                 .wrapContentHeight(align = Alignment.CenterVertically),
         )
         Setting(
-            component = component,
+            component,
             modifier = Modifier.fillMaxSize().weight(1f).padding(12.dp)
         )
     }
@@ -143,7 +143,7 @@ private fun Timer(
 @Composable
 private fun Setting(
     component: MissionInfoComponent,
-    modifier: Modifier = Modifier,
+    modifier: Modifier,
 ) {
     val state by component.state.subscribeAsState()
     var mumatorExpanded by remember { mutableStateOf(false) }

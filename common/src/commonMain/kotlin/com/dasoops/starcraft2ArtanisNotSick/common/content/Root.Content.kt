@@ -59,7 +59,7 @@ private fun SideBar(
         Column(
             Modifier.fillMaxHeight(),
             verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             val childCount = childStack.items.size
 

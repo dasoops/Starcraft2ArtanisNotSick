@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.arkivanov.decompose.extensions.compose.jetbrains.subscribeAsState
+import com.dasoops.starcraft2ArtanisNotSick.common.component.HintSound
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.AssaultEvent
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.Event
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.event.NormalTime
@@ -27,8 +28,9 @@ import kotlinx.coroutines.launch
 @Composable
 internal fun Main(
     component: MissionInfoComponent,
+    modifier: Modifier = Modifier,
 ) {
-    val mission = component.mission
+    val mission = remember { component.mission }
     val state by component.state.subscribeAsState()
 
     val eventList: List<Event> = remember(state) {
@@ -47,7 +49,10 @@ internal fun Main(
     }
 
     val lazyListState = rememberLazyListState()
-    Box(Modifier) {
+
+    Box(
+        modifier = modifier,
+    ) {
         LazyColumn(
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
             state = lazyListState,
@@ -70,8 +75,6 @@ internal fun Main(
     val scope = rememberCoroutineScope()
 
     LaunchedEffect(state, eventList) {
-        if (!state.autoScroll) return@LaunchedEffect
-
         val index = eventList.indexOfFirst {
             when (val first = it.time?.first) {
                 is NormalTime -> first.originSeconds == state.timer
@@ -81,7 +84,9 @@ internal fun Main(
             }
         }
         if (index <= 0) return@LaunchedEffect
+        scope.launch { HintSound.start() }
 
+        if (!state.autoScroll) return@LaunchedEffect
         scope.launch { lazyListState.animateScrollToItem(index = index) }
     }
 }

@@ -38,10 +38,13 @@ internal val EventPosition.text: String
                 .map { it.description }
                 .joinToString { it }
 
-        is RandomEventPosition ->
+        is RandomEventPosition -> {
+            val sum = this.position.sumOf { it.weight.toDouble() }
+
             "*" + this.position
-                .map { it.position.description }
-                .joinToString(separator = " or ") { it }
+                .map { (it.weight / sum * 100).toInt() to it.position.description }
+                .joinToString(separator = ",") { "${it.second}[${it.first}%]" }
+        }
 
         is UnknownEventPosition -> R.str.screen.mission.unknownPosition.description
     }
