@@ -832,7 +832,7 @@
         },
         "index": 7,
         "position": {
-          "type": "Random",
+          "type": "Multiple",
           "position": [
             "Point$940758d6-a7a9-4d90-867c-7968f1d7624f",
             "Point$73d45673-8d64-4cad-9ab4-b150c71a6aa1"
