@@ -27,6 +27,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.R
+import com.dasoops.starcraft2ArtanisNotSick.common.resources.icon
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.image
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.localization.str
 import com.dasoops.starcraft2ArtanisNotSick.common.resources.version
@@ -61,7 +62,7 @@ private fun githubRepository() {
         .padding(6.dp)) {
         Box(modifier = Modifier.align(Alignment.CenterVertically)) {
             Icon(
-                painter = painterResource("/image/icon/github.svg"),
+                painter = painterResource(R.icon.github),
                 contentDescription = "github icon",
                 tint = MaterialTheme.colorScheme.onBackground
             )

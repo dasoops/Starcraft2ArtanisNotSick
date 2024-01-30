@@ -181,6 +181,23 @@ internal fun Event.Composable(
                         text = strengthLevelValue,
                         style = MaterialTheme.typography.bodyMedium,
                     )
+                    /*Text(
+                        text = "(",
+                    )
+                    Image(
+                        painter = painterResource(R.icon.minerals),
+                        contentDescription = "minerals",
+                    )
+                    Text(
+                        text = " + ",
+                    )
+                    Image(
+                        painter = painterResource(R.icon.vespene),
+                        contentDescription = "vespene",
+                    )
+                    Text(
+                        text = ")",
+                    )*/
                 }
 
                 val techLevel = eventLevel.tech
